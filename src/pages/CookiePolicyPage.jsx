@@ -1,0 +1,313 @@
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { Cookie, ArrowRight } from 'lucide-react'
+import SEO from '../components/SEO'
+
+/* ═══════════════════════════════════════════════════════
+   TABLE OF CONTENTS DATA
+   ═══════════════════════════════════════════════════════ */
+
+const sections = [
+  { id: 'what-are-cookies', title: 'What Are Cookies' },
+  { id: 'how-we-use-cookies', title: 'How We Use Cookies' },
+  { id: 'first-party-cookies', title: 'First-Party Cookies' },
+  { id: 'third-party-cookies', title: 'Third-Party Cookies' },
+  { id: 'disabling-cookies', title: 'Disabling Cookies' },
+  { id: 'more-information', title: 'More Information' },
+  { id: 'contact', title: 'Contact' },
+]
+
+/* ═══════════════════════════════════════════════════════
+   COOKIE POLICY PAGE
+   ═══════════════════════════════════════════════════════ */
+
+export default function CookiePolicyPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    )
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <main>
+      <SEO
+        title="Cookie Policy"
+        description="Scrubby's cookie policy. Learn about the cookies we use."
+        path="/cookie-policy"
+        noindex={true}
+      />
+      {/* ── Hero ── */}
+      <section className="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div
+          className="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+          style={{ background: 'rgba(45, 206, 142, 0.08)' }}
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <div className="reveal">
+            <h1 className="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+              Cookie Policy
+            </h1>
+            <p className="text-slate-300 text-lg max-w-xl mx-auto font-body">
+              Last updated: January 2024
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Content ── */}
+      <section className="relative py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Table of Contents */}
+          <div className="reveal mb-12 p-6 rounded-xl bg-surface-secondary border border-surface-border">
+            <h2 className="font-display font-bold text-lg text-ink mb-4">
+              Table of Contents
+            </h2>
+            <nav className="grid sm:grid-cols-2 gap-2">
+              {sections.map((section, i) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+                >
+                  <span className="text-xs text-ink-tertiary font-display font-500 w-5">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  {section.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Intro */}
+          <div className="reveal mb-12">
+            <p className="text-ink-secondary leading-relaxed font-body">
+              This Cookie Policy explains what cookies are, how Scrubby O&Uuml; (&quot;Scrubby,&quot; &quot;we,&quot;
+              &quot;us,&quot; or &quot;our&quot;) uses cookies on our website at scrubby.io, and what options you have
+              regarding their use.
+            </p>
+          </div>
+
+          {/* ── Sections ── */}
+          <div className="space-y-12 reveal">
+
+            {/* 1. What Are Cookies */}
+            <div id="what-are-cookies">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                1. What Are Cookies
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body">
+                Cookies are small text files that are downloaded to your computer or mobile device when you visit a
+                website. They are widely used to make websites work more efficiently and to improve the browsing
+                experience. Cookies allow a website to recognize your device and remember information about your visit,
+                such as your preferred language, font size, and other display preferences.
+              </p>
+            </div>
+
+            {/* 2. How We Use Cookies */}
+            <div id="how-we-use-cookies">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                2. How We Use Cookies
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                We use cookies for a variety of operational purposes to ensure our website functions correctly and provides
+                you with the best possible experience. Our cookies serve the following general purposes:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body">
+                <li>Enabling core website functionality and security features</li>
+                <li>Remembering your preferences and settings</li>
+                <li>Understanding how you interact with our website</li>
+                <li>Improving our services based on usage patterns</li>
+                <li>Providing personalized content and experiences</li>
+              </ul>
+              <p className="text-ink-secondary leading-relaxed font-body mt-4">
+                Please note that disabling certain cookies may impact the functionality and features available to you on
+                our website.
+              </p>
+            </div>
+
+            {/* 3. First-Party Cookies */}
+            <div id="first-party-cookies">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                3. First-Party Cookies
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                First-party cookies are set directly by Scrubby when you visit our website. We use the following types
+                of first-party cookies:
+              </p>
+
+              <div className="space-y-4">
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Account Management Cookies</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    Used to manage and maintain your account session. These cookies help us identify you as a registered
+                    user and provide access to your account features.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Login &amp; Session Cookies</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    Essential cookies that maintain your logged-in state and active session. These cookies ensure you
+                    remain authenticated as you navigate between pages.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">E-Commerce &amp; Payment Cookies</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    Used during the checkout and payment process to track your order, manage your subscription, and
+                    process transactions securely.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Form Data Retention Cookies</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    These cookies remember data you have entered in forms across the website, such as contact forms or
+                    search queries, to improve your experience and avoid re-entry.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Site Preference Cookies</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    Store your preferences such as display settings, language choices, and other customizations so that
+                    the website can present content tailored to your preferences on return visits.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Third-Party Cookies */}
+            <div id="third-party-cookies">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                4. Third-Party Cookies
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                In addition to our own cookies, we may use various third-party cookies to report usage statistics,
+                deliver advertisements, and support partner programs:
+              </p>
+
+              <div className="space-y-4">
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Google Analytics</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    We use Google Analytics to help us understand how visitors engage with our website. Google Analytics
+                    uses cookies to collect information about how you use our site, including the pages you visit, the
+                    time spent on each page, and how you arrived at our site. This information is used to compile reports
+                    and help us improve the website. The cookies collect information in an aggregated form.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Affiliate Tracking Cookies</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    We work with affiliate and referral partners who may place cookies on your device to track partner
+                    referrals. These cookies help us attribute sign-ups and conversions to the correct partners and
+                    ensure they are properly compensated for their referrals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 5. Disabling Cookies */}
+            <div id="disabling-cookies">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                5. Disabling Cookies
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                You can prevent the setting of cookies by adjusting the settings on your browser. Most web browsers allow
+                some control over cookies through the browser settings. To find out more about cookies, including how to
+                see what cookies have been set and how to manage and delete them, visit your browser&apos;s help section
+                or settings.
+              </p>
+              <p className="text-ink-secondary leading-relaxed font-body">
+                Please be aware that disabling cookies may affect the functionality of this and many other websites that
+                you visit. Disabling cookies will usually result in also disabling certain functionality and features of
+                our website. Therefore, it is recommended that you do not disable cookies if you want to fully experience
+                our services.
+              </p>
+            </div>
+
+            {/* 6. More Information */}
+            <div id="more-information">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                6. More Information
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                We recommend that you leave cookies enabled to ensure the best possible experience on our website. If you
+                are unsure whether you need cookies or not, it is usually safer to leave cookies enabled in case they
+                interact with features you use on our site.
+              </p>
+              <p className="text-ink-secondary leading-relaxed font-body">
+                For more general information about cookies and how they work, you can visit third-party informational
+                websites. For details about how we handle your personal data, please refer to our{' '}
+                <Link to="/privacy" className="text-brand-green hover:underline font-medium">
+                  Privacy Policy
+                </Link>{' '}
+                and{' '}
+                <Link to="/gdpr" className="text-brand-green hover:underline font-medium">
+                  GDPR Compliance
+                </Link>{' '}
+                pages.
+              </p>
+            </div>
+
+            {/* 7. Contact */}
+            <div id="contact">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                7. Contact
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                If you have any questions about our Cookie Policy, please contact us:
+              </p>
+              <div className="p-6 rounded-xl bg-surface-secondary border border-surface-border">
+                <div className="space-y-2 text-sm text-ink-secondary font-body">
+                  <p><strong className="text-ink font-display">Scrubby O&Uuml;</strong></p>
+                  <p>Registration Code: 16031675</p>
+                  <p>Viru v&auml;ljak 2, 10111, Tallinn, Estonia</p>
+                  <p>CEO: Erik Paulson</p>
+                  <p>
+                    Email:{' '}
+                    <a href="mailto:info@scrubby.io" className="text-brand-green hover:underline">
+                      info@scrubby.io
+                    </a>
+                  </p>
+                  <p>
+                    Website:{' '}
+                    <a href="https://scrubby.io" className="text-brand-green hover:underline" target="_blank" rel="noopener noreferrer">
+                      scrubby.io
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Back to home */}
+          <div className="mt-16 pt-8 border-t border-surface-border reveal">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+            >
+              <ArrowRight size={14} className="rotate-180" />
+              Back to Home
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}

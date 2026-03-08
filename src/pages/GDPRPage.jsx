@@ -1,0 +1,348 @@
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { Lock, ArrowRight } from 'lucide-react'
+import SEO from '../components/SEO'
+
+/* ═══════════════════════════════════════════════════════
+   TABLE OF CONTENTS DATA
+   ═══════════════════════════════════════════════════════ */
+
+const sections = [
+  { id: 'company-information', title: 'Company Information' },
+  { id: 'data-collection', title: 'Data Collection & Purpose' },
+  { id: 'integration-partners', title: 'Integration Partners' },
+  { id: 'storage-security', title: 'Storage & Security' },
+  { id: 'data-retention', title: 'Data Retention' },
+  { id: 'third-country-transfers', title: 'Third-Country Transfers' },
+  { id: 'user-rights', title: 'User Rights' },
+  { id: 'data-breach-protocol', title: 'Data Breach Protocol' },
+  { id: 'consent', title: 'Consent' },
+  { id: 'contact-dpo', title: 'Contact DPO' },
+]
+
+/* ═══════════════════════════════════════════════════════
+   GDPR COMPLIANCE PAGE
+   ═══════════════════════════════════════════════════════ */
+
+export default function GDPRPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    )
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <main>
+      <SEO
+        title="GDPR Compliance"
+        description="Learn about Scrubby's GDPR compliance and data protection practices."
+        path="/gdpr"
+        noindex={true}
+      />
+      {/* ── Hero ── */}
+      <section className="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div
+          className="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+          style={{ background: 'rgba(45, 206, 142, 0.08)' }}
+        />
+
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <div className="reveal">
+            <h1 className="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+              GDPR Compliance
+            </h1>
+            <p className="text-slate-300 text-lg max-w-xl mx-auto font-body">
+              Last updated: January 2024
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Content ── */}
+      <section className="relative py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Table of Contents */}
+          <div className="reveal mb-12 p-6 rounded-xl bg-surface-secondary border border-surface-border">
+            <h2 className="font-display font-bold text-lg text-ink mb-4">
+              Table of Contents
+            </h2>
+            <nav className="grid sm:grid-cols-2 gap-2">
+              {sections.map((section, i) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+                >
+                  <span className="text-xs text-ink-tertiary font-display font-500 w-5">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  {section.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Intro */}
+          <div className="reveal mb-12">
+            <p className="text-ink-secondary leading-relaxed font-body">
+              This document outlines how Scrubby O&Uuml; complies with the General Data Protection Regulation (GDPR) and
+              describes our practices for collecting, processing, storing, and protecting personal data of our users. We are
+              committed to maintaining the highest standards of data protection and transparency.
+            </p>
+          </div>
+
+          {/* ── Sections ── */}
+          <div className="space-y-12 reveal">
+
+            {/* 1. Company Information */}
+            <div id="company-information">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                1. Company Information
+              </h2>
+              <div className="p-6 rounded-xl bg-surface-secondary border border-surface-border mb-4">
+                <div className="space-y-2 text-sm text-ink-secondary font-body">
+                  <p><strong className="text-ink font-display">Data Controller:</strong> Scrubby O&Uuml;</p>
+                  <p><strong className="text-ink font-display">Registration Code:</strong> 16031675</p>
+                  <p><strong className="text-ink font-display">Registered Address:</strong> Viru v&auml;ljak 2, 10111, Tallinn, Estonia</p>
+                  <p><strong className="text-ink font-display">Data Protection Officer (DPO):</strong> Erik Paulson</p>
+                  <p>
+                    <strong className="text-ink font-display">Contact:</strong>{' '}
+                    <a href="mailto:info@scrubby.io" className="text-brand-green hover:underline">
+                      info@scrubby.io
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p className="text-ink-secondary leading-relaxed font-body">
+                Scrubby O&Uuml; is the data controller responsible for your personal data. As a company registered in
+                Estonia, a member state of the European Union, we are fully subject to and compliant with the General Data
+                Protection Regulation (EU) 2016/679.
+              </p>
+            </div>
+
+            {/* 2. Data Collection & Purpose */}
+            <div id="data-collection">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                2. Data Collection &amp; Purpose
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                We collect and process personal data for the following purposes:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+                <li><strong className="text-ink">Account creation and management</strong> &mdash; Name, email address, company information, and account credentials</li>
+                <li><strong className="text-ink">Email marketing and communications</strong> &mdash; Email address and communication preferences</li>
+                <li><strong className="text-ink">Identity validation and service delivery</strong> &mdash; Business email verification and domain information</li>
+              </ul>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                Data sources include:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body">
+                <li>Google Analytics (website usage and behavior data)</li>
+                <li>IP address information collected during website visits</li>
+                <li>Information provided directly during signup and account registration</li>
+                <li>Data submitted through contact forms and customer support interactions</li>
+              </ul>
+            </div>
+
+            {/* 3. Integration Partners */}
+            <div id="integration-partners">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                3. Integration Partners
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                We work with trusted integration partners to enhance our services. These partners process data only as
+                necessary to provide their services and do not share your personal data with unauthorized third parties.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Stripe</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    Payment processing and subscription management. Stripe processes payment data under its own GDPR-compliant
+                    data processing agreements.
+                  </p>
+                </div>
+                <div className="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+                  <h3 className="font-display font-bold text-sm text-ink mb-2">Pipedrive</h3>
+                  <p className="text-sm text-ink-secondary font-body">
+                    Customer relationship management. Used to enhance our customer service and communication capabilities
+                    without sharing personal data externally.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Storage & Security */}
+            <div id="storage-security">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                4. Storage &amp; Security
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                We employ advanced cloud services and industry-standard security measures to protect your data:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+                <li><strong className="text-ink">Infrastructure:</strong> Amazon Web Services (AWS) for reliable and scalable cloud hosting</li>
+                <li><strong className="text-ink">Authentication:</strong> AWS Cognito for secure user authentication and identity management</li>
+                <li><strong className="text-ink">Database:</strong> AWS RDS for encrypted and managed database storage</li>
+                <li><strong className="text-ink">File Storage:</strong> AWS S3 for secure object storage with server-side encryption</li>
+                <li><strong className="text-ink">Payments:</strong> Stripe for PCI-DSS compliant payment processing</li>
+              </ul>
+              <p className="text-ink-secondary leading-relaxed font-body">
+                Security measures include encryption of data in transit and at rest, network firewalls, regular security
+                audits, access controls, and continuous monitoring. We conduct periodic reviews to ensure our security
+                posture meets or exceeds industry standards.
+              </p>
+            </div>
+
+            {/* 5. Data Retention */}
+            <div id="data-retention">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                5. Data Retention
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body">
+                Personal data is stored and maintained for as long as your account is active and you continue to use our
+                services. Data is retained until you request deletion. Upon receiving a valid deletion request, we will
+                remove your personal data from our active systems within a reasonable timeframe, subject to any legal
+                obligations that may require us to retain certain records.
+              </p>
+            </div>
+
+            {/* 6. Third-Country Transfers */}
+            <div id="third-country-transfers">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                6. Third-Country Transfers
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                Our primary data storage is located in the AWS US West region (Northern California, United States). While
+                this constitutes a transfer of data outside the European Economic Area, we ensure GDPR compliance through
+                the following safeguards:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body">
+                <li>Standard Contractual Clauses (SCCs) as approved by the European Commission</li>
+                <li>AWS&apos;s compliance with EU-US data transfer frameworks</li>
+                <li>Additional technical and organizational measures to protect data during transfer and storage</li>
+                <li>Regular assessment of the data protection landscape in recipient countries</li>
+              </ul>
+            </div>
+
+            {/* 7. User Rights */}
+            <div id="user-rights">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                7. User Rights
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                Under the GDPR, you have the following rights regarding your personal data:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+                <li><strong className="text-ink">Right of access</strong> &mdash; Request a copy of the personal data we hold about you</li>
+                <li><strong className="text-ink">Right to rectification</strong> &mdash; Request correction of inaccurate or incomplete data</li>
+                <li><strong className="text-ink">Right to erasure</strong> &mdash; Request deletion of your personal data</li>
+                <li><strong className="text-ink">Right to restrict processing</strong> &mdash; Request that we limit how we use your data</li>
+                <li><strong className="text-ink">Right to data portability</strong> &mdash; Request your data in a portable format via AWS S3 export</li>
+              </ul>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                You can exercise these rights through the following channels:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body">
+                <li>Your Scrubby account dashboard settings</li>
+                <li>In-app support via Gleap</li>
+                <li>Email request to{' '}
+                  <a href="mailto:info@scrubby.io" className="text-brand-green hover:underline font-medium">
+                    info@scrubby.io
+                  </a>
+                </li>
+                <li>Through our CRM system (Pipedrive)</li>
+              </ul>
+            </div>
+
+            {/* 8. Data Breach Protocol */}
+            <div id="data-breach-protocol">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                8. Data Breach Protocol
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                In the event of a personal data breach that is likely to result in a risk to the rights and freedoms of
+                individuals, Scrubby O&Uuml; will:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body">
+                <li>Notify the relevant supervisory authority within <strong className="text-ink">72 hours</strong> of becoming aware of the breach</li>
+                <li>Notify affected individuals without undue delay when the breach is likely to result in a high risk to their rights and freedoms</li>
+                <li>Document the breach, its effects, and the remedial actions taken</li>
+                <li>Take immediate steps to contain and mitigate the impact of the breach</li>
+                <li>Conduct a post-incident review and implement improvements to prevent recurrence</li>
+              </ul>
+            </div>
+
+            {/* 9. Consent */}
+            <div id="consent">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                9. Consent
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                We obtain explicit consent for data processing at the time of account signup. Our consent mechanism
+                ensures that:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-ink-secondary font-body">
+                <li>Consent is freely given, specific, informed, and unambiguous</li>
+                <li>Users are presented with clear information about what data is collected and how it will be used</li>
+                <li>Users can withdraw consent at any time through their account settings in the application</li>
+                <li>Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal</li>
+              </ul>
+            </div>
+
+            {/* 10. Contact DPO */}
+            <div id="contact-dpo">
+              <h2 className="font-display font-bold text-2xl text-ink mb-4">
+                10. Contact the Data Protection Officer
+              </h2>
+              <p className="text-ink-secondary leading-relaxed font-body mb-4">
+                If you have any questions, concerns, or requests regarding your personal data or this GDPR Compliance
+                document, please contact our Data Protection Officer:
+              </p>
+              <div className="p-6 rounded-xl bg-surface-secondary border border-surface-border">
+                <div className="space-y-2 text-sm text-ink-secondary font-body">
+                  <p><strong className="text-ink font-display">Data Protection Officer:</strong> Erik Paulson</p>
+                  <p><strong className="text-ink font-display">Company:</strong> Scrubby O&Uuml;</p>
+                  <p><strong className="text-ink font-display">Address:</strong> Viru v&auml;ljak 2, 10111, Tallinn, Estonia</p>
+                  <p>
+                    <strong className="text-ink font-display">Email:</strong>{' '}
+                    <a href="mailto:info@scrubby.io" className="text-brand-green hover:underline">
+                      info@scrubby.io
+                    </a>
+                  </p>
+                  <p>
+                    <strong className="text-ink font-display">Website:</strong>{' '}
+                    <a href="https://scrubby.io" className="text-brand-green hover:underline" target="_blank" rel="noopener noreferrer">
+                      scrubby.io
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Back to home */}
+          <div className="mt-16 pt-8 border-t border-surface-border reveal">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+            >
+              <ArrowRight size={14} className="rotate-180" />
+              Back to Home
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
