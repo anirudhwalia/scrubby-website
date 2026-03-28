@@ -194,7 +194,7 @@ export default function NavbarIsland() {
 
       {/* ── Mobile Menu ── */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[calc(theme(spacing.0)+88px)] bottom-0 bg-white overflow-y-auto">
+        <div className="lg:hidden absolute left-0 right-0 top-full bg-white overflow-y-auto shadow-lg border-t border-slate-100" style={{ maxHeight: 'calc(100dvh - 100%)' }}>
           <div className="max-w-7xl mx-auto px-6 py-4 space-y-1">
             {navLinks.map((link) => {
               const isDropdown = !!link.children
