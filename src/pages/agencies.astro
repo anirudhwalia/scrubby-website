@@ -1,0 +1,901 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const heroStats = [
+  {
+    value: '98%',
+    label: 'Accuracy',
+    icon: 'shield-check',
+  },
+  {
+    value: '42%',
+    label: 'More Leads',
+    icon: 'trending-up',
+  },
+  {
+    value: '2x',
+    label: 'Campaign ROI',
+    icon: 'zap',
+  },
+];
+
+const painPoints = [
+  {
+    icon: 'alert-triangle',
+    iconColor: 'text-amber-500',
+    iconBg: 'bg-amber-50',
+    title: 'Wasted Leads',
+    description:
+      'Most verification tools mark catch-all emails as risky, forcing agencies to discard up to 42% of their list — that is untapped revenue left on the table.',
+  },
+  {
+    icon: 'shield-off',
+    iconColor: 'text-red-400',
+    iconBg: 'bg-red-50',
+    title: 'Domain Reputation Risk',
+    description:
+      'Sending to unvalidated risky emails burns domains and triggers account shutdowns, costing you time, money, and client trust.',
+  },
+  {
+    icon: 'target',
+    iconColor: 'text-blue-500',
+    iconBg: 'bg-blue-50',
+    title: 'Client Expectations',
+    description:
+      'Your clients expect maximum deliverability and ROI from every campaign you manage. Falling short means lost accounts.',
+  },
+];
+
+const features = [
+  {
+    icon: 'trending-up',
+    title: 'Recover Lost Revenue',
+    description:
+      'Stop throwing away catch-all emails. Validate them and add up to 42% more deliverable leads to every campaign.',
+    highlights: ['Validate catch-all emails', 'Recover up to 42% more leads', 'Boost campaign performance'],
+  },
+  {
+    icon: 'shield-check',
+    title: 'Protect Client Domains',
+    description:
+      'Ensure every email you send meets deliverability standards. Keep client sender scores pristine and avoid account shutdowns.',
+    highlights: ['Maintain sender reputation', 'Prevent bounces', 'Safeguard client accounts'],
+  },
+  {
+    icon: 'zap',
+    title: 'Scale Without Limits',
+    description:
+      'Unlimited plans available for agencies. Handle any volume for any number of clients without worrying about caps.',
+    highlights: ['Unlimited validation plans', 'Multi-client support', 'No volume restrictions'],
+  },
+  {
+    icon: 'building-2',
+    title: 'Stack Compatible',
+    description:
+      'Works with Apollo, ZoomInfo, Clay, and all major email tools your agency already uses. No workflow disruption.',
+    highlights: ['Apollo & ZoomInfo', 'Clay & Instantly', 'API & CSV support'],
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Koa M.',
+    role: 'Head of Growth',
+    company: 'Leadbird',
+    text: 'Verifying all our emails at scale is something that separates Scrubby from the rest of the validation tool pack.',
+    rating: 5,
+    initials: 'KM',
+    color: 'from-brand-green/20 to-brand-green/5',
+  },
+  {
+    name: 'Shane W.',
+    role: 'CEO',
+    company: 'LinkedHacker',
+    text: "We've been working with Scrubby for some time now and we're very happy with their service.",
+    rating: 5,
+    initials: 'SW',
+    color: 'from-amber-400/20 to-amber-400/5',
+  },
+  {
+    name: 'Blaise G.',
+    role: 'VP of Sales',
+    company: 'Neptik',
+    text: "Scrubby is the only email validation software that doesn't give you 'unknown' emails.",
+    rating: 5,
+    initials: 'BG',
+    color: 'from-blue-400/20 to-blue-400/5',
+  },
+];
+
+const agencyClientLogos = [
+  { name: 'BetterContact', logo: 'bettercontact' },
+  { name: 'Leadbird', logo: 'leadbird' },
+  { name: 'Pitchlane', logo: 'pitchlane' },
+];
+
+const workflowSteps = [
+  { label: 'Agency Workflow', sub: 'Upload risky lists', icon: 'users' },
+  { label: 'Scrubby', sub: 'Validate catch-alls', icon: 'shield-check' },
+  { label: 'Validated Lists', sub: '98% deliverability', icon: 'check-circle-2' },
+  { label: 'Client Campaigns', sub: 'Maximum ROI', icon: 'target' },
+];
+---
+
+<BaseLayout
+  title="For Agencies"
+  description="Scrubby helps agencies validate risky emails at scale. White-label options, bulk pricing, and dedicated support for agency teams."
+  path="/agencies"
+>
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative pt-40 pb-28 overflow-hidden" style="background: #18181B;">
+      <!-- Background effects -->
+      <div
+        class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+        style="background: rgba(45, 206, 142, 0.08);"
+      ></div>
+      <div
+        class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+        style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+      ></div>
+      <div
+        class="absolute w-[300px] h-[300px] bottom-0 left-1/3 rounded-full blur-3xl animate-pulse"
+        style="background: rgba(245, 166, 35, 0.04); animation-delay: 3s;"
+      ></div>
+      <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div class="reveal">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+            <!-- Users icon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Built for Agencies
+          </div>
+
+          <!-- Heading -->
+          <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+            <span class="text-white">Maximize Campaign Performance </span>
+            <span class="text-gradient-light">for Your Clients</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+            Agency success depends on efficiency and effectiveness. Scrubby verifies
+            risky emails at scale to maximize results for your clients and grow your business.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+            <a href="/signup" class="btn-primary text-base px-8 py-4">
+              Try Free (100 emails)
+              <!-- ArrowRight icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="/demo" class="btn-secondary-dark text-base px-8 py-4">
+              Book a Demo
+            </a>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <!-- Accuracy stat -->
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-green/10 border border-brand-green/20 mb-3">
+                <!-- ShieldCheck icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <div class="font-display font-800 text-3xl sm:text-4xl text-white mb-1">98%</div>
+              <p class="text-sm text-slate-400 font-display font-500">Accuracy</p>
+            </div>
+            <!-- More Leads stat -->
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-green/10 border border-brand-green/20 mb-3">
+                <!-- TrendingUp icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                </svg>
+              </div>
+              <div class="font-display font-800 text-3xl sm:text-4xl text-white mb-1">42%</div>
+              <p class="text-sm text-slate-400 font-display font-500">More Leads</p>
+            </div>
+            <!-- Campaign ROI stat -->
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-green/10 border border-brand-green/20 mb-3">
+                <!-- Zap icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <div class="font-display font-800 text-3xl sm:text-4xl text-white mb-1">2x</div>
+              <p class="text-sm text-slate-400 font-display font-500">Campaign ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PAIN POINTS SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-16 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- AlertTriangle icon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Agency Challenges
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+            Challenges agencies <span class="text-gradient">face daily</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+            Traditional email verification leaves agencies guessing, wasting leads, and risking
+            client domains. There is a better way.
+          </p>
+        </div>
+
+        <!-- Pain Point Cards -->
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- Wasted Leads -->
+          <div class="glass-card p-8 reveal group" style="transition-delay: 0s;">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
+              <!-- AlertTriangle icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-3">Wasted Leads</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              Most verification tools mark catch-all emails as risky, forcing agencies to discard up to 42% of their list — that is untapped revenue left on the table.
+            </p>
+          </div>
+          <!-- Domain Reputation Risk -->
+          <div class="glass-card p-8 reveal group" style="transition-delay: 0.12s;">
+            <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
+              <!-- ShieldOff icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400">
+                <path d="M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18"/><path d="M4.73 4.73L4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38"/><line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-3">Domain Reputation Risk</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              Sending to unvalidated risky emails burns domains and triggers account shutdowns, costing you time, money, and client trust.
+            </p>
+          </div>
+          <!-- Client Expectations -->
+          <div class="glass-card p-8 reveal group" style="transition-delay: 0.24s;">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
+              <!-- Target icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-3">Client Expectations</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              Your clients expect maximum deliverability and ROI from every campaign you manage. Falling short means lost accounts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SOLUTION / WORKFLOW SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-surface-secondary">
+      <div class="divider mb-24"></div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-16 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- Zap icon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            How It Works
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+            Effortless <span class="text-gradient">Client Fulfillment</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+            A user-friendly platform for swift filtering to discover viable leads and
+            untapped revenue. Validate, deliver, and impress.
+          </p>
+        </div>
+
+        <!-- Flow Diagram -->
+        <div class="reveal max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-7 gap-0 items-center">
+            <!-- Step 0: Agency Workflow -->
+            <div class="sm:col-span-1">
+              <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center bg-surface-secondary">
+                  <!-- Users icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-secondary">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <h4 class="font-display font-700 text-sm text-ink mb-1">Agency Workflow</h4>
+                <p class="text-xs text-ink-tertiary font-body">Upload risky lists</p>
+              </div>
+            </div>
+            <!-- Arrow -->
+            <div class="hidden sm:flex sm:col-span-1 items-center justify-center text-ink-muted/40">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+            <!-- Step 1: Scrubby (highlighted) -->
+            <div class="sm:col-span-1">
+              <div class="card p-6 text-center border-brand-green/30 bg-brand-green/[0.02] shadow-[0_0_24px_rgba(45,206,142,0.08)]">
+                <div class="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center bg-brand-green-bg">
+                  <!-- ShieldCheck icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                </div>
+                <h4 class="font-display font-700 text-sm text-ink mb-1">Scrubby</h4>
+                <p class="text-xs text-ink-tertiary font-body">Validate catch-alls</p>
+              </div>
+            </div>
+            <!-- Arrow -->
+            <div class="hidden sm:flex sm:col-span-1 items-center justify-center text-ink-muted/40">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+            <!-- Step 2: Validated Lists -->
+            <div class="sm:col-span-1">
+              <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center bg-surface-secondary">
+                  <!-- CheckCircle2 icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <h4 class="font-display font-700 text-sm text-ink mb-1">Validated Lists</h4>
+                <p class="text-xs text-ink-tertiary font-body">98% deliverability</p>
+              </div>
+            </div>
+            <!-- Arrow -->
+            <div class="hidden sm:flex sm:col-span-1 items-center justify-center text-ink-muted/40">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+            <!-- Step 3: Client Campaigns -->
+            <div class="sm:col-span-1">
+              <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center bg-surface-secondary">
+                  <!-- Target icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-secondary">
+                    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                  </svg>
+                </div>
+                <h4 class="font-display font-700 text-sm text-ink mb-1">Client Campaigns</h4>
+                <p class="text-xs text-ink-tertiary font-body">Maximum ROI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider mt-24"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FEATURES GRID SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-16 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- ShieldCheck icon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+            </svg>
+            Agency Features
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+            Everything your agency needs to <span class="text-gradient">deliver results</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+            Purpose-built features that help agencies recover more leads, protect client
+            domains, and scale operations effortlessly.
+          </p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <!-- Recover Lost Revenue -->
+          <div class="card p-8 reveal group" style="transition-delay: 0s;">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center flex-shrink-0 group-hover:shadow-green-glow transition-shadow duration-300">
+                <!-- TrendingUp icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-700 text-lg text-ink mb-2">Recover Lost Revenue</h3>
+                <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-4">
+                  Stop throwing away catch-all emails. Validate them and add up to 42% more deliverable leads to every campaign.
+                </p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Validate catch-all emails</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Recover up to 42% more leads</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Boost campaign performance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Protect Client Domains -->
+          <div class="card p-8 reveal group" style="transition-delay: 0.1s;">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center flex-shrink-0 group-hover:shadow-green-glow transition-shadow duration-300">
+                <!-- ShieldCheck icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-700 text-lg text-ink mb-2">Protect Client Domains</h3>
+                <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-4">
+                  Ensure every email you send meets deliverability standards. Keep client sender scores pristine and avoid account shutdowns.
+                </p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Maintain sender reputation</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Prevent bounces</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Safeguard client accounts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scale Without Limits -->
+          <div class="card p-8 reveal group" style="transition-delay: 0.2s;">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center flex-shrink-0 group-hover:shadow-green-glow transition-shadow duration-300">
+                <!-- Zap icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-700 text-lg text-ink mb-2">Scale Without Limits</h3>
+                <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-4">
+                  Unlimited plans available for agencies. Handle any volume for any number of clients without worrying about caps.
+                </p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Unlimited validation plans</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Multi-client support</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">No volume restrictions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stack Compatible -->
+          <div class="card p-8 reveal group" style="transition-delay: 0.3s;">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center flex-shrink-0 group-hover:shadow-green-glow transition-shadow duration-300">
+                <!-- Building2 icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-display font-700 text-lg text-ink mb-2">Stack Compatible</h3>
+                <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-4">
+                  Works with Apollo, ZoomInfo, Clay, and all major email tools your agency already uses. No workflow disruption.
+                </p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Apollo &amp; ZoomInfo</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">Clay &amp; Instantly</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span class="text-xs font-display font-500 text-ink-secondary">API &amp; CSV support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         TESTIMONIALS SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-surface-secondary">
+      <div class="divider mb-24"></div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-14 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- Star icon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Testimonials
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-4">
+            Trusted by agencies <span class="text-gradient">worldwide</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-xl mx-auto font-body">
+            See why leading agencies choose Scrubby for their email validation needs.
+          </p>
+        </div>
+
+        <!-- G2 Badge -->
+        <div class="flex justify-center mb-10 reveal">
+          <div class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-surface-border shadow-sm">
+            <div class="flex -space-x-0.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="text-sm font-display font-600 text-ink">5/5</span>
+            <span class="text-xs text-ink-tertiary font-body">on G2</span>
+          </div>
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14">
+          <!-- Koa M. -->
+          <div class="card p-7 reveal" style="transition-delay: 0s;">
+            <div class="flex gap-0.5 mb-4">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="text-sm text-ink-secondary leading-relaxed font-body mb-6 italic">
+              &ldquo;Verifying all our emails at scale is something that separates Scrubby from the rest of the validation tool pack.&rdquo;
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-surface-border/60">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-green/20 to-brand-green/5 flex items-center justify-center">
+                <span class="text-xs font-display font-700 text-ink">KM</span>
+              </div>
+              <div>
+                <p class="text-sm font-display font-600 text-ink">Koa M.</p>
+                <p class="text-xs text-ink-tertiary font-body">Head of Growth at Leadbird</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shane W. -->
+          <div class="card p-7 reveal" style="transition-delay: 0.12s;">
+            <div class="flex gap-0.5 mb-4">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="text-sm text-ink-secondary leading-relaxed font-body mb-6 italic">
+              &ldquo;We&rsquo;ve been working with Scrubby for some time now and we&rsquo;re very happy with their service.&rdquo;
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-surface-border/60">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-400/5 flex items-center justify-center">
+                <span class="text-xs font-display font-700 text-ink">SW</span>
+              </div>
+              <div>
+                <p class="text-sm font-display font-600 text-ink">Shane W.</p>
+                <p class="text-xs text-ink-tertiary font-body">CEO at LinkedHacker</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blaise G. -->
+          <div class="card p-7 reveal" style="transition-delay: 0.24s;">
+            <div class="flex gap-0.5 mb-4">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="text-sm text-ink-secondary leading-relaxed font-body mb-6 italic">
+              &ldquo;Scrubby is the only email validation software that doesn&rsquo;t give you &lsquo;unknown&rsquo; emails.&rdquo;
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-surface-border/60">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-400/20 to-blue-400/5 flex items-center justify-center">
+                <span class="text-xs font-display font-700 text-ink">BG</span>
+              </div>
+              <div>
+                <p class="text-sm font-display font-600 text-ink">Blaise G.</p>
+                <p class="text-xs text-ink-tertiary font-body">VP of Sales at Neptik</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agency Client Logos -->
+        <div class="reveal">
+          <p class="text-center text-xs font-display font-600 text-ink-muted uppercase tracking-widest mb-6">
+            Trusted by Leading Agencies
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <div class="card px-5 py-4 flex items-center justify-center gap-2.5 hover:shadow-card-hover transition-all duration-300 group">
+              <img src="/logos/clients/bettercontact.png" alt="BetterContact" class="w-6 h-6 rounded object-contain" />
+              <span class="text-sm font-display font-600 text-ink-secondary group-hover:text-ink transition-colors">BetterContact</span>
+            </div>
+            <div class="card px-5 py-4 flex items-center justify-center gap-2.5 hover:shadow-card-hover transition-all duration-300 group">
+              <img src="/logos/clients/leadbird.png" alt="Leadbird" class="w-6 h-6 rounded object-contain" />
+              <span class="text-sm font-display font-600 text-ink-secondary group-hover:text-ink transition-colors">Leadbird</span>
+            </div>
+            <div class="card px-5 py-4 flex items-center justify-center gap-2.5 hover:shadow-card-hover transition-all duration-300 group">
+              <img src="/logos/clients/pitchlane.png" alt="Pitchlane" class="w-6 h-6 rounded object-contain" />
+              <span class="text-sm font-display font-600 text-ink-secondary group-hover:text-ink transition-colors">Pitchlane</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider mt-24"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PRICING TEASER SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- Zap icon -->
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Pricing
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+            Exclusive <span class="text-gradient">Agency Plans</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-xl mx-auto font-body">
+            Flexible pricing designed to grow with your agency.
+          </p>
+        </div>
+
+        <!-- Pricing Tiers -->
+        <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12 reveal">
+          <!-- Free Tier -->
+          <div class="card p-7 text-center">
+            <div class="w-12 h-12 rounded-xl bg-surface-secondary flex items-center justify-center mx-auto mb-4">
+              <!-- Users icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-secondary">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-2">Free Tier</h3>
+            <p class="font-display font-800 text-3xl text-ink mb-1">
+              100<span class="text-base font-600 text-ink-tertiary ml-1">emails</span>
+            </p>
+            <p class="text-xs text-ink-tertiary font-body">Perfect for testing the platform</p>
+          </div>
+
+          <!-- Monthly Plans (highlighted) -->
+          <div class="card p-7 text-center border-brand-green/30 bg-brand-green/[0.02] shadow-[0_0_24px_rgba(45,206,142,0.06)]">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-bg flex items-center justify-center mx-auto mb-4">
+              <!-- TrendingUp icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-2">Monthly Plans</h3>
+            <p class="font-display font-800 text-3xl text-ink mb-1">
+              $27<span class="text-base font-600 text-ink-tertiary ml-1">/mo</span>
+            </p>
+            <p class="text-xs text-ink-tertiary font-body">Starting price for growing agencies</p>
+          </div>
+
+          <!-- Unlimited -->
+          <div class="card p-7 text-center">
+            <div class="w-12 h-12 rounded-xl bg-surface-secondary flex items-center justify-center mx-auto mb-4">
+              <!-- Zap icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-secondary">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-2">Unlimited</h3>
+            <p class="font-display font-800 text-3xl text-ink mb-1">Custom</p>
+            <p class="text-xs text-ink-tertiary font-body">For qualifying agencies at scale</p>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center justify-center gap-4 reveal">
+          <a href="/pricing" class="btn-secondary">
+            View Pricing
+            <!-- ArrowRight icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="/contact" class="btn-primary">
+            Apply for Unlimited
+            <!-- ArrowRight icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden bg-white">
+      <div class="divider mb-24"></div>
+
+      <div class="relative max-w-4xl mx-auto px-6">
+        <div class="reveal">
+          <div class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden" style="background: #18181B;">
+            <!-- Grid background -->
+            <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+            <!-- Decorative glowing dots -->
+            <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+            <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+            <div class="relative z-10">
+              <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+                Ready to Supercharge <span class="text-gradient-light">Your Agency?</span>
+              </h2>
+
+              <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+                Join 2,500+ agencies using Scrubby to deliver better results.
+                Start with 100 free email credits today.
+              </p>
+
+              <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+                <a href="/signup" class="btn-primary text-base px-8 py-4">
+                  Get Started Free
+                  <!-- ArrowRight icon -->
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </a>
+                <a href="/contact" class="btn-secondary-dark text-base px-8 py-4">
+                  Contact Sales
+                </a>
+              </div>
+
+              <!-- Trust badges -->
+              <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+                <div class="flex items-center gap-1.5">
+                  <!-- ShieldCheck icon -->
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                  98% Deliverability
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <!-- Users icon -->
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                  2,500+ Agencies
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <!-- Zap icon -->
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                  </svg>
+                  Free Trial
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reveal animation script (replaces useEffect IntersectionObserver) -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</BaseLayout>

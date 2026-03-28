@@ -1,0 +1,301 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+/* ─── FAQ Data ─── */
+
+const faqDetails = [
+  {
+    slug: 'what-is-a-risky-or-catch-all-email',
+    question: 'What is a risky or catch-all email?',
+    answer: 'Risky emails are addresses that may cause deliverability issues when included in your campaigns. Catch-all (also known as accept-all) addresses belong to domains configured to receive all incoming messages, regardless of whether a specific mailbox actually exists.\n\nThis means any email sent to the domain — even to random or misspelled addresses — will be accepted by the server. Standard email verification tools can detect these domains but cannot determine which individual addresses are actually valid.\n\nCommon types of risky emails include:\n- **Catch-all/Accept-all addresses**: Server accepts everything\n- **Temporary or disposable emails**: Created for short-term use\n- **Spam trap addresses**: Used by ISPs to identify spammers\n- **Role-based addresses**: Generic addresses like info@, admin@, support@\n\nScrubby specializes in validating these risky emails through deep inbox-level testing, giving you definitive valid/invalid results instead of uncertain "risky" classifications.',
+    category: 'general',
+  },
+  {
+    slug: 'catch-all-vs-risky-email',
+    question: 'Is a Catch-All email the same thing as a Risky Email?',
+    answer: "Yes, essentially they refer to the same category of hard-to-verify emails, but the terminology depends on the tool you use.\n\n**SMTP verification tools** (like ZeroBounce, NeverBounce, MillionVerifier) classify them as **Catch-All** or **Accept-All** because that describes the server behavior — the domain's mail server is configured to catch all incoming messages.\n\n**Data providers and enrichment tools** (like Apollo, Cognism, ZoomInfo) classify them as **Risky** or assign **low confidence validation scores** because from their perspective, the email's deliverability is uncertain.\n\nRegardless of the label, the core problem is the same: standard verification methods cannot determine whether the individual mailbox actually exists and will deliver your message to a real person.\n\nScrubby bridges this gap by going beyond SMTP checks and actually testing deliverability at the inbox level.",
+    category: 'general',
+  },
+  {
+    slug: 'why-cant-smtp-tools-validate-risky-emails',
+    question: "Why can't my SMTP tool validate the Risky Emails?",
+    answer: "SMTP (Simple Mail Transfer Protocol) verification works by performing a \"handshake\" with the receiving mail server to check if an email address exists. Here's the technical process:\n\n1. Your tool connects to the recipient's mail server\n2. It says \"I want to send an email to user@domain.com\"\n3. The server responds with either acceptance or rejection\n\nWith **catch-all domains**, the server is configured to accept ALL incoming connections, regardless of whether the specific mailbox exists. This means:\n- Every address returns a \"valid\" handshake response\n- The tool cannot distinguish real addresses from fake ones\n- Results are marked as \"Accept-All\" or \"Risky\" — not valid or invalid\n\nThis is why tools like ZeroBounce, NeverBounce, and MillionVerifier cannot give you a definitive answer for these addresses.\n\n**Scrubby takes a different approach**: instead of relying on SMTP handshakes, we perform actual inbox-level testing over 48-72 hours, monitoring what happens when a test email is sent. This gives definitive valid/invalid results that SMTP-based tools simply cannot achieve.",
+    category: 'general',
+  },
+  {
+    slug: 'what-results-to-expect-with-scrubby',
+    question: 'What Kind of Results Can I Expect with Scrubby?',
+    answer: "With Scrubby, you can expect:\n\n- **~98.7% accuracy** in detecting hard bounces among catch-all/risky emails\n- **Bounce rates under 2%** when using Scrubby-validated addresses\n- **Up to 42% more usable leads** recovered from your \"risky\" email segment\n\n**Hard bounces vs Soft bounces:**\n- **Hard bounces** occur when an email address doesn't exist — Scrubby excels at catching these\n- **Soft bounces** can result from offline servers, full inboxes, or poor sender reputation — these depend on factors beyond the email address itself\n\nScrubby focuses specifically on hard bounce detection, which is the most critical factor for protecting your sender reputation. Soft bounce rates depend on your list quality, sender score, domain reputation, and email content.\n\n**Processing time:** Results are typically delivered within 48-72 hours because Scrubby performs deep inbox-level validation rather than instant SMTP checks. This trade-off in speed delivers significantly more accurate results.",
+    category: 'results',
+  },
+  {
+    slug: 'how-does-scrubby-work-with-tech-stack',
+    question: 'How does Scrubby work with my existing tech stack?',
+    answer: "Scrubby is designed to complement — not replace — your existing email verification tools. Here's how it fits into your workflow:\n\n**Step 1: Initial Verification**\nRun your email list through your current SMTP tool (ZeroBounce, NeverBounce, MillionVerifier, etc.)\n\n**Step 2: Separate the Results**\n- Valid emails → Send directly\n- Invalid emails → Remove from list\n- Catch-All/Risky emails → Send to Scrubby\n\n**Step 3: Deep Validation with Scrubby**\nScrubby validates the risky segment through inbox-level testing over 48-72 hours.\n\n**Step 4: Use the Results**\n- Scrubby-validated → Safe to include in campaigns\n- Scrubby-invalid → Remove from list\n\n**Integrations available:**\n- **API**: Full REST API for custom integrations\n- **Zapier**: Automate workflows without code\n- **Clay**: Native integration for data enrichment\n- **CRM tools**: HubSpot, Salesforce, Pipedrive via Zapier\n- **Outreach tools**: Instantly, SmartLead via API or CSV\n\nYou can also use your own API keys from ZeroBounce, NeverBounce, or MillionVerifier within the Scrubby platform.",
+    category: 'usage',
+  },
+  {
+    slug: 'is-there-a-scrubby-api',
+    question: 'Is there a Scrubby API available?',
+    answer: 'Yes! Scrubby offers a full REST API that enables you to integrate email validation directly into your applications and workflows.\n\n**API Features:**\n- Single email validation endpoint\n- Bulk email validation (upload lists)\n- Webhook notifications when results are ready\n- Full documentation with code examples\n\n**Getting started:**\n1. Sign up at app.scrubby.io\n2. Navigate to API settings\n3. Generate your API key\n4. Use the endpoints with your preferred language\n\nAPI keys and documentation are available within the platform immediately after registration.',
+    category: 'billing',
+  },
+  {
+    slug: 'how-secure-is-my-data',
+    question: 'How secure is my data with Scrubby?',
+    answer: "Data security is a top priority at Scrubby. Here's how we protect your information:\n\n**Encryption:**\n- All data is encrypted in transit using TLS 1.3\n- Data at rest is encrypted with AES-256\n\n**Access Control:**\n- Your data remains strictly under your control\n- No third-party access without your explicit consent\n- Role-based access controls for team accounts\n\n**Compliance:**\n- GDPR compliant — we follow all EU data protection regulations\n- Regular security audits and penetration testing\n- SOC 2 compliance processes in place\n\n**Data Retention:**\n- Email lists are processed and results are stored securely\n- You can delete your data at any time from the dashboard\n- We never sell or share your email data\n\nFor more details, see our Privacy Policy and GDPR Compliance pages.",
+    category: 'security',
+  },
+];
+
+const categoryLabels: Record<string, string> = {
+  general: 'General',
+  results: 'Results & Accuracy',
+  usage: 'Usage & Integration',
+  billing: 'Account & Billing',
+  security: 'Security',
+};
+
+/* ─── getStaticPaths ─── */
+
+export function getStaticPaths() {
+  const allFaqs = [
+    { slug: 'what-is-a-risky-or-catch-all-email', category: 'general' },
+    { slug: 'catch-all-vs-risky-email', category: 'general' },
+    { slug: 'why-cant-smtp-tools-validate-risky-emails', category: 'general' },
+    { slug: 'what-results-to-expect-with-scrubby', category: 'results' },
+    { slug: 'how-does-scrubby-work-with-tech-stack', category: 'usage' },
+    { slug: 'is-there-a-scrubby-api', category: 'billing' },
+    { slug: 'how-secure-is-my-data', category: 'security' },
+  ];
+  return allFaqs.map((f) => ({
+    params: { slug: f.slug },
+    props: { slug: f.slug, category: f.category },
+  }));
+}
+
+/* ─── Props ─── */
+
+const { slug, category } = Astro.props;
+const faq = faqDetails.find((f) => f.slug === slug)!;
+
+const relatedQuestions = faqDetails
+  .filter((f) => f.category === category && f.slug !== slug)
+  .slice(0, 4);
+
+const metaDescription = faq.answer.split('\n\n')[0].slice(0, 160);
+
+/* ─── FAQ Schema ─── */
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    },
+  ],
+};
+
+/* ─── Answer renderer ─── */
+
+// Converts **bold** markers to <strong> tags (escapes HTML first)
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function renderInline(text: string): string {
+  const escaped = escapeHtml(text);
+  return escaped.replace(/\*\*([^*]+)\*\*/g, '<strong class="text-ink font-semibold">$1</strong>');
+}
+
+function renderAnswer(answer: string): string {
+  const paragraphs = answer.split('\n\n');
+  return paragraphs
+    .map((block) => {
+      const lines = block.split('\n');
+      const isUnordered = lines.every((l) => l.startsWith('- '));
+      const isOrdered = lines.every((l) => /^\d+\.\s/.test(l));
+
+      if (isUnordered) {
+        const items = lines
+          .map((l) => `<li class="text-ink-secondary leading-relaxed">${renderInline(l.replace(/^- /, ''))}</li>`)
+          .join('');
+        return `<ul class="list-disc pl-6 mb-4 space-y-1">${items}</ul>`;
+      }
+
+      if (isOrdered) {
+        const items = lines
+          .map((l) => `<li class="text-ink-secondary leading-relaxed">${renderInline(l.replace(/^\d+\.\s/, ''))}</li>`)
+          .join('');
+        return `<ol class="list-decimal pl-6 mb-4 space-y-1">${items}</ol>`;
+      }
+
+      // Mixed: paragraph text followed by list items
+      const listStart = lines.findIndex((l) => l.startsWith('- '));
+      if (listStart > 0) {
+        const textPart = `<p class="text-ink-secondary leading-relaxed mb-4">${renderInline(lines.slice(0, listStart).join(' '))}</p>`;
+        const listItems = lines
+          .slice(listStart)
+          .map((l) => `<li class="text-ink-secondary leading-relaxed">${renderInline(l.replace(/^- /, ''))}</li>`)
+          .join('');
+        return `${textPart}<ul class="list-disc pl-6 mb-4 space-y-1">${listItems}</ul>`;
+      }
+
+      // Regular paragraph
+      return `<p class="text-ink-secondary leading-relaxed mb-4">${renderInline(lines.join(' '))}</p>`;
+    })
+    .join('');
+}
+
+const renderedAnswer = renderAnswer(faq.answer);
+---
+
+<BaseLayout
+  title={faq.question}
+  description={metaDescription}
+  path={`/faq/${faq.slug}/`}
+  schema={faqSchema}
+>
+  <!-- ── Hero ── -->
+  <section class="relative bg-[#18181B] pt-32 pb-14 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div class="absolute top-20 left-1/4 w-72 h-72 bg-brand-green/10 rounded-full blur-[120px]"></div>
+    <div class="relative max-w-4xl mx-auto px-6">
+
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-sm text-slate-400 mb-6">
+        <a href="/faq/" class="hover:text-brand-green transition-colors">FAQ</a>
+        <!-- chevron-right icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+        <span class="text-slate-300 line-clamp-1">{faq.question}</span>
+      </nav>
+
+      <span class="inline-flex text-xs font-display font-medium px-3 py-1.5 rounded-full mb-4 bg-brand-green/10 text-brand-green border border-brand-green/20">
+        {categoryLabels[faq.category] ?? faq.category}
+      </span>
+
+      <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+        {faq.question}
+      </h1>
+    </div>
+  </section>
+
+  <!-- ── Content + Sidebar ── -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+
+        <!-- Main Content -->
+        <article class="reveal">
+          <div
+            class="prose prose-lg max-w-none
+              prose-headings:font-display prose-headings:font-bold prose-headings:text-ink
+              prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+              prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+              prose-p:text-ink-secondary prose-p:leading-relaxed prose-p:mb-4
+              prose-li:text-ink-secondary
+              prose-a:text-brand-green-dark prose-a:no-underline hover:prose-a:underline
+              prose-strong:text-ink prose-strong:font-semibold
+              prose-ol:pl-6 prose-ul:pl-6"
+            set:html={renderedAnswer}
+          />
+
+          <!-- Back Link -->
+          <div class="mt-10 pt-6 border-t border-slate-200">
+            <a
+              href="/faq/"
+              class="inline-flex items-center gap-2 text-sm font-display font-medium text-brand-green-dark hover:text-brand-green transition-colors"
+            >
+              <!-- arrow-left icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 19-7-7 7-7"/>
+                <path d="M19 12H5"/>
+              </svg>
+              Back to All Questions
+            </a>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-32 space-y-6">
+
+            <!-- CTA Card -->
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-950 text-white">
+              <h3 class="font-display text-lg font-bold mb-2">Try Scrubby Free</h3>
+              <p class="text-sm text-slate-300 mb-4">
+                Validate your catch-all emails with 98.7% accuracy. Start with 100 free credits.
+              </p>
+              <a
+                href="https://app.scrubby.io"
+                class="btn-primary w-full justify-center text-sm"
+              >
+                Get Started Free
+                <!-- arrow-right icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"/>
+                  <path d="m12 5 7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Related Questions -->
+            {relatedQuestions.length > 0 && (
+              <div class="p-6 rounded-2xl bg-surface-secondary border border-slate-200">
+                <h3 class="font-display text-sm font-bold text-ink mb-4">Related Questions</h3>
+                <div class="space-y-4">
+                  {relatedQuestions.map((rq) => (
+                    <a href={`/faq/${rq.slug}/`} class="block group">
+                      <h4 class="font-display text-sm font-medium text-ink group-hover:text-brand-green-dark transition-colors line-clamp-2 mb-1">
+                        {rq.question}
+                      </h4>
+                      <span class="text-xs text-ink-tertiary">
+                        {categoryLabels[rq.category]}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Bottom CTA ── -->
+  <section class="py-20 bg-[#18181B] relative overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-20"></div>
+    <div class="absolute top-10 right-1/4 w-60 h-60 bg-brand-green/10 rounded-full blur-[100px]"></div>
+    <div class="relative max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+        Ready to Validate Your Emails?
+      </h2>
+      <p class="text-slate-300 mb-8">Start with 100 free credits. No credit card required.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://app.scrubby.io" class="btn-primary">
+          Start Free
+          <!-- arrow-right icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="/how-it-works/" class="btn-secondary-dark">How It Works</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

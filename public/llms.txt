@@ -1,0 +1,45 @@
+# Scrubby — Email Validation for Risky & Catch-All Emails
+
+> For full product documentation see: https://scrubby.io/llms-full.txt
+
+## What it does
+Scrubby validates catch-all and risky emails that standard SMTP verification tools cannot resolve. Using deep inbox-level testing over 48-72 hours, Scrubby gives definitive valid/invalid results with 98.7% accuracy, recovering up to 42% more usable leads from your email lists.
+
+## Key Features
+- Risky/Catch-All Email Validation — validates emails that ZeroBounce, NeverBounce, and similar tools mark as "Accept-All" or "Risky"
+- Bulk Email List Cleaning — upload CSV lists for batch processing
+- Blacklist Monitor — monitor domains and IPs against 100+ blacklists
+- Email Testing — test deliverability, spam scores, and inbox placement
+- API & Integrations — REST API plus integrations with Clay, Zapier, HubSpot, Salesforce, Pipedrive, Instantly, SmartLead
+
+## How it works
+1. Run your list through any SMTP verification tool (ZeroBounce, NeverBounce, MillionVerifier, etc.)
+2. Export the "Risky" / "Catch-All" / "Accept-All" segment
+3. Upload that segment to Scrubby
+4. Scrubby performs inbox-level validation over 48-72 hours
+5. Get definitive Valid / Invalid results — no more grey area
+
+## Pricing
+- Free: 100 validation credits (no credit card required)
+- Starter: $27/mo — 1,000 credits
+- Basic: $127/mo — 5,000 credits
+- Growth: $247/mo — 10,000 credits
+- Enterprise: Custom pricing — contact sales
+
+## Integrations
+Clay, Zapier, HubSpot, Salesforce, Pipedrive, Mailchimp, Instantly, SmartLead, ZeroBounce, NeverBounce, MillionVerifier, BriteVerify, Bouncer, Debounce, Hunter.io
+
+## Company
+- Founded: 2020
+- Founders: Erik Paulson, Anirudh Kaushal
+- HQ: Tallinn, Estonia (with teams in India and US)
+- G2 Rating: 4.85/5 (120+ reviews)
+- GDPR Compliant
+
+## Contact
+- Website: https://scrubby.io
+- App: https://app.scrubby.io
+- Email: hello@scrubby.io
+- Support: support@scrubby.io
+- LinkedIn: https://www.linkedin.com/company/scrubbyio
+- Twitter: https://twitter.com/scrubbyio

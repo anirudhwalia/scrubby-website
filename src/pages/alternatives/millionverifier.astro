@@ -1,0 +1,362 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const comparisonRows = [
+  { feature: 'Primary Focus', millionverifier: 'Bulk email list verification & cleaning', scrubby: 'Risky / catch-all email validation' },
+  { feature: 'Accuracy Rate', millionverifier: '99%+ deliverability guarantee', scrubby: '98.7% deliverability on risky emails' },
+  { feature: 'Processing Speed', millionverifier: 'Fast bulk processing (minutes)', scrubby: '48-72 hours (deep inbox-level checks)' },
+  { feature: 'Pricing', millionverifier: 'Affordable bulk rates from $29', scrubby: 'Starting at $27/mo, 100 free credits' },
+  { feature: 'Catch-All Handling', millionverifier: 'Flags as risky / unknown', scrubby: 'Validates each catch-all address individually' },
+  { feature: 'Verification Method', millionverifier: 'SMTP checks + pattern detection', scrubby: 'Deep inbox-level validation probes' },
+  { feature: 'Result Categories', millionverifier: 'Good / Risky / Bad / Unknown', scrubby: 'Valid / Invalid (definitive results)' },
+  { feature: 'Best For', millionverifier: 'Fast, affordable bulk list cleaning', scrubby: 'Recovering leads from risky segments' },
+];
+
+const keyDifferences = [
+  {
+    title: 'Risky Email Resolution',
+    description: 'MillionVerifier identifies risky and unknown emails during bulk verification but cannot resolve them further. Scrubby takes those flagged addresses and performs deep inbox-level validation to deliver definitive valid or invalid results.',
+    icon: 'barchart',
+  },
+  {
+    title: 'Speed vs Precision',
+    description: 'MillionVerifier processes lists in minutes with fast SMTP-level checks, ideal for rapid bulk cleaning. Scrubby takes 48-72 hours but reaches deeper into catch-all domains where quick checks cannot determine deliverability.',
+    icon: 'clock',
+  },
+  {
+    title: 'Affordable + Accurate',
+    description: 'MillionVerifier offers some of the most competitive bulk verification pricing available. Combined with Scrubby, you get affordable initial cleaning plus deep validation of the risky segment, maximizing ROI on every list.',
+    icon: 'filecheck',
+  },
+];
+
+const workflowSteps = [
+  {
+    step: '01',
+    title: 'Verify with MillionVerifier',
+    description: 'Upload your email list to MillionVerifier for fast, affordable bulk verification. Remove invalid and bad emails instantly.',
+    icon: 'refreshcw',
+  },
+  {
+    step: '02',
+    title: 'Export Risky / Unknown',
+    description: 'Filter and export the risky, unknown, and catch-all emails that MillionVerifier flagged but could not definitively verify.',
+    icon: 'arrowdownright',
+  },
+  {
+    step: '03',
+    title: 'Scrubby Validates',
+    description: 'Send the risky segment to Scrubby for deep inbox-level validation. Within 48-72 hours, get definitive valid or invalid results.',
+    icon: 'shield',
+  },
+  {
+    step: '04',
+    title: 'Deploy Clean List',
+    description: 'Merge MillionVerifier verified emails with Scrubby-validated leads. Launch campaigns with maximum deliverability and zero wasted contacts.',
+    icon: 'sparkles',
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Scrubby vs MillionVerifier — Email Validation Comparison",
+  "description": "Compare Scrubby and MillionVerifier for email validation. See how Scrubby complements MillionVerifier to validate catch-all and risky emails with 98.7% accuracy.",
+  "url": "https://scrubby.io/alternatives/millionverifier"
+};
+---
+
+<BaseLayout
+  title="Scrubby vs MillionVerifier — Email Validation Comparison"
+  description="Compare Scrubby and MillionVerifier for email validation. See how Scrubby complements MillionVerifier to validate catch-all and risky emails with 98.7% accuracy."
+  path="/alternatives/millionverifier"
+  schema={schema}
+>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-28 overflow-hidden" style="background: #18181B;">
+    <div
+      class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+          <!-- Zap icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Scrubby + MillionVerifier
+        </div>
+
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">MillionVerifier + Scrubby: </span>
+          <span class="text-gradient-light">Better Together</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+          MillionVerifier delivers fast, affordable bulk verification. Scrubby picks up the risky
+          and unknown emails it flags, turning unresolved contacts into verified leads.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Try Scrubby Free
+            <!-- ArrowRight icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/how-it-works" class="btn-secondary-dark text-base px-8 py-4">
+            How It Works
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       COMPARISON TABLE SECTION
+       ═══════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Layers icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          Feature Comparison
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          How They <span class="text-gradient">Compare</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          MillionVerifier and Scrubby handle different stages of email validation.
+          Here is a side-by-side look at what each tool does best.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div class="card overflow-hidden">
+          <!-- Table Header -->
+          <div class="grid grid-cols-3 border-b border-surface-border">
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider">
+              Feature
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider text-center bg-surface-secondary/50">
+              MillionVerifier
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 uppercase tracking-wider text-center" style="background: rgba(45,206,142,0.05); color: #1BA872;">
+              Scrubby
+            </div>
+          </div>
+
+          <!-- Table Rows -->
+          {comparisonRows.map((row, i) => (
+            <div class={`grid grid-cols-3 ${i < comparisonRows.length - 1 ? 'border-b border-surface-border/50' : ''} hover:bg-surface-secondary/30 transition-colors`}>
+              <div class="px-6 py-4 text-sm font-display font-600 text-ink">
+                {row.feature}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center bg-surface-secondary/20">
+                {row.millionverifier}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center" style="background: rgba(45,206,142,0.02);">
+                {row.scrubby}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       KEY DIFFERENCES SECTION
+       ═══════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="divider mb-24"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Target icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          Key Differences
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          What Sets Them <span class="text-gradient">Apart</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Understanding the core differences helps you use both tools effectively
+          to maximize your email deliverability and list value.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {keyDifferences.map((diff, i) => (
+          <div class="card p-8 reveal group" style={`transition-delay: ${i * 0.1}s;`}>
+            <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center mb-6 group-hover:shadow-green-glow transition-shadow duration-300">
+              {diff.icon === 'barchart' && (
+                <!-- BarChart3 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              )}
+              {diff.icon === 'clock' && (
+                <!-- Clock icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              )}
+              {diff.icon === 'filecheck' && (
+                <!-- FileCheck icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
+              )}
+            </div>
+            <h3 class="font-display font-700 text-xl text-ink mb-3">
+              {diff.title}
+            </h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              {diff.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="divider mt-24"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       RECOMMENDED WORKFLOW SECTION
+       ═══════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- RefreshCw icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          Recommended Workflow
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Use Them <span class="text-gradient">Together</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Combine MillionVerifier's affordable bulk cleaning with Scrubby's deep risky email validation
+          for maximum list quality at the best price.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {workflowSteps.map((step, i) => (
+          <div class="card p-7 reveal text-center relative group" style={`transition-delay: ${i * 0.1}s;`}>
+            <!-- Step number -->
+            <div class="text-5xl font-display font-800 text-surface-tertiary mb-4 group-hover:text-brand-green/20 transition-colors duration-300">
+              {step.step}
+            </div>
+
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-4">
+              {step.icon === 'refreshcw' && (
+                <!-- RefreshCw icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              )}
+              {step.icon === 'arrowdownright' && (
+                <!-- ArrowDownRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><line x1="7" y1="7" x2="17" y2="17"/><polyline points="17 7 17 17 7 17"/></svg>
+              )}
+              {step.icon === 'shield' && (
+                <!-- Shield icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              )}
+              {step.icon === 'sparkles' && (
+                <!-- Sparkles icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M12 3 9.5 9.5 3 12l6.5 2.5L12 21l2.5-6.5L21 12l-6.5-2.5z"/><path d="M5 3v4"/><path d="M3 5h4"/><path d="M19 17v4"/><path d="M17 19h4"/></svg>
+              )}
+            </div>
+
+            <h3 class="font-display font-700 text-lg text-ink mb-2">
+              {step.title}
+            </h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              {step.description}
+            </p>
+
+            <!-- Connector arrow (not on last) -->
+            {i < workflowSteps.length - 1 && (
+              <div class="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-muted"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden bg-white">
+    <div class="divider mb-24"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="reveal">
+        <div class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden" style="background: #18181B;">
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+          <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+          <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+          <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- Zap icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Get Started
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Try Scrubby <span class="text-gradient-light">Free</span>
+            </h2>
+
+            <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+              Start with 100 free credits. Upload your MillionVerifier risky segment and see
+              how many verified leads you can recover from those unknown emails.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+                Start Free Trial
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+                View Pricing
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                100 Free Credits
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                No Credit Card Required
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                98.7% Accuracy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

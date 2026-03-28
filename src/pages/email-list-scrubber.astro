@@ -1,0 +1,430 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const howSteps = [
+  {
+    number: '01',
+    title: 'Upload Your List',
+    description:
+      'Upload your email list via CSV or connect directly through one of our many integrations. Support for files up to 1M+ contacts.',
+    icon: 'upload',
+  },
+  {
+    number: '02',
+    title: 'Scrub & Validate',
+    description:
+      'Scrubby deep-cleans your list by removing invalid, disposable, role-based, and risky addresses using multi-layer verification.',
+    icon: 'refresh',
+  },
+  {
+    number: '03',
+    title: 'Download Clean List',
+    description:
+      'Download your scrubbed list as a CSV or sync directly to your tools. Only verified, deliverable emails remain.',
+    icon: 'download',
+  },
+];
+
+const features = [
+  {
+    iconBg: 'bg-red-50',
+    iconColor: 'text-red-400',
+    icon: 'xcircle',
+    title: 'Invalid Email Detection',
+    description: "Identifies and removes emails that don't exist or can't receive messages.",
+  },
+  {
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-500',
+    icon: 'trash',
+    title: 'Disposable Email Removal',
+    description: 'Filters out temporary and throwaway email addresses.',
+  },
+  {
+    iconBg: 'bg-purple-50',
+    iconColor: 'text-purple-500',
+    icon: 'users',
+    title: 'Role-Based Email Filtering',
+    description: 'Flags role-based addresses like info@, admin@, support@.',
+  },
+  {
+    iconBg: 'bg-brand-green-bg',
+    iconColor: 'text-brand-green-dark',
+    icon: 'search',
+    title: 'Catch-All Validation',
+    description: 'Goes beyond standard checks to validate catch-all/accept-all domains.',
+  },
+  {
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-500',
+    icon: 'copy',
+    title: 'Duplicate Removal',
+    description: 'Automatically detects and removes duplicate entries from your list.',
+  },
+  {
+    iconBg: 'bg-teal-50',
+    iconColor: 'text-teal-500',
+    icon: 'barchart',
+    title: 'Detailed Reporting',
+    description: 'Get comprehensive reports with validation status for every email.',
+  },
+];
+
+const stats = [
+  { value: '98.7%', label: 'Accuracy', icon: 'check' },
+  { value: '42%',   label: 'More Leads Recovered', icon: 'trending' },
+  { value: '<2%',   label: 'Bounce Rate', icon: 'barchart' },
+];
+---
+
+<BaseLayout
+  title="Email List Scrubber"
+  description="Deep-clean your email lists by scrubbing invalid, disposable, role-based, and risky addresses. Protect your sender reputation with Scrubby."
+  path="/email-list-scrubber"
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-28 overflow-hidden" style="background:#18181B">
+    <!-- Background blobs -->
+    <div class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+         style="background:rgba(45,206,142,0.08)"></div>
+    <div class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+         style="background:rgba(45,206,142,0.05);animation-delay:2s"></div>
+    <div class="absolute w-[300px] h-[300px] bottom-0 left-1/3 rounded-full blur-3xl animate-pulse"
+         style="background:rgba(245,166,35,0.04);animation-delay:3s"></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+          <!-- sparkles -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/>
+            <path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"/>
+            <path d="M19 2l.5 1.5L21 4l-1.5.5L19 6l-.5-1.5L17 4l1.5-.5L19 2z"/>
+          </svg>
+          Email List Scrubber
+        </div>
+
+        <!-- Heading -->
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Deep-Clean Your Email Lists with </span>
+          <span class="text-gradient-light">Scrubby</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+          Remove invalid, disposable, role-based, and risky addresses from your
+          email lists. Protect your sender reputation and maximize deliverability.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Start Scrubbing
+            <!-- arrow-right -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+            View Pricing
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HOW IT WORKS
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- zap -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          How It Works
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Three simple <span class="text-gradient">steps</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Scrubbing your email list takes minutes, not hours. Upload, scrub, and download.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {howSteps.map((step, i) => (
+          <div class="relative reveal" style={`transition-delay:${i * 0.15}s`}>
+
+            <!-- Connector line (desktop) -->
+            {i < howSteps.length - 1 && (
+              <div class="hidden md:block absolute top-12 left-[calc(50%+40px)] w-[calc(100%-80px)] h-px bg-gradient-to-r from-brand-green/30 to-brand-green/10"></div>
+            )}
+
+            <div class="glass-card p-8 text-center h-full">
+
+              <!-- Step number -->
+              <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-green/10 border border-brand-green/20 mb-5">
+                <span class="text-xs font-display font-700 text-brand-green">{step.number}</span>
+              </div>
+
+              <!-- Icon -->
+              <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-green-bg flex items-center justify-center mb-5">
+                {step.icon === 'upload' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                )}
+                {step.icon === 'refresh' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                    <polyline points="23 4 23 10 17 10"/>
+                    <polyline points="1 20 1 14 7 14"/>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                  </svg>
+                )}
+                {step.icon === 'download' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                )}
+              </div>
+
+              <h3 class="font-display font-700 text-lg text-ink mb-3">{step.title}</h3>
+              <p class="text-sm text-ink-tertiary leading-relaxed font-body">{step.description}</p>
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FEATURES
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- shield -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Features
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Everything you need to <span class="text-gradient">scrub your lists</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Scrubby goes beyond basic verification. Every email in your list is
+          checked against multiple layers of validation to ensure maximum list hygiene.
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {features.map((feature, i) => (
+          <div class="glass-card p-8 reveal group" style={`transition-delay:${i * 0.08}s`}>
+
+            <div class={`w-14 h-14 rounded-2xl ${feature.iconBg} flex items-center justify-center mb-6 group-hover:shadow-lg transition-shadow duration-300`}>
+              {feature.icon === 'xcircle' && (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={feature.iconColor}>
+                  <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+              )}
+              {feature.icon === 'trash' && (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={feature.iconColor}>
+                  <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                </svg>
+              )}
+              {feature.icon === 'users' && (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={feature.iconColor}>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              )}
+              {feature.icon === 'search' && (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={feature.iconColor}>
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              )}
+              {feature.icon === 'copy' && (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={feature.iconColor}>
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+              )}
+              {feature.icon === 'barchart' && (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={feature.iconColor}>
+                  <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              )}
+            </div>
+
+            <h3 class="font-display font-700 text-lg text-ink mb-3">{feature.title}</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">{feature.description}</p>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       WHY SCRUB (STATS)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- trending-up -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+          </svg>
+          Proven Results
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Why Scrub Your <span class="text-gradient">Email List?</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Dirty lists damage your sender reputation, waste your budget, and
+          kill campaign performance. Scrubby ensures every email you send reaches
+          a real inbox.
+        </p>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto reveal">
+        {stats.map((stat, i) => (
+          <div class="glass-card p-8 text-center" style={`transition-delay:${i * 0.1}s`}>
+
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-brand-green-bg mb-4">
+              {stat.icon === 'check' && (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              )}
+              {stat.icon === 'trending' && (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                </svg>
+              )}
+              {stat.icon === 'barchart' && (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              )}
+            </div>
+
+            <div class="font-display font-800 text-4xl text-ink mb-2">{stat.value}</div>
+            <p class="text-sm text-ink-tertiary font-display font-500">{stat.label}</p>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden" style="background:#18181B">
+    <!-- Background -->
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div class="absolute w-[500px] h-[500px] -bottom-40 -right-40 rounded-full blur-3xl animate-pulse"
+         style="background:rgba(45,206,142,0.06)"></div>
+    <div class="absolute w-[400px] h-[400px] -top-20 -left-20 rounded-full blur-3xl animate-pulse"
+         style="background:rgba(45,206,142,0.04);animation-delay:2s"></div>
+
+    <!-- Decorative dots -->
+    <div class="absolute top-12 left-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+    <div class="absolute top-20 right-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:1s"></div>
+    <div class="absolute bottom-20 left-1/4 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:2s"></div>
+    <div class="absolute bottom-12 right-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:0.5s"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div class="reveal">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+          <!-- sparkles -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/>
+            <path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"/>
+            <path d="M19 2l.5 1.5L21 4l-1.5.5L19 6l-.5-1.5L17 4l1.5-.5L19 2z"/>
+          </svg>
+          Get Started
+        </div>
+
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+          Start Scrubbing Your <span class="text-gradient-light">List Today</span>
+        </h2>
+
+        <p class="text-lg text-slate-300 leading-relaxed mb-10 font-body">
+          Get started with 100 free credits. No credit card required.
+          See the difference a clean list makes in your next campaign.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Start Scrubbing
+            <!-- arrow-right -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+            View Pricing
+          </a>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap items-center justify-center gap-6 mt-10 text-xs text-slate-400 font-display font-500">
+          <div class="flex items-center gap-1.5">
+            <!-- check-circle -->
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            100 Free Credits
+          </div>
+          <div class="flex items-center gap-1.5">
+            <!-- shield -->
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            No Credit Card Required
+          </div>
+          <div class="flex items-center gap-1.5">
+            <!-- zap -->
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Results in Minutes
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

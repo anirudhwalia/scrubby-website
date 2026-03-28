@@ -1,0 +1,408 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const comparisonRows = [
+  { feature: 'Primary Focus', cognism: 'B2B data intelligence & contact data', scrubby: 'Risky / catch-all email validation' },
+  { feature: 'Data Offering', cognism: 'Phone-verified mobile numbers + emails', scrubby: 'Deep email validation for risky addresses' },
+  { feature: 'Verification Method', cognism: 'Diamond Data (phone verification)', scrubby: 'Inbox-level catch-all validation' },
+  { feature: 'Compliance', cognism: 'GDPR-compliant B2B database', scrubby: 'GDPR compliant, data encryption' },
+  { feature: 'Confidence Scoring', cognism: 'High / Medium / Low confidence levels', scrubby: 'Valid / Invalid (definitive results)' },
+  { feature: 'Processing Speed', cognism: 'Real-time data access', scrubby: '48-72 hours (deep inbox checks)' },
+  { feature: 'Pricing Model', cognism: 'Enterprise annual contracts', scrubby: 'Starting at $27/mo, 100 free credits' },
+  { feature: 'Best For', cognism: 'Contact data enrichment & discovery', scrubby: 'Validating low-confidence emails' },
+];
+
+const keyDifferences = [
+  {
+    icon: 'phone',
+    title: 'Data Intelligence vs Validation',
+    description: 'Cognism is a B2B data intelligence platform that provides phone-verified contacts with Diamond Data accuracy. Scrubby is a specialized validation tool that takes the emails Cognism marks with low confidence and verifies them at the inbox level.',
+  },
+  {
+    icon: 'user-check',
+    title: 'Confidence Score Resolution',
+    description: 'Cognism assigns confidence scores to contact data, categorizing emails as high, medium, or low confidence. Scrubby resolves those low-confidence emails into definitive valid or invalid results, ensuring no good lead is left behind.',
+  },
+  {
+    icon: 'database',
+    title: 'Enterprise vs Accessible',
+    description: 'Cognism targets enterprise teams with comprehensive data packages and annual contracts. Scrubby offers accessible pricing starting at $27/month with 100 free credits, making it easy to validate any batch of uncertain emails.',
+  },
+];
+
+const workflowSteps = [
+  {
+    step: '01',
+    icon: 'database',
+    title: 'Enrich with Cognism',
+    description: 'Use Cognism to build and enrich your contact database with phone-verified numbers, emails, and company data from their GDPR-compliant database.',
+  },
+  {
+    step: '02',
+    icon: 'arrow-down-right',
+    title: 'Filter Low-Confidence',
+    description: 'Export the emails Cognism flagged with low or medium confidence scores. These are the contacts that need additional verification.',
+  },
+  {
+    step: '03',
+    icon: 'shield',
+    title: 'Validate with Scrubby',
+    description: 'Upload the low-confidence emails to Scrubby for deep inbox-level validation. Within 48-72 hours, get definitive valid or invalid results.',
+  },
+  {
+    step: '04',
+    icon: 'sparkles',
+    title: 'Recover Hidden Leads',
+    description: 'Merge Scrubby-validated contacts back into your CRM. Recover leads that would otherwise be discarded and expand your reachable pipeline.',
+  },
+];
+---
+
+<BaseLayout
+  title="Scrubby vs Cognism — Email Validation Comparison"
+  description="Compare Scrubby and Cognism for email validation. See how Scrubby complements Cognism to validate catch-all and risky emails with 98.7% accuracy."
+  path="/alternatives/cognism"
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-28 overflow-hidden" style="background: #18181B;">
+    <div
+      class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+          <!-- Zap icon -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Scrubby vs Cognism
+        </div>
+
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Cognism + Scrubby: </span>
+          <span class="text-gradient-light">Recover Every Lead</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+          Cognism provides premium B2B contact data with confidence scores.
+          Scrubby validates the low-confidence emails Cognism cannot verify, recovering leads others miss.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Try Scrubby Free
+            <!-- ArrowRight icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="/how-it-works" class="btn-secondary-dark text-base px-8 py-4">
+            How It Works
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       COMPARISON TABLE SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Layers icon -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          Feature Comparison
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          How They <span class="text-gradient">Compare</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Cognism provides B2B intelligence while Scrubby specializes in validating uncertain emails.
+          Here is how their capabilities complement each other.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div class="card overflow-hidden">
+          <!-- Table Header -->
+          <div class="grid grid-cols-3 border-b border-surface-border">
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider">
+              Feature
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider text-center bg-surface-secondary/50">
+              Cognism
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 uppercase tracking-wider text-center" style="background: rgba(45,206,142,0.05); color: #1BA872;">
+              Scrubby
+            </div>
+          </div>
+
+          <!-- Table Rows -->
+          {comparisonRows.map((row, i) => (
+            <div class={`grid grid-cols-3 ${i < comparisonRows.length - 1 ? 'border-b border-surface-border/50' : ''} hover:bg-surface-secondary/30 transition-colors`}>
+              <div class="px-6 py-4 text-sm font-display font-600 text-ink">
+                {row.feature}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center bg-surface-secondary/20">
+                {row.cognism}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center" style="background: rgba(45,206,142,0.02);">
+                {row.scrubby}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       KEY DIFFERENCES SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="divider mb-24"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Target icon -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+          Key Differences
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          What Sets Them <span class="text-gradient">Apart</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Cognism and Scrubby serve fundamentally different purposes in your sales stack.
+          Together, they ensure no valid contact slips through the cracks.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {keyDifferences.map((diff, i) => (
+          <div class="card p-8 reveal group" style={`transition-delay: ${i * 0.1}s;`}>
+            <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center mb-6 group-hover:shadow-green-glow transition-shadow duration-300">
+              {diff.icon === 'phone' && (
+                <!-- Phone icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              )}
+              {diff.icon === 'user-check' && (
+                <!-- UserCheck icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <polyline points="16 11 18 13 22 9"></polyline>
+                </svg>
+              )}
+              {diff.icon === 'database' && (
+                <!-- Database icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              )}
+            </div>
+            <h3 class="font-display font-700 text-xl text-ink mb-3">
+              {diff.title}
+            </h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              {diff.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="divider mt-24"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RECOMMENDED WORKFLOW SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- RefreshCw icon -->
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          Recommended Workflow
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Use Them <span class="text-gradient">Together</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Pair Cognism&apos;s data intelligence with Scrubby&apos;s deep email validation
+          to maximize the value of every contact in your database.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {workflowSteps.map((step, i) => (
+          <div class="card p-7 reveal text-center relative group" style={`transition-delay: ${i * 0.1}s;`}>
+            <div class="text-5xl font-display font-800 text-surface-tertiary mb-4 group-hover:text-brand-green/20 transition-colors duration-300">
+              {step.step}
+            </div>
+
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-4">
+              {step.icon === 'database' && (
+                <!-- Database icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              )}
+              {step.icon === 'arrow-down-right' && (
+                <!-- ArrowDownRight icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <line x1="7" y1="7" x2="17" y2="17"></line>
+                  <polyline points="17 7 17 17 7 17"></polyline>
+                </svg>
+              )}
+              {step.icon === 'shield' && (
+                <!-- Shield icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              )}
+              {step.icon === 'sparkles' && (
+                <!-- Sparkles icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                  <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"></path>
+                  <path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"></path>
+                  <path d="M19 3l.75 2.25L22 6l-2.25.75L19 9l-.75-2.25L16 6l2.25-.75L19 3z"></path>
+                </svg>
+              )}
+            </div>
+
+            <h3 class="font-display font-700 text-lg text-ink mb-2">
+              {step.title}
+            </h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              {step.description}
+            </p>
+
+            {i < workflowSteps.length - 1 && (
+              <div class="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                <!-- ArrowRight icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-muted">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden bg-white">
+    <div class="divider mb-24"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="reveal">
+        <div class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden" style="background: #18181B;">
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+          <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+          <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+          <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- Zap icon -->
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              Get Started
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Try Scrubby <span class="text-gradient-light">Free</span>
+            </h2>
+
+            <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+              Start with 100 free credits. Validate the low-confidence emails from Cognism
+              and recover leads that would otherwise go unreached.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+                Start Free Trial
+                <!-- ArrowRight icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+                View Pricing
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                100 Free Credits
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                No Credit Card Required
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                98.7% Accuracy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

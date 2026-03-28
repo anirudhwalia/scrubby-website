@@ -1,0 +1,376 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const comparisonRows = [
+  { feature: 'Primary Focus', instantly: 'Cold email outreach at scale', scrubby: 'Risky / catch-all email validation' },
+  { feature: 'Core Strength', instantly: 'Unlimited accounts & smart sending', scrubby: '98.7% deliverability on risky emails' },
+  { feature: 'Email Warmup', instantly: 'Built-in warmup with smart rotation', scrubby: 'Not applicable (validation tool)' },
+  { feature: 'Email Verification', instantly: 'Basic built-in verification', scrubby: 'Deep inbox-level catch-all validation' },
+  { feature: 'Catch-All Handling', instantly: 'Flags but cannot resolve catch-alls', scrubby: 'Validates each catch-all individually' },
+  { feature: 'Campaign Analytics', instantly: 'Open, click, reply tracking', scrubby: 'Deliverability validation reports' },
+  { feature: 'Pricing', instantly: 'Plans from $30/mo', scrubby: 'Starting at $27/mo, 100 free credits' },
+  { feature: 'Best For', instantly: 'Scaling outreach with smart sending', scrubby: 'Preventing bounces before campaigns' },
+];
+
+const keyDifferences = [
+  {
+    title: 'Outreach vs Validation',
+    description: 'Instantly is built for scaling cold email with unlimited accounts, smart sending, and automatic warmup. Scrubby ensures every email loaded into Instantly is deliverable, preventing the bounces that undo your warmup progress.',
+    // Rocket icon
+    svgPath: 'M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5',
+  },
+  {
+    title: 'Warmup Protection',
+    description: 'Instantly invests significant effort warming up your sending accounts. Scrubby protects that investment by validating risky emails before they enter campaigns, preventing hard bounces that damage sender scores.',
+    // Shield icon
+    svgPath: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+  },
+  {
+    title: 'Beyond Basic Verification',
+    description: 'Instantly includes basic email verification, but catch-all domains remain unresolved. Scrubby goes deeper with inbox-level validation, turning those unknown catch-all emails into definitive valid or invalid results.',
+    // MailCheck icon
+    svgPath: 'M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8M2 8l10 7 10-7M16 19l2 2 4-4',
+  },
+];
+
+const workflowSteps = [
+  {
+    step: '01',
+    title: 'Build Your List',
+    description: 'Source prospects from your preferred data providers and compile your outreach list for upcoming campaigns.',
+    // Target icon
+    svgPath: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z',
+  },
+  {
+    step: '02',
+    title: 'Validate Risky Emails',
+    description: 'Send risky and catch-all emails to Scrubby for deep inbox-level validation. Get definitive results in 48-72 hours.',
+    // Shield icon
+    svgPath: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+  },
+  {
+    step: '03',
+    title: 'Load into Instantly',
+    description: 'Import your Scrubby-validated clean list into Instantly. Set up sequences, configure warmup, and prepare campaigns.',
+    // ArrowDownRight icon
+    svgPath: 'M7 7l10 10M17 7v10H7',
+  },
+  {
+    step: '04',
+    title: 'Send at Scale',
+    description: 'Launch campaigns in Instantly with confidence. Every email reaches a real inbox, protecting your sender reputation and warmup.',
+    // Sparkles icon
+    svgPath: 'M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0zM20 3v4M22 5h-4M4 17v2M5 18H3',
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Scrubby vs Instantly — Email Validation Comparison",
+    "description": "Compare Scrubby and Instantly for email validation. See how Scrubby complements Instantly to validate catch-all and risky emails with 98.7% accuracy.",
+    "url": "https://scrubby.io/alternatives/instantly",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scrubby.io" },
+      { "@type": "ListItem", "position": 2, "name": "Alternatives", "item": "https://scrubby.io/alternatives" },
+      { "@type": "ListItem", "position": 3, "name": "Instantly", "item": "https://scrubby.io/alternatives/instantly" },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Scrubby vs Instantly — Email Validation Comparison"
+  description="Compare Scrubby and Instantly for email validation. See how Scrubby complements Instantly to validate catch-all and risky emails with 98.7% accuracy."
+  path="/alternatives/instantly"
+  schema={schema}
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-28 overflow-hidden" style="background: #18181B;">
+    <div
+      class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+          <!-- Zap icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          Scrubby + Instantly
+        </div>
+
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Instantly + Scrubby: </span>
+          <span class="text-gradient-light">Better Together</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+          Instantly sends your cold emails at scale. Scrubby validates the risky catch-all
+          emails before they enter your campaigns, preventing bounces that hurt deliverability.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Try Scrubby Free
+            <!-- ArrowRight icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/how-it-works" class="btn-secondary-dark text-base px-8 py-4">
+            How It Works
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       COMPARISON TABLE SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Layers icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Feature Comparison
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          How They <span class="text-gradient">Compare</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Instantly is a cold email sending platform while Scrubby is an email validation specialist.
+          They serve different but complementary roles in your outreach stack.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div class="card overflow-hidden">
+          <!-- Table Header -->
+          <div class="grid grid-cols-3 border-b border-surface-border">
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider">
+              Feature
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider text-center bg-surface-secondary/50">
+              Instantly
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 uppercase tracking-wider text-center" style="background: rgba(45,206,142,0.05); color: #1BA872;">
+              Scrubby
+            </div>
+          </div>
+
+          <!-- Table Rows -->
+          {comparisonRows.map((row, i) => (
+            <div class={`grid grid-cols-3 ${i < comparisonRows.length - 1 ? 'border-b border-surface-border/50' : ''} hover:bg-surface-secondary/30 transition-colors`}>
+              <div class="px-6 py-4 text-sm font-display font-600 text-ink">
+                {row.feature}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center bg-surface-secondary/20">
+                {row.instantly}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center" style="background: rgba(45,206,142,0.02);">
+                {row.scrubby}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       KEY DIFFERENCES SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="divider mb-24"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Target icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+          </svg>
+          Key Differences
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          What Sets Them <span class="text-gradient">Apart</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Instantly and Scrubby are different tools that work powerfully together.
+          Understanding their strengths helps you maximize every campaign.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {keyDifferences.map((diff, i) => (
+          <div class="card p-8 reveal group" style={`transition-delay: ${i * 0.1}s;`}>
+            <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center mb-6 group-hover:shadow-green-glow transition-shadow duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                <path d={diff.svgPath}/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-xl text-ink mb-3">
+              {diff.title}
+            </h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              {diff.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="divider mt-24"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RECOMMENDED WORKFLOW SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- RefreshCw icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>
+          </svg>
+          Recommended Workflow
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Use Them <span class="text-gradient">Together</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Validate risky emails with Scrubby before loading them into Instantly.
+          Protect your sender reputation and maximize campaign performance.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {workflowSteps.map((step, i) => (
+          <div class="card p-7 reveal text-center relative group" style={`transition-delay: ${i * 0.1}s;`}>
+            <div class="text-5xl font-display font-800 text-surface-tertiary mb-4 group-hover:text-brand-green/20 transition-colors duration-300">
+              {step.step}
+            </div>
+
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                <path d={step.svgPath}/>
+              </svg>
+            </div>
+
+            <h3 class="font-display font-700 text-lg text-ink mb-2">
+              {step.title}
+            </h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+              {step.description}
+            </p>
+
+            {i < workflowSteps.length - 1 && (
+              <div class="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-muted" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden bg-white">
+    <div class="divider mb-24"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="reveal">
+        <div class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden" style="background: #18181B;">
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+          <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+          <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+          <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- Zap icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+              Get Started
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Try Scrubby <span class="text-gradient-light">Free</span>
+            </h2>
+
+            <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+              Start with 100 free credits. Validate your risky emails before loading them
+              into Instantly and launch campaigns with total confidence.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+                Start Free Trial
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+                View Pricing
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+                100 Free Credits
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+                No Credit Card Required
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+                98.7% Accuracy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

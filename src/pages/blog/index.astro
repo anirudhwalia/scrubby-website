@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogListPage from '../../page-components/BlogListPage.jsx';
+---
+
+<BaseLayout
+  title="Blog — Email Validation Insights & Tips"
+  description="Expert insights on email validation, catch-all emails, deliverability strategies, and cold email best practices from the Scrubby team."
+  path="/blog/"
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Scrubby Blog',
+    description: 'Expert insights on email validation, catch-all emails, deliverability strategies, and cold email best practices.',
+    url: 'https://scrubby.io/blog/',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Scrubby',
+      logo: { '@type': 'ImageObject', url: 'https://scrubby.io/logos/scrubby-logo.svg' },
+    },
+  }}
+>
+  <BlogListPage client:load />
+</BaseLayout>

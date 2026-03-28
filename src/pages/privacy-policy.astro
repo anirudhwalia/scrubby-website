@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  { id: 'consent', title: 'Consent' },
+  { id: 'information-we-collect', title: 'Information We Collect' },
+  { id: 'how-we-use-information', title: 'How We Use Information' },
+  { id: 'log-files', title: 'Log Files' },
+  { id: 'cookies', title: 'Cookies' },
+  { id: 'third-party-privacy-policies', title: 'Third-Party Privacy Policies' },
+  { id: 'ccpa-privacy-rights', title: 'CCPA Privacy Rights' },
+  { id: 'gdpr-data-protection-rights', title: 'GDPR Data Protection Rights' },
+  { id: 'childrens-information', title: "Children's Information" },
+  { id: 'changes-to-policy', title: 'Changes to This Policy' },
+  { id: 'contact-us', title: 'Contact Us' },
+];
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="Scrubby's privacy policy. Learn how we collect, use, and protect your data."
+  path="/privacy-policy"
+  noindex={true}
+>
+  {/* ── Hero ── */}
+  <section class="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div
+      class="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+          Privacy Policy
+        </h1>
+        <p class="text-slate-300 text-lg max-w-xl mx-auto font-body">
+          Last updated: January 2024
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Content ── */}
+  <section class="relative py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      {/* Table of Contents */}
+      <div class="reveal mb-12 p-6 rounded-xl bg-surface-secondary border border-surface-border">
+        <h2 class="font-display font-bold text-lg text-ink mb-4">
+          Table of Contents
+        </h2>
+        <nav class="grid sm:grid-cols-2 gap-2">
+          {sections.map((section, i) => (
+            <a
+              href={`#${section.id}`}
+              class="flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+            >
+              <span class="text-xs text-ink-tertiary font-display font-500 w-5">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              {section.title}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      {/* Intro */}
+      <div class="reveal mb-12">
+        <p class="text-ink-secondary leading-relaxed font-body">
+          This Privacy Policy describes how Scrubby O&Uuml; (&quot;Scrubby,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
+          collects, uses, and shares information when you visit or use our website at scrubby.io. This policy applies to
+          all visitors, users, and others who access or use the website.
+        </p>
+      </div>
+
+      {/* ── Sections ── */}
+      <div class="space-y-12 reveal">
+
+        {/* 1. Consent */}
+        <div id="consent">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            1. Consent
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            By using our website, you hereby consent to our Privacy Policy and agree to its terms. Your continued use
+            of the website following the posting of changes to this policy will be deemed your acceptance of those changes.
+          </p>
+        </div>
+
+        {/* 2. Information We Collect */}
+        <div id="information-we-collect">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            2. Information We Collect
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            We collect personal information that you voluntarily provide to us when you register on the website, express
+            an interest in obtaining information about us or our products and services, or otherwise contact us. The
+            personal information we collect may include:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+            <li>Name and contact details (email address, phone number)</li>
+            <li>Company name and job title</li>
+            <li>Account credentials (username and password)</li>
+            <li>Billing and payment information</li>
+            <li>Any other information you choose to provide during registration or communication</li>
+          </ul>
+        </div>
+
+        {/* 3. How We Use Information */}
+        <div id="how-we-use-information">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            3. How We Use Information
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            We use the information we collect for various purposes, including to:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+            <li>Provide, operate, and maintain the website and our services</li>
+            <li>Develop new products, services, features, and functionality</li>
+            <li>Communicate with you, including for customer service, updates, and marketing</li>
+            <li>Process transactions and send related information</li>
+            <li>Prevent fraudulent activity and improve security</li>
+            <li>Understand and analyze how you use our website to improve user experience</li>
+          </ul>
+        </div>
+
+        {/* 4. Log Files */}
+        <div id="log-files">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            4. Log Files
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            Scrubby follows a standard procedure of using log files. These files log visitors when they visit our website.
+            The information collected by log files includes internet protocol (IP) addresses, browser type, Internet
+            Service Provider (ISP), date and time stamps, referring and exit pages, and possibly the number of clicks. This
+            information is not linked to anything that is personally identifiable. The purpose of the information is for
+            analyzing trends, administering the site, tracking user movement on the website, and gathering demographic information.
+          </p>
+        </div>
+
+        {/* 5. Cookies */}
+        <div id="cookies">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            5. Cookies
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            Like most websites, Scrubby uses cookies. These cookies are used to store information including visitor
+            preferences and the pages on the website that the visitor accessed or visited. The information is used to
+            optimize the user experience by customizing our web page content based on the visitor&apos;s browser type
+            and other information.
+          </p>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            Third-party ad servers or ad networks may use technologies such as cookies, JavaScript, or web beacons in
+            their respective advertisements and links that appear on Scrubby. These technologies are used to measure
+            the effectiveness of their advertising campaigns and to personalize the advertising content that you see.
+            Scrubby has no access to or control over cookies that are used by third-party advertisers. For more details,
+            please see our <a href="/cookies" class="text-brand-green hover:underline font-medium">Cookie Policy</a>.
+          </p>
+        </div>
+
+        {/* 6. Third-Party Privacy Policies */}
+        <div id="third-party-privacy-policies">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            6. Third-Party Privacy Policies
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            Scrubby&apos;s Privacy Policy does not apply to other advertisers or websites. We advise you to consult the
+            respective privacy policies of these third-party ad servers for more detailed information. Their policies may
+            include practices and instructions about how to opt out of certain options. You can choose to disable cookies
+            through your individual browser options. More detailed information about cookie management with specific web
+            browsers can be found at the browsers&apos; respective websites.
+          </p>
+        </div>
+
+        {/* 7. CCPA Privacy Rights */}
+        <div id="ccpa-privacy-rights">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            7. CCPA Privacy Rights (Do Not Sell My Personal Information)
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            Under the California Consumer Privacy Act (CCPA), California consumers have the right to:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+            <li>Request that a business that collects personal data disclose the categories and specific pieces of personal data collected</li>
+            <li>Request that a business delete any personal data about the consumer that the business has collected</li>
+            <li>Request that a business that sells personal data not sell the consumer&apos;s personal data</li>
+          </ul>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+            please contact us at <a href="mailto:info@scrubby.io" class="text-brand-green hover:underline font-medium">info@scrubby.io</a>.
+          </p>
+        </div>
+
+        {/* 8. GDPR Data Protection Rights */}
+        <div id="gdpr-data-protection-rights">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            8. GDPR Data Protection Rights
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            We want to make sure you are fully aware of all of your data protection rights. Every user is entitled to
+            the following:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+            <li><strong class="text-ink">The right to access</strong> &mdash; You have the right to request copies of your personal data.</li>
+            <li><strong class="text-ink">The right to rectification</strong> &mdash; You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.</li>
+            <li><strong class="text-ink">The right to erasure</strong> &mdash; You have the right to request that we erase your personal data, under certain conditions.</li>
+            <li><strong class="text-ink">The right to restrict processing</strong> &mdash; You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+            <li><strong class="text-ink">The right to data portability</strong> &mdash; You have the right to request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</li>
+            <li><strong class="text-ink">The right to object</strong> &mdash; You have the right to object to our processing of your personal data, under certain conditions.</li>
+          </ul>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+            please contact us at <a href="mailto:info@scrubby.io" class="text-brand-green hover:underline font-medium">info@scrubby.io</a>.
+          </p>
+        </div>
+
+        {/* 9. Children's Information */}
+        <div id="childrens-information">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            9. Children&apos;s Information
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            Scrubby does not knowingly collect any personal identifiable information from children under the age of 13.
+            If you think that your child provided this kind of information on our website, we strongly encourage you to
+            contact us immediately and we will do our best efforts to promptly remove such information from our records.
+          </p>
+        </div>
+
+        {/* 10. Changes to This Policy */}
+        <div id="changes-to-policy">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            10. Changes to This Privacy Policy
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
+            Privacy Policy on this page. Changes are effective immediately after they are posted on this page. We
+            encourage you to review this Privacy Policy periodically for any changes.
+          </p>
+        </div>
+
+        {/* 11. Contact Us */}
+        <div id="contact-us">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            11. Contact Us
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            If you have any questions about this Privacy Policy, please contact us:
+          </p>
+          <div class="p-6 rounded-xl bg-surface-secondary border border-surface-border">
+            <div class="space-y-2 text-sm text-ink-secondary font-body">
+              <p><strong class="text-ink font-display">Scrubby O&Uuml;</strong></p>
+              <p>Registration Code: 16031675</p>
+              <p>Viru v&auml;ljak 2, 10111, Tallinn, Estonia</p>
+              <p>CEO/DPO: Erik Paulson</p>
+              <p>
+                Email: <a href="mailto:info@scrubby.io" class="text-brand-green hover:underline">info@scrubby.io</a>
+              </p>
+              <p>
+                Website: <a href="https://scrubby.io" class="text-brand-green hover:underline" target="_blank" rel="noopener noreferrer">scrubby.io</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Back to home */}
+      <div class="mt-16 pt-8 border-t border-surface-border reveal">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+        >
+          {/* ArrowRight rotated 180deg = arrow pointing left */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="rotate-180"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+          Back to Home
+        </a>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

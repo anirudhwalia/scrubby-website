@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AuthorPage from '../../../page-components/AuthorPage.jsx';
+import { blogAuthors } from '../../../data/blog.js';
+
+export function getStaticPaths() {
+  return blogAuthors.map((author) => ({
+    params: { slug: author.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const author = blogAuthors.find((a) => a.slug === slug);
+---
+
+<BaseLayout title={`${author?.name || 'Author'} — Author at Scrubby Blog`} description={`Articles by ${author?.name || 'Author'} on the Scrubby blog.`} path={`/blog/author/${slug}/`}>
+  <AuthorPage client:load />
+</BaseLayout>

@@ -1,0 +1,573 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import blogConfig from '../../../content/blog-config.json';
+
+// ─── Blog data ────────────────────────────────────────────────────────────────
+const mdxModules = import.meta.glob('../../../content/blog/*.mdx', { eager: true });
+
+const blogPosts = Object.values(mdxModules)
+  .map((mod: any) => mod.frontmatter)
+  .filter(Boolean)
+  .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const recentPosts = blogPosts.slice(0, 6);
+
+const { categories: blogCategories, authors: blogAuthors } = blogConfig;
+
+function getCategoryName(slug: string): string {
+  const cat = blogCategories.find((c) => c.slug === slug);
+  return cat ? cat.name : slug;
+}
+
+function getAuthorBySlug(slug: string) {
+  return blogAuthors.find((a) => a.slug === slug) ?? null;
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+
+// ─── Static resource cards ────────────────────────────────────────────────────
+const resources = [
+  {
+    category: 'Guide',
+    title: 'How to Validate Risky Emails',
+    description:
+      'Learn the step-by-step process for validating catch-all and risky emails that standard tools mark as unknown.',
+    color: 'from-brand-green/20 to-brand-green/5',
+    iconColor: 'text-brand-green-dark',
+    categoryColor: 'bg-brand-green-bg text-brand-green-dark',
+    icon: 'shield',
+  },
+  {
+    category: 'Guide',
+    title: 'Understanding Catch-All Domains',
+    description:
+      'What catch-all domains are, why they matter for your email campaigns, and how to handle them effectively.',
+    color: 'from-blue-400/20 to-blue-400/5',
+    iconColor: 'text-blue-600',
+    categoryColor: 'bg-blue-50 text-blue-600',
+    icon: 'search',
+  },
+  {
+    category: 'Blog',
+    title: 'Email Deliverability Best Practices',
+    description:
+      'Proven strategies to improve your email deliverability rates and protect your sender reputation across all major ISPs.',
+    color: 'from-amber-400/20 to-amber-400/5',
+    iconColor: 'text-amber-600',
+    categoryColor: 'bg-amber-50 text-amber-600',
+    icon: 'mail',
+  },
+  {
+    category: 'Tutorial',
+    title: 'Integrating Scrubby with Your Stack',
+    description:
+      'Step-by-step tutorials for connecting Scrubby with Clay, HubSpot, Instantly, SmartLead, Zapier, and more.',
+    color: 'from-purple-400/20 to-purple-400/5',
+    iconColor: 'text-purple-600',
+    categoryColor: 'bg-purple-50 text-purple-600',
+    icon: 'puzzle',
+  },
+  {
+    category: 'Docs',
+    title: 'Scrubby API Documentation',
+    description:
+      'Complete API reference with authentication, endpoints, webhooks, and code examples in multiple languages.',
+    color: 'from-teal-400/20 to-teal-400/5',
+    iconColor: 'text-teal-600',
+    categoryColor: 'bg-teal-50 text-teal-600',
+    icon: 'code',
+  },
+  {
+    category: 'Guide',
+    title: 'Email Verification vs Validation',
+    description:
+      'Understand the critical difference between email verification and validation, and why you need both for optimal results.',
+    color: 'from-rose-400/20 to-rose-400/5',
+    iconColor: 'text-rose-600',
+    categoryColor: 'bg-rose-50 text-rose-600',
+    icon: 'lightbulb',
+  },
+];
+---
+
+<BaseLayout
+  title="Resources"
+  description="Email validation guides, API documentation, best practices, and tools from the Scrubby team."
+  path="/resources/"
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION (DARK)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-20 overflow-hidden" style="background: #18181B;">
+    <!-- Background blobs -->
+    <div
+      class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <!-- Decorative dots -->
+    <div class="absolute top-12 left-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+    <div class="absolute top-20 right-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-20 left-1/4 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Learn About </span>
+          <span class="text-gradient-light">Email Validation</span>
+        </h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-body">
+          Guides, tutorials, and best practices to help you get the most out of
+          your email validation workflow.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FEATURED RESOURCE SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="reveal">
+        <div class="max-w-5xl mx-auto">
+          <div class="card p-0 overflow-hidden group hover:shadow-card-hover transition-all duration-300">
+            <div class="grid md:grid-cols-2">
+
+              <!-- Left — Visual -->
+              <div
+                class="relative p-10 md:p-14 flex items-center justify-center overflow-hidden"
+                style="background: #18181B;"
+              >
+                <div class="absolute inset-0 grid-bg opacity-30"></div>
+                <div class="absolute top-6 left-6 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+                <div class="absolute bottom-6 right-6 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+
+                <div class="relative z-10 text-center">
+                  <div class="w-20 h-20 mx-auto rounded-2xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-6">
+                    <!-- file-text icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green">
+                    <!-- star icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    Featured Guide
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right — Content -->
+              <div class="p-10 md:p-14 flex flex-col justify-center">
+                <div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-display font-600 bg-brand-green-bg text-brand-green-dark w-fit mb-4">
+                  <!-- book-open icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  Ultimate Guide
+                </div>
+
+                <h2 class="font-display font-800 text-2xl sm:text-3xl text-ink mb-4">
+                  The Ultimate Guide to{' '}
+                  <span class="text-gradient">Catch-All Emails</span>
+                </h2>
+
+                <p class="text-ink-secondary leading-relaxed font-body mb-6">
+                  Everything you need to know about catch-all domains: what they are,
+                  why standard tools fail to validate them, and how Scrubby&apos;s
+                  proprietary technology delivers the answers other tools can&apos;t.
+                  Includes real-world case studies and actionable strategies.
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <a href="/how-it-works" class="btn-primary">
+                    Read the Guide
+                    <!-- arrow-right icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                  <span class="text-xs text-ink-muted font-display font-500">10 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RESOURCES GRID SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="divider mb-24"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- file-text icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          All Resources
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Guides, Tutorials &amp;
+          <span class="text-gradient">More</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Dive deep into email validation best practices with our curated collection
+          of resources.
+        </p>
+      </div>
+
+      <!-- Resources Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {resources.map((resource, i) => (
+          <div
+            class="glass-card p-7 reveal group cursor-pointer hover:shadow-card-hover transition-all duration-300"
+            style={`transition-delay: ${i * 0.08}s;`}
+          >
+            <!-- Icon -->
+            <div class={`w-12 h-12 rounded-xl bg-gradient-to-br ${resource.color} flex items-center justify-center mb-5`}>
+              {resource.icon === 'shield' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={resource.iconColor}>
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              )}
+              {resource.icon === 'search' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={resource.iconColor}>
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              )}
+              {resource.icon === 'mail' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={resource.iconColor}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              )}
+              {resource.icon === 'puzzle' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={resource.iconColor}>
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              )}
+              {resource.icon === 'code' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={resource.iconColor}>
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              )}
+              {resource.icon === 'lightbulb' && (
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={resource.iconColor}>
+                  <line x1="9" y1="18" x2="15" y2="18"></line>
+                  <line x1="10" y1="22" x2="14" y2="22"></line>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+                </svg>
+              )}
+            </div>
+
+            <!-- Category tag -->
+            <div class={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-display font-600 ${resource.categoryColor} mb-3`}>
+              {resource.category}
+            </div>
+
+            <!-- Title -->
+            <h3 class="font-display font-700 text-lg text-ink mb-2 group-hover:text-brand-green-dark transition-colors duration-300">
+              {resource.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-5">
+              {resource.description}
+            </p>
+
+            <!-- Read More -->
+            <div class="flex items-center gap-1.5 text-sm text-brand-green-dark font-display font-600 group-hover:gap-2.5 transition-all duration-300">
+              Read More
+              <!-- chevron-right icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="divider mt-24"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LATEST BLOG SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- book-open icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          Blog
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl text-ink mb-4">
+          Latest from the <span class="text-gradient">Blog</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Stay updated with the latest insights on email validation, deliverability, and lead generation.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {recentPosts.map((post: any, i: number) => {
+          const author = getAuthorBySlug(post.author);
+          return (
+            <a
+              href={`/blog/${post.slug}`}
+              class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-brand-green/30 transition-all duration-300 reveal"
+              style={`transition-delay: ${i * 0.08}s;`}
+            >
+              {post.thumbnail ? (
+                <div class="h-40 bg-slate-100 overflow-hidden">
+                  <img
+                    src={post.thumbnail}
+                    alt={post.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div class="h-40 bg-gradient-to-br from-navy-800 to-navy-950 flex items-center justify-center p-6">
+                  <h3 class="font-display text-sm font-bold text-white/80 text-center leading-tight line-clamp-3">
+                    {post.title}
+                  </h3>
+                </div>
+              )}
+              <div class="p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-display font-medium px-2.5 py-1 rounded-full bg-brand-green-bg text-brand-green-dark">
+                    {getCategoryName(post.category)}
+                  </span>
+                  <span class="text-xs text-ink-tertiary flex items-center gap-1">
+                    <!-- clock icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    {post.readTime}
+                  </span>
+                </div>
+                <h3 class="font-display text-base font-bold text-ink mb-2 group-hover:text-brand-green-dark transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
+                <p class="text-sm text-ink-secondary mb-4 line-clamp-2">{post.excerpt}</p>
+                <div class="flex items-center gap-2 text-xs text-ink-tertiary">
+                  {author?.avatar && (
+                    <img
+                      src={author.avatar}
+                      alt={author.name}
+                      class="w-5 h-5 rounded-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                  <span class="font-display font-medium">{author?.name ?? 'Scrubby Team'}</span>
+                  <span>&middot;</span>
+                  <span>{formatDate(post.date)}</span>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="/blog" class="btn-primary">
+          View All Articles
+          <!-- arrow-right icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NEWSLETTER SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto reveal">
+        <div class="card p-10 md:p-14 text-center relative overflow-hidden">
+          <!-- Decorative blobs -->
+          <div
+            class="absolute -top-20 -left-20 w-40 h-40 rounded-full blur-3xl"
+            style="background: rgba(45, 206, 142, 0.06);"
+          ></div>
+          <div
+            class="absolute -bottom-20 -right-20 w-40 h-40 rounded-full blur-3xl"
+            style="background: rgba(45, 206, 142, 0.06);"
+          ></div>
+
+          <div class="relative z-10">
+            <div class="badge mx-auto mb-6">
+              <!-- mail icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Newsletter
+            </div>
+
+            <h2 class="font-display font-800 text-2xl sm:text-3xl text-ink mb-4">
+              Stay <span class="text-gradient">Updated</span>
+            </h2>
+
+            <p class="text-ink-secondary leading-relaxed font-body mb-8 max-w-md mx-auto">
+              Get the latest guides, tips, and product updates delivered straight
+              to your inbox. No spam, just actionable insights.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="you@company.com"
+                class="flex-1 px-4 py-3 rounded-xl border border-surface-border bg-white text-sm text-ink font-body placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-brand-green/30 focus:border-brand-green transition-all"
+              />
+              <button class="btn-primary whitespace-nowrap">
+                Subscribe
+                <!-- send icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+
+            <p class="text-xs text-ink-muted font-body mt-4">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden bg-white">
+    <div class="divider mb-24"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="reveal">
+        <div
+          class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden"
+          style="background: #18181B;"
+        >
+          <!-- Grid background -->
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <!-- Decorative dots -->
+          <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+          <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+          <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+          <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- zap icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+              Get Started
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Start Validating Your <span class="text-gradient-light">Emails</span>
+            </h2>
+
+            <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+              Put what you&apos;ve learned into practice. Sign up for free and
+              get 100 credits to start validating your email lists today.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+                Start Free
+                <!-- arrow-right icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+                View Pricing
+              </a>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- shield icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                GDPR Compliant
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- users icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                2,500+ Customers
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- star icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                4.85/5 on G2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

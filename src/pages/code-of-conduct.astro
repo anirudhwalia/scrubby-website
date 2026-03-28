@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  { id: 'our-commitment',      title: 'Our Commitment' },
+  { id: 'expected-behavior',   title: 'Expected Behavior' },
+  { id: 'unacceptable-behavior', title: 'Unacceptable Behavior' },
+  { id: 'data-ethics',         title: 'Data Ethics' },
+  { id: 'reporting',           title: 'Reporting' },
+  { id: 'enforcement',         title: 'Enforcement' },
+  { id: 'contact',             title: 'Contact' },
+];
+---
+
+<BaseLayout title="Code of Conduct" description="Scrubby's code of conduct for users and team members." path="/code-of-conduct/" noindex={true}>
+  <main>
+
+    {/* ── Hero ── */}
+    <section class="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+      <div class="absolute inset-0 grid-bg opacity-30"></div>
+      <div
+        class="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+        style="background: rgba(45, 206, 142, 0.08);"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 text-center">
+        <div class="reveal">
+          <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+            Code of Conduct
+          </h1>
+          <p class="text-slate-300 text-lg max-w-xl mx-auto font-body">
+            Last updated: January 2024
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* ── Content ── */}
+    <section class="relative py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+
+        {/* Table of Contents */}
+        <div class="reveal mb-12 p-6 rounded-xl bg-surface-secondary border border-surface-border">
+          <h2 class="font-display font-bold text-lg text-ink mb-4">Table of Contents</h2>
+          <nav class="grid sm:grid-cols-2 gap-2">
+            {sections.map((section, i) => (
+              <a
+                href={`#${section.id}`}
+                class="flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+              >
+                <span class="text-xs text-ink-tertiary font-display font-500 w-5">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                {section.title}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* Intro */}
+        <div class="reveal mb-12">
+          <p class="text-ink-secondary leading-relaxed font-body">
+            At Scrubby, we believe that a strong community is built on mutual respect, professionalism, and
+            ethical conduct. This Code of Conduct outlines the standards we expect from all users, partners,
+            and community members who interact with our platform and services.
+          </p>
+        </div>
+
+        {/* ── Sections ── */}
+        <div class="space-y-12 reveal">
+
+          {/* 1. Our Commitment */}
+          <div id="our-commitment">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">1. Our Commitment</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">
+              Scrubby is committed to providing a safe, inclusive, and welcoming environment for everyone, regardless
+              of gender, gender identity and expression, age, sexual orientation, disability, physical appearance,
+              body size, race, ethnicity, religion, nationality, or level of experience.
+            </p>
+            <p class="text-ink-secondary leading-relaxed font-body">
+              We are dedicated to fostering a community where all members can participate in a harassment-free
+              experience. We do not tolerate harassment of any kind, and we expect all members to treat each other
+              with dignity and respect.
+            </p>
+          </div>
+
+          {/* 2. Expected Behavior */}
+          <div id="expected-behavior">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">2. Expected Behavior</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">We expect all community members to:</p>
+            <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+              <li><strong class="text-ink">Be respectful</strong> &mdash; Treat all users, team members, and partners with courtesy and respect in all interactions</li>
+              <li><strong class="text-ink">Be professional</strong> &mdash; Maintain professional standards in all communications and conduct on the platform</li>
+              <li><strong class="text-ink">Be constructive</strong> &mdash; Provide feedback and engage in discussions in a constructive, solution-oriented manner</li>
+              <li><strong class="text-ink">Be honest</strong> &mdash; Represent yourself and your organization accurately and truthfully</li>
+              <li><strong class="text-ink">Be collaborative</strong> &mdash; Work together in good faith to build a better community and better products</li>
+              <li><strong class="text-ink">Be mindful</strong> &mdash; Consider the impact of your actions on others and on the broader community</li>
+            </ul>
+          </div>
+
+          {/* 3. Unacceptable Behavior */}
+          <div id="unacceptable-behavior">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">3. Unacceptable Behavior</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">
+              The following behaviors are considered unacceptable and will not be tolerated:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+              <li><strong class="text-ink">Harassment</strong> &mdash; Any form of harassment, intimidation, or bullying directed at any individual or group</li>
+              <li><strong class="text-ink">Discrimination</strong> &mdash; Discriminatory jokes, language, or behavior based on protected characteristics</li>
+              <li><strong class="text-ink">Spam</strong> &mdash; Sending unsolicited bulk messages, promotional content, or repeated unwanted communications</li>
+              <li><strong class="text-ink">Unauthorized data collection</strong> &mdash; Scraping, harvesting, or collecting user data without proper authorization and consent</li>
+              <li><strong class="text-ink">Abuse of services</strong> &mdash; Using Scrubby services in ways that violate our Terms and Conditions or applicable laws</li>
+              <li><strong class="text-ink">Impersonation</strong> &mdash; Misrepresenting your identity or affiliation to deceive others</li>
+              <li><strong class="text-ink">Threats</strong> &mdash; Making threats of violence or using language intended to intimidate</li>
+            </ul>
+          </div>
+
+          {/* 4. Data Ethics */}
+          <div id="data-ethics">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">4. Data Ethics</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">
+              As an email validation service, we hold our users to high standards of data ethics. All users are
+              expected to:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+              <li>Use email validation services responsibly and in compliance with applicable anti-spam laws (CAN-SPAM, GDPR, CASL, etc.)</li>
+              <li>Only validate email addresses that you have obtained through legitimate and lawful means</li>
+              <li>Never use validated email addresses for sending unsolicited spam or phishing campaigns</li>
+              <li>Respect the privacy and data protection rights of the individuals whose emails are being validated</li>
+              <li>Maintain proper consent records for all email communications sent to validated addresses</li>
+              <li>Promptly honor unsubscribe requests and maintain clean suppression lists</li>
+            </ul>
+          </div>
+
+          {/* 5. Reporting */}
+          <div id="reporting">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">5. Reporting</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">
+              If you experience or witness behavior that violates this Code of Conduct, please report it to us
+              immediately. We take all reports seriously and will investigate promptly.
+            </p>
+            <div class="p-5 rounded-xl bg-surface-secondary border border-surface-border">
+              <p class="text-sm text-ink-secondary font-body mb-2">
+                <strong class="text-ink font-display">How to report:</strong>
+              </p>
+              <p class="text-sm text-ink-secondary font-body">
+                Send a detailed description of the incident to{' '}
+                <a href="mailto:info@scrubby.io" class="text-brand-green hover:underline font-medium">
+                  info@scrubby.io
+                </a>.
+                Include relevant screenshots, links, or other evidence if available. All reports will be handled
+                confidentially, and the reporter&apos;s identity will be protected to the extent possible.
+              </p>
+            </div>
+          </div>
+
+          {/* 6. Enforcement */}
+          <div id="enforcement">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">6. Enforcement</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">
+              Violations of this Code of Conduct will be taken seriously and may result in consequences including,
+              but not limited to:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+              <li>A formal warning issued to the violating party</li>
+              <li>Temporary suspension of account access and platform privileges</li>
+              <li>Permanent termination of services and account deletion</li>
+              <li>Reporting to relevant legal authorities if applicable laws have been violated</li>
+            </ul>
+            <p class="text-ink-secondary leading-relaxed font-body mt-4">
+              The severity of the consequence will be determined based on the nature and gravity of the violation,
+              whether it is a first offense or a repeated pattern, and the impact on affected individuals and the
+              community.
+            </p>
+          </div>
+
+          {/* 7. Contact */}
+          <div id="contact">
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">7. Contact</h2>
+            <p class="text-ink-secondary leading-relaxed font-body mb-4">
+              If you have any questions about this Code of Conduct or need to report a violation, please reach out:
+            </p>
+            <div class="p-6 rounded-xl bg-surface-secondary border border-surface-border">
+              <div class="space-y-2 text-sm text-ink-secondary font-body">
+                <p><strong class="text-ink font-display">Scrubby O&Uuml;</strong></p>
+                <p>Registration Code: 16031675</p>
+                <p>Viru v&auml;ljak 2, 10111, Tallinn, Estonia</p>
+                <p>CEO: Erik Paulson</p>
+                <p>
+                  Email:{' '}
+                  <a href="mailto:info@scrubby.io" class="text-brand-green hover:underline">
+                    info@scrubby.io
+                  </a>
+                </p>
+                <p>
+                  Website:{' '}
+                  <a href="https://scrubby.io" class="text-brand-green hover:underline" target="_blank" rel="noopener noreferrer">
+                    scrubby.io
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>{/* end space-y-12 */}
+
+        {/* Back to home */}
+        <div class="mt-16 pt-8 border-t border-surface-border reveal">
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+          >
+            {/* ArrowRight rotated 180° → points left */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="transform: rotate(180deg);"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+            Back to Home
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

@@ -1,0 +1,622 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqData = [
+  {
+    category: 'general',
+    question: 'What is a risky or catch-all email?',
+    answer:
+      'Risky emails may cause deliverability issues. Catch-all addresses receive all messages sent to a domain, even nonexistent ones. They can also include temporary, invalid, spam-trap, or role-based addresses.',
+  },
+  {
+    category: 'general',
+    question: 'Is a Catch-All email the same thing as a Risky Email?',
+    answer:
+      'Yes, SMTP tools classify them as Catch-All or Accept-All, while data providers classify them as Risky or assign low confidence validation scores.',
+  },
+  {
+    category: 'general',
+    question: "Why can't my SMTP tool validate the Risky Emails?",
+    answer:
+      'Catch-All servers deliberately bypass SMTP validation. They catch all "handshakes" without providing Valid or Invalid signals.',
+  },
+  {
+    category: 'results',
+    question: 'What Kind of Results Can I Expect with Scrubby?',
+    answer:
+      'Expect approximately 98% accuracy detecting hard bounces, maintaining bounce rates under 2%. Soft bounces depend on list quality, sender score, domain reputation, and content.',
+  },
+  {
+    category: 'results',
+    question: 'What is a soft bounce vs a hard bounce? Can Scrubby catch soft bounces?',
+    answer:
+      'Hard bounces occur for nonexistent addresses. Soft bounces result from offline servers or poor sender reputation. Scrubby focuses on hard bounces and cannot catch soft bounces.',
+  },
+  {
+    category: 'results',
+    question: 'What happens if I don\'t validate my "risky" emails?',
+    answer:
+      'Discarding risky emails wastes up to 42% of your list. Including unvalidated ones risks burned domains and account shutdowns from high bounce rates.',
+  },
+  {
+    category: 'usage',
+    question: 'How can I best utilize Scrubby?',
+    answer:
+      'Use Scrubby exclusively for "risky" emails that SMTP tools classify as Catch-All or Accept-All, or data providers mark as Risky with low confidence scores.',
+  },
+  {
+    category: 'usage',
+    question: 'What are the most common SMTP verification tools?',
+    answer:
+      'Common tools include ZeroBounce, NeverBounce, BriteVerify, DeBounce, and MillionVerifier.',
+  },
+  {
+    category: 'usage',
+    question: 'How does Scrubby work with my existing tech stack?',
+    answer:
+      'Scrubby complements existing tools by validating "risky" emails that traditional platforms can\'t confidently classify through actual blank email testing.',
+  },
+  {
+    category: 'usage',
+    question: 'Can I use my own accounts with ZeroBounce, NeverBounce, or MillionVerifier?',
+    answer:
+      'Yes, you can enter API keys from these services. In-house accounts remain available if you don\'t have external accounts.',
+  },
+  {
+    category: 'usage',
+    question: 'Does Scrubby integrate with Clay?',
+    answer: 'Yes, full integration is available with documentation and setup guides.',
+  },
+  {
+    category: 'billing',
+    question: 'Is there a Scrubby API available?',
+    answer: 'Yes, API keys are available within the platform with full documentation.',
+  },
+  {
+    category: 'billing',
+    question: 'What if I need more credits?',
+    answer: 'Purchase additional data packs once you exceed your monthly quota limits.',
+  },
+  {
+    category: 'billing',
+    question: 'If I cancel my subscription, do I keep my rolled-over credits?',
+    answer: 'Yes, unused credits remain available after canceling monthly subscriptions.',
+  },
+  {
+    category: 'billing',
+    question: 'I\'m trying to register but it says "Domain Restricted". What should I do?',
+    answer:
+      'Registration restrictions apply to personal/public domain emails (Gmail, Yahoo), nonexistent domains, or domains redirecting elsewhere. Use a business email.',
+  },
+  {
+    category: 'security',
+    question: 'How secure is my data with Scrubby?',
+    answer: 'Data is encrypted with cutting-edge protocols and remains under your control at all times.',
+  },
+  {
+    category: 'security',
+    question: "My question isn't answered. How do I contact you?",
+    answer:
+      'Email support@scrubby.io. Expect responses within 24–48 hours; mention urgency for priority handling.',
+  },
+];
+
+const categoryOrder = ['general', 'results', 'usage', 'billing', 'security'] as const;
+
+const categoryMeta: Record<string, { label: string; iconPath: string }> = {
+  general: {
+    label: 'General',
+    iconPath:
+      'M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+  results: {
+    label: 'Results & Accuracy',
+    iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  },
+  usage: {
+    label: 'Usage & Integration',
+    iconPath:
+      'M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4',
+  },
+  billing: {
+    label: 'Account & Billing',
+    iconPath:
+      'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
+  },
+  security: {
+    label: 'Security',
+    iconPath:
+      'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
+  },
+};
+
+const grouped = categoryOrder.reduce<Record<string, typeof faqData>>((acc, key) => {
+  acc[key] = faqData.filter((f) => f.category === key);
+  return acc;
+}, {});
+
+// Build FAQ schema for structured data
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="Frequently Asked Questions"
+  description="Find answers to common questions about Scrubby's email validation, pricing, integrations, accuracy, and more."
+  path="/faq/"
+  schema={faqSchema}
+>
+  <!-- ── Hero ── -->
+  <section class="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div
+      class="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[350px] h-[350px] top-16 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+          Frequently Asked{' '}
+          <span class="text-gradient-light">Questions</span>
+        </h1>
+        <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+          Everything you need to know about Scrubby, email validation, and how
+          to get the most out of your risky email lists.
+        </p>
+
+        <!-- Search bar (plain HTML, JS-enhanced below) -->
+        <div class="max-w-lg mx-auto relative">
+          <!-- Search icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="faq-search"
+            type="text"
+            placeholder="Search questions..."
+            autocomplete="off"
+            class="w-full pl-11 pr-16 py-3.5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-sm text-white font-body placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-green/40 focus:border-brand-green/40 transition-all"
+          />
+          <button
+            id="faq-search-clear"
+            type="button"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors text-xs font-display hidden"
+            aria-label="Clear search"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Category Filters + FAQ Content ── -->
+  <section class="relative py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <!-- Category Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12 reveal" id="category-tabs">
+        <!-- All Questions -->
+        <button
+          type="button"
+          data-category="all"
+          class="faq-tab active inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-display font-500 transition-all duration-300 bg-brand-green text-white shadow-md shadow-brand-green/20"
+        >
+          <!-- HelpCircle icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093"></path>
+            <path d="M12 17h.01"></path>
+            <circle cx="12" cy="12" r="10"></circle>
+          </svg>
+          All Questions
+        </button>
+
+        {categoryOrder.map((key) => (
+          <button
+            type="button"
+            data-category={key}
+            class="faq-tab inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-display font-500 transition-all duration-300 bg-surface-secondary text-ink-secondary hover:bg-surface-border hover:text-ink"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d={categoryMeta[key].iconPath}></path>
+            </svg>
+            {categoryMeta[key].label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Search results count (hidden until a search is active) -->
+      <div id="faq-results-count" class="text-center mb-8 hidden reveal">
+        <p class="text-sm text-ink-muted font-body">
+          <span id="faq-count-number"></span> <span id="faq-count-label"></span> found
+          <span id="faq-count-cat-wrap" class="hidden">
+            {' '}in{' '}
+            <span id="faq-count-cat" class="font-display font-600 text-ink-secondary"></span>
+          </span>
+        </p>
+      </div>
+
+      <!-- FAQ Groups -->
+      <div id="faq-content" class="space-y-12 reveal">
+        {categoryOrder.map((catKey) => (
+          <div data-group={catKey} class="faq-group">
+            <!-- Category Heading (shown in "all" view or when searching) -->
+            <div class="faq-group-heading flex items-center gap-2.5 mb-5">
+              <div class="w-8 h-8 rounded-lg bg-brand-green-bg flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                  <path d={categoryMeta[catKey].iconPath}></path>
+                </svg>
+              </div>
+              <h2 class="font-display font-700 text-lg text-ink">
+                {categoryMeta[catKey].label}
+              </h2>
+              <span class="faq-group-count text-xs font-display font-500 text-ink-muted bg-surface-secondary px-2 py-0.5 rounded-full">
+                {grouped[catKey].length}
+              </span>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-3">
+              {grouped[catKey].map((faq) => (
+                <details
+                  class="faq-item border border-surface-border rounded-xl overflow-hidden group"
+                  data-question={faq.question.toLowerCase()}
+                  data-answer={faq.answer.toLowerCase()}
+                  data-category={faq.category}
+                >
+                  <summary class="flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-surface-secondary transition-colors list-none select-none">
+                    <span class="font-display font-700 text-ink text-sm pr-4">
+                      {faq.question}
+                    </span>
+                    <!-- ChevronDown icon — rotates via CSS when open -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="faq-chevron text-ink-muted flex-shrink-0 transition-transform duration-300"
+                      aria-hidden="true"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </summary>
+                  <div class="faq-body px-6 pb-5 overflow-hidden">
+                    <p class="text-sm text-ink-secondary leading-relaxed font-body">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Empty State (hidden by default) -->
+      <div id="faq-empty" class="text-center py-16 hidden reveal">
+        <div class="w-16 h-16 rounded-2xl bg-surface-secondary flex items-center justify-center mx-auto mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-muted" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <h3 class="font-display font-700 text-lg text-ink mb-2">No results found</h3>
+        <p class="text-sm text-ink-secondary font-body mb-6 max-w-sm mx-auto">
+          We couldn't find any questions matching your search. Try a different
+          term or browse by category.
+        </p>
+        <button type="button" id="faq-clear-all" class="btn-secondary">
+          Clear Filters
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider max-w-3xl mx-auto"></div>
+
+  <!-- ── CTA Section ── -->
+  <section class="relative py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="card-dark p-8 md:p-12 text-center relative overflow-hidden rounded-2xl reveal">
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <div
+          class="absolute w-[300px] h-[300px] -top-20 -right-20 rounded-full blur-3xl opacity-30"
+          style="background: rgba(45, 206, 142, 0.15);"
+        ></div>
+        <div class="relative z-10">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-6">
+            <!-- Mail icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h2 class="font-display font-700 text-xl sm:text-2xl text-white mb-3">
+            Still have questions?
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-md mx-auto font-body">
+            Can't find the answer you're looking for? Our support team is here
+            to help. Reach out and we'll get back to you within 24&ndash;48 hours.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="/contact" class="btn-primary">
+              Contact Support
+              <!-- ArrowRight icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="mailto:support@scrubby.io" class="btn-secondary-dark">
+              Email Us
+              <!-- Mail icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Rotate chevron when details is open */
+  details[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Smooth open/close animation for the answer body */
+  .faq-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+  details[open] .faq-body {
+    grid-template-rows: 1fr;
+  }
+  .faq-body > p {
+    overflow: hidden;
+  }
+
+  /* Remove default details marker across browsers */
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details > summary::marker {
+    display: none;
+  }
+</style>
+
+<script>
+  // ── Types ────────────────────────────────────────────────────────────────
+  type Category = 'all' | 'general' | 'results' | 'usage' | 'billing' | 'security';
+
+  // ── State ────────────────────────────────────────────────────────────────
+  let activeCategory: Category = 'all';
+  let searchQuery = '';
+
+  // ── DOM refs ─────────────────────────────────────────────────────────────
+  const searchInput    = document.getElementById('faq-search')         as HTMLInputElement;
+  const clearBtn       = document.getElementById('faq-search-clear')   as HTMLButtonElement;
+  const clearAllBtn    = document.getElementById('faq-clear-all')      as HTMLButtonElement;
+  const tabs           = document.querySelectorAll<HTMLButtonElement>('.faq-tab');
+  const groups         = document.querySelectorAll<HTMLElement>('.faq-group');
+  const items          = document.querySelectorAll<HTMLDetailsElement>('.faq-item');
+  const emptyState     = document.getElementById('faq-empty')          as HTMLElement;
+  const faqContent     = document.getElementById('faq-content')        as HTMLElement;
+  const resultsCount   = document.getElementById('faq-results-count')  as HTMLElement;
+  const countNumber    = document.getElementById('faq-count-number')   as HTMLElement;
+  const countLabel     = document.getElementById('faq-count-label')    as HTMLElement;
+  const countCatWrap   = document.getElementById('faq-count-cat-wrap') as HTMLElement;
+  const countCat       = document.getElementById('faq-count-cat')      as HTMLElement;
+
+  const categoryLabels: Record<string, string> = {
+    general:  'General',
+    results:  'Results & Accuracy',
+    usage:    'Usage & Integration',
+    billing:  'Account & Billing',
+    security: 'Security',
+  };
+
+  // ── Render ───────────────────────────────────────────────────────────────
+  function render() {
+    const q = searchQuery.trim().toLowerCase();
+    let totalVisible = 0;
+
+    groups.forEach((group) => {
+      const groupKey = group.dataset.group as string;
+      const isTargetCategory = activeCategory === 'all' || activeCategory === groupKey;
+
+      // Show/hide category heading based on filter mode
+      const heading = group.querySelector<HTMLElement>('.faq-group-heading');
+      if (heading) {
+        heading.style.display =
+          activeCategory === 'all' || q ? 'flex' : 'none';
+      }
+
+      let groupVisible = 0;
+
+      const groupItems = group.querySelectorAll<HTMLDetailsElement>('.faq-item');
+      groupItems.forEach((item) => {
+        const questionText = item.dataset.question ?? '';
+        const answerText   = item.dataset.answer   ?? '';
+
+        const matchesCategory = isTargetCategory;
+        const matchesSearch   = !q || questionText.includes(q) || answerText.includes(q);
+
+        if (matchesCategory && matchesSearch) {
+          item.style.display = '';
+          groupVisible++;
+          totalVisible++;
+        } else {
+          item.style.display = 'none';
+          // Close hidden items
+          item.removeAttribute('open');
+        }
+      });
+
+      // Update count badge
+      const countBadge = group.querySelector<HTMLElement>('.faq-group-count');
+      if (countBadge) countBadge.textContent = String(groupVisible);
+
+      // Show/hide the whole group
+      group.style.display = groupVisible > 0 ? '' : 'none';
+    });
+
+    // Empty state
+    if (totalVisible === 0) {
+      faqContent.style.display = 'none';
+      emptyState.classList.remove('hidden');
+    } else {
+      faqContent.style.display = '';
+      emptyState.classList.add('hidden');
+    }
+
+    // Results count (only when searching)
+    if (q) {
+      resultsCount.classList.remove('hidden');
+      countNumber.textContent = String(totalVisible);
+      countLabel.textContent  = totalVisible === 1 ? 'result' : 'results';
+      if (activeCategory !== 'all') {
+        countCatWrap.classList.remove('hidden');
+        countCat.textContent = categoryLabels[activeCategory] ?? '';
+      } else {
+        countCatWrap.classList.add('hidden');
+      }
+    } else {
+      resultsCount.classList.add('hidden');
+    }
+
+    // Clear button visibility
+    clearBtn.classList.toggle('hidden', !searchQuery);
+  }
+
+  // ── Tab clicks ───────────────────────────────────────────────────────────
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activeCategory = (tab.dataset.category ?? 'all') as Category;
+
+      tabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle('bg-brand-green',           isActive);
+        t.classList.toggle('text-white',               isActive);
+        t.classList.toggle('shadow-md',                isActive);
+        t.classList.toggle('shadow-brand-green/20',    isActive);
+        t.classList.toggle('bg-surface-secondary',    !isActive);
+        t.classList.toggle('text-ink-secondary',      !isActive);
+        t.classList.toggle('hover:bg-surface-border', !isActive);
+        t.classList.toggle('hover:text-ink',          !isActive);
+        if (isActive) t.classList.add('active');
+        else           t.classList.remove('active');
+      });
+
+      // Close all open items when switching category
+      items.forEach((item) => item.removeAttribute('open'));
+
+      render();
+    });
+  });
+
+  // ── Search input ─────────────────────────────────────────────────────────
+  searchInput.addEventListener('input', () => {
+    searchQuery = searchInput.value;
+    // Close all open items on new search
+    items.forEach((item) => item.removeAttribute('open'));
+    render();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchQuery       = '';
+    searchInput.value = '';
+    items.forEach((item) => item.removeAttribute('open'));
+    render();
+  });
+
+  clearAllBtn.addEventListener('click', () => {
+    searchQuery       = '';
+    searchInput.value = '';
+    activeCategory    = 'all';
+
+    tabs.forEach((t, i) => {
+      const isFirst = i === 0;
+      t.classList.toggle('bg-brand-green',           isFirst);
+      t.classList.toggle('text-white',               isFirst);
+      t.classList.toggle('shadow-md',                isFirst);
+      t.classList.toggle('shadow-brand-green/20',    isFirst);
+      t.classList.toggle('bg-surface-secondary',    !isFirst);
+      t.classList.toggle('text-ink-secondary',      !isFirst);
+      t.classList.toggle('hover:bg-surface-border', !isFirst);
+      t.classList.toggle('hover:text-ink',          !isFirst);
+    });
+
+    items.forEach((item) => item.removeAttribute('open'));
+    render();
+  });
+
+  // ── Smooth open/close animation ──────────────────────────────────────────
+  // The CSS grid-template-rows trick handles animation; the <details> element
+  // natively toggles [open]. We intercept the toggle to prevent the default
+  // snap-open so the CSS transition has time to play on close.
+  items.forEach((details) => {
+    const summary = details.querySelector('summary')!;
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (details.hasAttribute('open')) {
+        // Closing: let the CSS transition run, then remove [open]
+        const body = details.querySelector<HTMLElement>('.faq-body')!;
+        body.addEventListener(
+          'transitionend',
+          () => details.removeAttribute('open'),
+          { once: true }
+        );
+        // Force reflow then collapse
+        details.classList.add('closing');
+        requestAnimationFrame(() => {
+          details.classList.remove('closing');
+        });
+        details.removeAttribute('open');
+      } else {
+        // Opening
+        details.setAttribute('open', '');
+      }
+    });
+  });
+
+  // Initial render
+  render();
+</script>

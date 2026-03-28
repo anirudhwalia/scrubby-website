@@ -26,15 +26,7 @@ const navLinks = [
       { label: 'Benefits', to: '/benefits' },
     ],
   },
-  {
-    label: 'Pricing',
-    children: [
-      { label: 'Overview', to: '/pricing' },
-      { label: 'Subscription', to: '/pricing/subscription' },
-      { label: 'Pay As You Go', to: '/pricing/paygo' },
-      { label: 'Unlimited', to: '/pricing/unlimited' },
-    ],
-  },
+  { label: 'Pricing', to: '/pricing' },
   { label: 'How It Works', to: '/how-it-works' },
   { label: 'Integrations', to: '/integrations' },
   { label: 'Enterprise', to: '/enterprise' },
@@ -73,10 +65,7 @@ const footerColumns = {
     { label: 'Benefits', to: '/benefits' },
   ],
   Pricing: [
-    { label: 'Pricing Overview', to: '/pricing' },
-    { label: 'Subscription Plans', to: '/pricing/subscription' },
-    { label: 'Pay As You Go', to: '/pricing/paygo' },
-    { label: 'Unlimited', to: '/pricing/unlimited' },
+    { label: 'Pricing', to: '/pricing' },
     { label: 'Enterprise', to: '/enterprise' },
     { label: 'Agencies', to: '/agencies' },
   ],

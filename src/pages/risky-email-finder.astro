@@ -1,0 +1,401 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const featureCards = [
+  {
+    iconKey: 'target',
+    iconBg: 'bg-brand-green-bg',
+    iconColor: 'text-brand-green-dark',
+    title: "Don't Miss Valuable Leads",
+    description:
+      'Expand your reach with leads you might otherwise discard. Risky emails often belong to high-value decision makers at enterprise companies using catch-all domains.',
+    delay: '0s',
+  },
+  {
+    iconKey: 'trending-up',
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-500',
+    title: 'From Rejection to Discovery',
+    description:
+      'Stop discarding risky emails. Harness them for 2x more effective campaigns. What other tools reject, Scrubby validates and delivers.',
+    delay: '0.12s',
+  },
+  {
+    iconKey: 'plug',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-500',
+    title: 'Seamless Stack Integration',
+    description:
+      'Complements Apollo, ZoomInfo, and all major data providers. Just add Scrubby as an extra verification layer to your existing workflow.',
+    delay: '0.24s',
+  },
+];
+
+const flowSteps = [
+  {
+    label: 'Your Email List',
+    sublabel: '10,000 emails',
+    iconKey: 'users',
+    color: 'text-ink-secondary',
+    bg: 'bg-surface-secondary',
+    highlight: false,
+  },
+  {
+    label: 'Standard Tool',
+    sublabel: '4,200 marked risky',
+    iconKey: 'alert-triangle',
+    color: 'text-amber-500',
+    bg: 'bg-amber-50',
+    highlight: false,
+  },
+  {
+    label: 'Scrubby Validates',
+    sublabel: 'Deep verification',
+    iconKey: 'search',
+    color: 'text-brand-green-dark',
+    bg: 'bg-brand-green-bg',
+    highlight: true,
+  },
+  {
+    label: '3,500 Deliverable',
+    sublabel: 'Recovered leads',
+    iconKey: 'check-circle',
+    color: 'text-brand-green',
+    bg: 'bg-brand-green-bg',
+    highlight: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Risky Email Finder"
+  description="Find and validate risky catch-all emails that other tools can't verify. Recover more leads with 98.7% accuracy."
+  path="/risky-email-finder/"
+>
+
+  <!-- ── Hero ── -->
+  <section class="relative pt-40 pb-28 overflow-hidden" style="background: #18181B;">
+    <!-- Background glows -->
+    <div
+      class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+    <div
+      class="absolute w-[300px] h-[300px] bottom-0 left-1/3 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(245, 166, 35, 0.04); animation-delay: 3s;"
+    ></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+          <!-- Search -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          Risky Email Finder
+        </div>
+
+        <!-- Heading -->
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Expand Your Reach by Validating </span>
+          <span class="text-gradient-light">Your Full Email List</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+          Unlock untapped revenue and missed opportunities. Risky emails can be
+          your most valuable ones.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Get Started Today
+            <!-- ArrowRight -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+            View Pricing
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Feature Spotlight ── -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Sparkles -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>
+          </svg>
+          The Scrubby Difference
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          What others call risky,{' '}
+          <span class="text-gradient">we call opportunity</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Most email finder tools uncover hidden addresses, but they cannot verify
+          catch-all emails. Scrubby can.
+        </p>
+      </div>
+
+      <!-- Visual Flow -->
+      <div class="reveal max-w-4xl mx-auto mb-20">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+          {flowSteps.map((step, i) => (
+            <div class="relative">
+              <div class={`glass-card p-6 text-center${step.highlight ? ' ring-2 ring-brand-green shadow-green-glow' : ''}`}>
+                <div class={`w-12 h-12 mx-auto rounded-xl ${step.bg} flex items-center justify-center mb-4`}>
+                  {step.iconKey === 'users' && (
+                    <!-- Users -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={step.color} aria-hidden="true">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  )}
+                  {step.iconKey === 'alert-triangle' && (
+                    <!-- AlertTriangle -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={step.color} aria-hidden="true">
+                      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>
+                    </svg>
+                  )}
+                  {step.iconKey === 'search' && (
+                    <!-- Search -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={step.color} aria-hidden="true">
+                      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                    </svg>
+                  )}
+                  {step.iconKey === 'check-circle' && (
+                    <!-- CheckCircle2 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={step.color} aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+                    </svg>
+                  )}
+                </div>
+                <h3 class="font-display font-700 text-sm text-ink mb-1">{step.label}</h3>
+                <p class="text-xs text-ink-tertiary font-body">{step.sublabel}</p>
+              </div>
+
+              <!-- Arrow connector (desktop) -->
+              {i < flowSteps.length - 1 && (
+                <div class="hidden lg:flex absolute top-1/2 -right-4 -translate-y-1/2 z-10">
+                  <!-- ArrowRight -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-muted" aria-hidden="true">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <!-- Before / After callout -->
+        <div class="mt-8 grid sm:grid-cols-2 gap-4">
+          <div class="glass-card p-5 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
+              <!-- XCircle -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-400" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-display font-600 text-sm text-ink mb-1">Without Scrubby</h4>
+              <p class="text-xs text-ink-tertiary font-body leading-relaxed">
+                42% of your list is marked as risky or unknown. You discard them and miss potential revenue.
+              </p>
+            </div>
+          </div>
+          <div class="glass-card p-5 flex items-start gap-4 ring-1 ring-brand-green/20">
+            <div class="w-10 h-10 rounded-xl bg-brand-green-bg flex items-center justify-center flex-shrink-0">
+              <!-- CheckCircle2 -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-display font-600 text-sm text-ink mb-1">With Scrubby</h4>
+              <p class="text-xs text-ink-tertiary font-body leading-relaxed">
+                Scrubby validates those risky emails and recovers up to 83% of them as deliverable, usable leads.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Feature Cards ── -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Zap -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+          </svg>
+          Features
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Why teams choose{' '}
+          <span class="text-gradient">Scrubby</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Turn your risky emails into validated leads and unlock revenue you never knew existed.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid md:grid-cols-3 gap-8">
+        {featureCards.map((card) => (
+          <div
+            class="glass-card p-8 reveal group"
+            style={`transition-delay: ${card.delay};`}
+          >
+            <div class={`w-14 h-14 rounded-2xl ${card.iconBg} flex items-center justify-center mb-6 group-hover:shadow-lg transition-shadow duration-300`}>
+              {card.iconKey === 'target' && (
+                <!-- Target -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={card.iconColor} aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                </svg>
+              )}
+              {card.iconKey === 'trending-up' && (
+                <!-- TrendingUp -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={card.iconColor} aria-hidden="true">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+                </svg>
+              )}
+              {card.iconKey === 'plug' && (
+                <!-- Plug -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={card.iconColor} aria-hidden="true">
+                  <path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8H6a2 2 0 0 0-2 2v3a6 6 0 0 0 12 0v-3a2 2 0 0 0-2-2Z"/>
+                </svg>
+              )}
+            </div>
+            <h3 class="font-display font-700 text-lg text-ink mb-3">{card.title}</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">{card.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Integration mention -->
+      <div class="mt-16 text-center reveal">
+        <div class="glass-card p-8 max-w-2xl mx-auto">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <!-- Plug -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+              <path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8H6a2 2 0 0 0-2 2v3a6 6 0 0 0 12 0v-3a2 2 0 0 0-2-2Z"/>
+            </svg>
+            <h3 class="font-display font-700 text-lg text-ink">
+              Fits right into your workflow
+            </h3>
+          </div>
+          <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-6">
+            Scrubby works alongside your existing email verification and outreach tools.
+            Add it as an extra layer to validate what others cannot.
+          </p>
+          <a href="/integrations" class="btn-secondary text-sm inline-flex items-center gap-2">
+            View All Integrations
+            <!-- ArrowRight -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="relative py-24 overflow-hidden" style="background: #18181B;">
+    <!-- Background -->
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div
+      class="absolute w-[500px] h-[500px] -bottom-40 -right-40 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.06);"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] -top-20 -left-20 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.04); animation-delay: 2s;"
+    ></div>
+
+    <!-- Decorative dots -->
+    <div class="absolute top-12 left-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+    <div class="absolute top-20 right-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-20 left-1/4 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-12 right-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+          <!-- Zap -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+          </svg>
+          Unlock Your Leads
+        </div>
+
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+          Unlock Your Full{' '}
+          <span class="text-gradient-light">List Potential</span>
+        </h2>
+
+        <p class="text-lg text-slate-300 leading-relaxed mb-10 font-body">
+          Stop leaving money on the table. Validate your risky emails and recover
+          leads that other tools would throw away.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Get Started Today
+            <!-- ArrowRight -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+            View Pricing
+          </a>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap items-center justify-center gap-6 mt-10 text-xs text-slate-400 font-display font-500">
+          <div class="flex items-center gap-1.5">
+            <!-- CheckCircle2 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+            </svg>
+            100 Free Credits
+          </div>
+          <div class="flex items-center gap-1.5">
+            <!-- Shield -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+            </svg>
+            98% Deliverability
+          </div>
+          <div class="flex items-center gap-1.5">
+            <!-- TrendingUp -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+            </svg>
+            42% More Usable Emails
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

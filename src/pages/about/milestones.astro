@@ -1,0 +1,466 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const milestones = [
+  {
+    year: '2022',
+    quarter: 'Q1',
+    title: 'Company Founded',
+    description: "Scrubby was founded in Tallinn, Estonia, with a mission to solve the catch-all email validation problem that every other tool was ignoring.",
+    iconKey: 'rocket',
+    color: 'from-brand-green/20 to-brand-green/5',
+    iconColor: 'text-brand-green-dark',
+  },
+  {
+    year: '2022',
+    quarter: 'Q4',
+    title: 'First 100 Customers',
+    description: "Within months of launch, 100 sales teams trusted Scrubby to validate the risky emails that other tools couldn't handle.",
+    iconKey: 'users',
+    color: 'from-blue-400/20 to-blue-400/5',
+    iconColor: 'text-blue-600',
+  },
+  {
+    year: '2023',
+    quarter: 'Q1',
+    title: '10M+ Emails Validated',
+    description: 'A major milestone as Scrubby surpassed 10 million email validations, proving our technology works at scale.',
+    iconKey: 'check-circle',
+    color: 'from-amber-400/20 to-amber-400/5',
+    iconColor: 'text-amber-600',
+  },
+  {
+    year: '2023',
+    quarter: 'Q2',
+    title: 'API & Clay Integration',
+    description: 'Launched our REST API and native Clay integration, enabling teams to validate emails directly within their existing workflows.',
+    iconKey: 'puzzle',
+    color: 'from-purple-400/20 to-purple-400/5',
+    iconColor: 'text-purple-600',
+  },
+  {
+    year: '2023',
+    quarter: 'Q4',
+    title: '1,000 Active Customers',
+    description: 'Reached the 1,000 customer milestone, with teams across sales, marketing, and operations relying on Scrubby daily.',
+    iconKey: 'trophy',
+    color: 'from-rose-400/20 to-rose-400/5',
+    iconColor: 'text-rose-600',
+  },
+  {
+    year: '2024',
+    quarter: 'Q1',
+    title: '2,500+ Customers Worldwide',
+    description: 'Scrubby is now trusted by over 2,500 companies globally, from startups to enterprises across every industry.',
+    iconKey: 'globe',
+    color: 'from-teal-400/20 to-teal-400/5',
+    iconColor: 'text-teal-600',
+  },
+  {
+    year: '2024',
+    quarter: 'Q2',
+    title: 'PayGo Pricing Model',
+    description: 'Launched our flexible pay-as-you-go pricing, making Scrubby accessible to teams of all sizes with no commitments or subscriptions required.',
+    iconKey: 'credit-card',
+    color: 'from-indigo-400/20 to-indigo-400/5',
+    iconColor: 'text-indigo-600',
+  },
+  {
+    year: '2024',
+    quarter: 'Q4',
+    title: '4.85/5 Rating on G2',
+    description: 'Achieved a 4.85 out of 5 rating on G2, one of the highest in the email validation category, based on real customer reviews.',
+    iconKey: 'star',
+    color: 'from-amber-400/20 to-amber-400/5',
+    iconColor: 'text-amber-600',
+  },
+  {
+    year: '2025',
+    quarter: 'Q1',
+    title: '15+ Platform Integrations',
+    description: 'Expanded our integration ecosystem to 15+ platforms including HubSpot, Instantly, SmartLead, Zapier, and more.',
+    iconKey: 'puzzle',
+    color: 'from-brand-green/20 to-brand-green/5',
+    iconColor: 'text-brand-green-dark',
+  },
+];
+
+const stats = [
+  { value: '2,500+', label: 'Customers',       iconKey: 'users'  },
+  { value: '10M+',   label: 'Emails Validated', iconKey: 'zap'    },
+  { value: '98%',    label: 'Accuracy',          iconKey: 'target' },
+  { value: '4.85/5', label: 'G2 Rating',         iconKey: 'star'   },
+];
+---
+
+<BaseLayout
+  title="Our Milestones"
+  description="Scrubby's journey from founding in 2022 to validating 10M+ emails. Key milestones and achievements."
+  path="/about/milestones/"
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO (DARK)
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-20 overflow-hidden" style="background:#18181B">
+
+    <!-- Background glows -->
+    <div class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+         style="background:rgba(45,206,142,0.08)"></div>
+    <div class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+         style="background:rgba(45,206,142,0.05);animation-delay:2s"></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <!-- Decorative dots -->
+    <div class="absolute top-12 left-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+    <div class="absolute top-20 right-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:1s"></div>
+    <div class="absolute bottom-20 left-1/4 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:2s"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Scrubby </span>
+          <span class="text-gradient-light">Milestones</span>
+        </h1>
+
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-body">
+          From our founding in Estonia to serving 2,500+ customers worldwide &mdash;
+          here&apos;s how we got here.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TIMELINE
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Section header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Calendar icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Timeline
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Key <span class="text-gradient">Moments</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Every milestone represents a step closer to our mission of making
+          every email count.
+        </p>
+      </div>
+
+      <!-- Vertical timeline -->
+      <div class="relative">
+
+        <!-- Vertical line -->
+        <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-green/20 via-brand-green/40 to-brand-green/20 md:-translate-x-px"></div>
+
+        <div class="space-y-12">
+          {milestones.map((milestone, i) => {
+            const isLeft = i % 2 === 0;
+            return (
+              <div
+                class="reveal relative"
+                style={`transition-delay:${i * 0.08}s`}
+              >
+                <!-- Timeline dot -->
+                <div class="absolute left-6 md:left-1/2 top-8 w-3 h-3 -translate-x-1.5 md:-translate-x-1.5 rounded-full bg-brand-green border-4 border-white shadow-sm z-10"></div>
+
+                <!-- Content card -->
+                <div class={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] ${isLeft ? 'md:mr-auto md:pr-0' : 'md:ml-auto md:pl-0'}`}>
+                  <div class="card p-6 group hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-start gap-4">
+
+                      <!-- Icon -->
+                      <div class={`w-12 h-12 rounded-xl bg-gradient-to-br ${milestone.color} flex items-center justify-center flex-shrink-0`}>
+                        {milestone.iconKey === 'rocket' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'users' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'check-circle' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'puzzle' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.083-.898.425-1.073.906A2.5 2.5 0 1 1 2.443 14.1c.48-.175.822-.58.906-1.073a1.026 1.026 0 0 0-.29-.877L1.49 10.582A2.402 2.402 0 0 1 .784 8.878a2.404 2.404 0 0 1 .707-1.704l1.61-1.61a.979.979 0 0 1 .837-.276c.47.07.802.48.968.925a2.501 2.501 0 1 0 3.214-3.214c-.446-.166-.855-.497-.925-.968a.98.98 0 0 1 .276-.837l1.61-1.61A2.403 2.403 0 0 1 10.877.784a2.404 2.404 0 0 1 1.704.707l1.568 1.568c.23.23.556.338.877.29.493-.083.898-.426 1.073-.906A2.5 2.5 0 1 1 21.557 5.9c-.175.48-.522.842-1.118.95z"></path>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'trophy' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                            <path d="M4 22h16"></path>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'globe' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'credit-card' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                          </svg>
+                        )}
+                        {milestone.iconKey === 'star' && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                               class={milestone.iconColor}>
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                        )}
+                      </div>
+
+                      <!-- Text content -->
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-2">
+                          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-display font-700 tracking-wide bg-brand-green-bg text-brand-green-dark">
+                            {milestone.year}
+                          </span>
+                          <span class="text-[10px] font-display font-500 text-ink-muted">
+                            {milestone.quarter}
+                          </span>
+                        </div>
+                        <h3 class="font-display font-700 text-base text-ink mb-1.5">
+                          {milestone.title}
+                        </h3>
+                        <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+                          {milestone.description}
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STATS
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="divider mb-24"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Section header -->
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- TrendingUp icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+          By the Numbers
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Where We <span class="text-gradient">Stand Today</span>
+        </h2>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="reveal">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-brand-green-bg mb-4">
+                {stat.iconKey === 'users' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       class="text-brand-green-dark">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                )}
+                {stat.iconKey === 'zap' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       class="text-brand-green-dark">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                )}
+                {stat.iconKey === 'target' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       class="text-brand-green-dark">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                )}
+                {stat.iconKey === 'star' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                       class="text-brand-green-dark">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                )}
+              </div>
+              <div class="font-display font-800 text-3xl sm:text-4xl text-ink mb-1">
+                {stat.value}
+              </div>
+              <p class="text-sm text-ink-tertiary font-display font-500">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="divider mt-24"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden bg-white">
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="reveal">
+        <div class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden" style="background:#18181B">
+
+          <!-- Grid background -->
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <!-- Decorative dots -->
+          <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+          <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:1s"></div>
+          <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:2s"></div>
+          <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:0.5s"></div>
+
+          <div class="relative z-10">
+
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- Rocket icon (small) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+              </svg>
+              Next Chapter
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Be Part of Our Next <span class="text-gradient-light">Milestone</span>
+            </h2>
+
+            <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+              Join 2,500+ teams who trust Scrubby to validate their emails.
+              Start with 100 free credits today.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+                Start Free
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+                View Pricing
+              </a>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- Shield icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="text-brand-green">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                GDPR Compliant
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- Users icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="text-brand-green">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                2,500+ Customers
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- Star icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="text-brand-green">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                4.85/5 on G2
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

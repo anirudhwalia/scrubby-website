@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "slug": "catchallemails",
+      "name": "Catch-All Emails",
+      "description": "Everything about catch-all and accept-all email validation"
+    },
+    {
+      "slug": "emaillistcleaning",
+      "name": "Email List Cleaning",
+      "description": "Tips and guides for cleaning your email lists"
+    },
+    {
+      "slug": "emailvalidation",
+      "name": "Email Validation",
+      "description": "Email validation tools, techniques, and best practices"
+    },
+    {
+      "slug": "founders",
+      "name": "Founders",
+      "description": "Stories and insights from Scrubby founders"
+    },
+    {
+      "slug": "leadgenerationagency",
+      "name": "Lead Generation",
+      "description": "Lead generation strategies and agency insights"
+    },
+    {
+      "slug": "scrubbycampaign",
+      "name": "Scrubby Campaign",
+      "description": "Scrubby campaigns, updates, and announcements"
+    },
+    {
+      "slug": "scrubbycomparison",
+      "name": "Scrubby Comparison",
+      "description": "How Scrubby compares with other email tools"
+    },
+    {
+      "slug": "uncategorized",
+      "name": "General",
+      "description": "General email marketing and validation topics"
+    }
+  ],
+  "authors": [
+    {
+      "slug": "abhinav_scrubby",
+      "name": "Abhinav",
+      "role": "Content Writer",
+      "avatar": "/blog-images/author_abhinav.jpg"
+    },
+    {
+      "slug": "amit_s_u3654",
+      "name": "Amit S.",
+      "role": "Marketing Lead",
+      "avatar": "/blog-images/author_amit_singh.jpg"
+    },
+    {
+      "slug": "nick_abraham_scru247",
+      "name": "Nick Abraham",
+      "role": "Cold Email Expert",
+      "avatar": "/blog-images/author_nick_abraham.webp"
+    },
+    {
+      "slug": "anirudh_kaushal_scru249",
+      "name": "Anirudh Kaushal",
+      "role": "Co-Founder",
+      "avatar": "/blog-images/author_anirudh_kaushal.webp"
+    },
+    {
+      "slug": "kristelk",
+      "name": "Kristel K.",
+      "role": "Content Strategist",
+      "avatar": "/blog-images/author_kristel_kongas.webp"
+    },
+    {
+      "slug": "admin_scrubby_f1wrkklo",
+      "name": "Scrubby Team",
+      "role": "Admin",
+      "avatar": null
+    }
+  ]
+}

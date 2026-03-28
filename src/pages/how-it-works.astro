@@ -1,0 +1,416 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const steps = [
+  {
+    number: 1,
+    title: 'Create Your Account',
+    description:
+      'Sign up in seconds and get 100 free credits to test. No credit card required — start validating immediately.',
+    icon: 'user-plus',
+  },
+  {
+    number: 2,
+    title: 'Submit Your Risky Email List',
+    description:
+      'Upload your catch-all or risky emails from any verification tool. Scrubby handles what others can\u2019t.',
+    icon: 'upload',
+  },
+  {
+    number: 3,
+    title: 'Receive Your Validated List',
+    description:
+      'Get back a 98% validated lead list. Only truly deliverable emails make the cut.',
+    icon: 'check-circle',
+  },
+];
+
+const preScrubbyTools = [
+  { name: 'ZeroBounce', logo: 'zerobounce' },
+  { name: 'NeverBounce', logo: 'neverbounce' },
+  { name: 'MillionVerifier', logo: 'millionverifier' },
+  { name: 'Bouncer', logo: 'bouncer' },
+  { name: 'Debounce', logo: 'debounce' },
+  { name: 'Hunter.io', logo: 'hunter' },
+];
+
+const postScrubbyTools = [
+  { name: 'Clay', logo: 'clay' },
+  { name: 'SmartLead', logo: 'smartlead' },
+  { name: 'Instantly', logo: 'instantly' },
+  { name: 'HubSpot', logo: 'hubspot' },
+  { name: 'Salesforce', logo: 'salesforce' },
+];
+
+const benefits = [
+  {
+    title: 'Superior Email Validation',
+    description:
+      'Validates risky emails beyond basic verification, ensuring genuinely deliverable addresses.',
+    icon: 'shield-check',
+  },
+  {
+    title: 'Maximized List Potential',
+    description:
+      'Recover otherwise discarded emails, potentially doubling your usable list size.',
+    icon: 'maximize2',
+  },
+  {
+    title: 'Domain Reputation Protection',
+    description:
+      'Invalid emails harm sender reputation; our validation preserves your domain score.',
+    icon: 'shield',
+  },
+  {
+    title: 'Increased ROI',
+    description:
+      'Better engagement rates from refined, larger lists improve your email marketing returns.',
+    icon: 'trending-up',
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scrubby.io/" },
+    { "@type": "ListItem", "position": 2, "name": "How It Works", "item": "https://scrubby.io/how-it-works/" }
+  ]
+};
+---
+
+<BaseLayout
+  title="How It Works"
+  description="Learn how Scrubby validates catch-all and risky emails in 3 simple steps. Upload your list, we test each email, and you get 98% accurate results."
+  path="/how-it-works/"
+  schema={breadcrumbSchema}
+>
+
+  <!-- ── Hero ── -->
+  <section class="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div
+      class="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+    <div
+      class="absolute w-[350px] h-[350px] top-16 right-0 rounded-full blur-3xl animate-pulse"
+      style="background: rgba(45, 206, 142, 0.05); animation-delay: 2s;"
+    ></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+          How Scrubby
+          <span class="text-gradient-light">Works</span>
+        </h1>
+        <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-10 font-body">
+          Verify your risky emails at scale in 3 easy steps. Submit your lead
+          list, get it scrubbed, and receive an optimized list with 98%
+          accuracy.
+        </p>
+        <a href="https://app.scrubby.io" class="btn-primary">
+          Try It Free
+          <!-- ArrowRight -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3-Step Process ── -->
+  <section class="relative py-24 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 relative">
+        <!-- Connecting dotted line (desktop) -->
+        <div class="hidden md:block absolute top-20 left-[20%] right-[20%]">
+          <div
+            class="h-px w-full"
+            style="background-image: repeating-linear-gradient(to right, #2DCE8E 0, #2DCE8E 6px, transparent 6px, transparent 14px);"
+          ></div>
+        </div>
+
+        {steps.map((step, i) => (
+          <div
+            class="reveal relative text-center"
+            style={`transition-delay: ${i * 0.15}s;`}
+          >
+            <!-- Numbered circle -->
+            <div class="relative mx-auto mb-8 w-fit">
+              <div class="w-20 h-20 rounded-2xl bg-brand-green/8 border border-brand-green/15 flex items-center justify-center relative z-10">
+                {step.icon === 'user-plus' && (
+                  <!-- UserPlus -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>
+                  </svg>
+                )}
+                {step.icon === 'upload' && (
+                  <!-- Upload -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>
+                  </svg>
+                )}
+                {step.icon === 'check-circle' && (
+                  <!-- CheckCircle -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/>
+                  </svg>
+                )}
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-green flex items-center justify-center text-sm font-display font-700 text-white z-20 shadow-lg shadow-brand-green/30">
+                {step.number}
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="glass-card p-6 rounded-xl">
+              <h3 class="font-display font-700 text-lg text-ink mb-3">
+                {step.title}
+              </h3>
+              <p class="text-sm text-ink-secondary leading-relaxed font-body">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Integration Flow ── -->
+  <section class="relative py-24 bg-surface-secondary overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Layers -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+          </svg>
+          Integrations
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl text-ink mb-4">
+          Works With Your
+          <span class="text-gradient">Existing Stack</span>
+        </h2>
+        <p class="text-ink-secondary text-base max-w-xl mx-auto font-body">
+          Scrubby complements your existing email verification tools. Run your
+          list through your preferred SMTP tool first, then send the risky
+          results to Scrubby.
+        </p>
+      </div>
+
+      <!-- Visual Flow -->
+      <div class="reveal">
+        <div class="grid md:grid-cols-3 gap-6 items-stretch mb-16">
+
+          <!-- Step 1: Your Verifier -->
+          <div class="card p-6 text-center flex flex-col">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-amber-50 border border-amber-200/50 flex items-center justify-center mb-4">
+              <!-- Layers -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600" aria-hidden="true">
+                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-base text-ink mb-2">Your Verifier</h3>
+            <p class="text-sm text-ink-tertiary font-body mb-5">
+              Flags risky &amp; catch-all emails as &quot;unknown&quot;
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 mt-auto">
+              {preScrubbyTools.map((tool) => (
+                <div class="flex items-center gap-2 bg-white border border-surface-border rounded-lg px-3 py-2">
+                  <img
+                    src={`/logos/integrations/${tool.logo}.png`}
+                    alt={tool.name}
+                    class="w-5 h-5 rounded object-contain"
+                  />
+                  <span class="text-xs font-display font-500 text-ink-secondary">
+                    {tool.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Step 2: Scrubby Validates -->
+          <div class="card p-6 text-center flex flex-col ring-2 ring-brand-green shadow-green-glow">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-4">
+              <!-- ShieldCheck -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-base text-ink mb-2">Scrubby Validates</h3>
+            <p class="text-sm text-ink-tertiary font-body mb-5">
+              Verifies inbox deliverability on catch-all domains with 98% accuracy
+            </p>
+            <div class="mt-auto flex justify-center">
+              <span class="badge text-[10px] py-0.5">
+                <!-- Zap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+                </svg>
+                98% Deliverability
+              </span>
+            </div>
+          </div>
+
+          <!-- Step 3: Send with Confidence -->
+          <div class="card p-6 text-center flex flex-col">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-4">
+              <!-- Send -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                <path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-700 text-base text-ink mb-2">Send with Confidence</h3>
+            <p class="text-sm text-ink-tertiary font-body mb-5">
+              Clean, validated data flows to your sending platform
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 mt-auto">
+              {postScrubbyTools.map((tool) => (
+                <div class="flex items-center gap-2 bg-white border border-surface-border rounded-lg px-3 py-2">
+                  <img
+                    src={`/logos/integrations/${tool.logo}.png`}
+                    alt={tool.name}
+                    class="w-5 h-5 rounded object-contain"
+                  />
+                  <span class="text-xs font-display font-500 text-ink-secondary">
+                    {tool.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Flow Arrows (desktop summary) -->
+        <div class="hidden md:flex items-center justify-center gap-4 text-sm font-display font-600">
+          <span class="text-ink-secondary">Your Verifier</span>
+          <!-- ChevronRight -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+          <span class="text-brand-green-dark">Scrubby Validates</span>
+          <!-- ChevronRight -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+          <span class="text-ink-secondary">Send with Confidence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Benefits ── -->
+  <section class="relative py-24 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Zap -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+          </svg>
+          Benefits
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl text-ink mb-4">
+          Why teams choose
+          <span class="text-gradient">Scrubby</span>
+        </h2>
+        <p class="text-ink-secondary text-base max-w-lg mx-auto font-body">
+          Go beyond basic email verification. Scrubby delivers real results
+          where other tools fall short.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        {benefits.map((benefit, i) => (
+          <div
+            class="glass-card p-6 rounded-xl text-center hover:shadow-card-hover transition-all duration-300"
+            style={`transition-delay: ${i * 0.1}s;`}
+          >
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-5">
+              {benefit.icon === 'shield-check' && (
+                <!-- ShieldCheck -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+              )}
+              {benefit.icon === 'maximize2' && (
+                <!-- Maximize2 -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                  <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/>
+                </svg>
+              )}
+              {benefit.icon === 'shield' && (
+                <!-- Shield -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                </svg>
+              )}
+              {benefit.icon === 'trending-up' && (
+                <!-- TrendingUp -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark" aria-hidden="true">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+                </svg>
+              )}
+            </div>
+            <h3 class="font-display font-700 text-base text-ink mb-3">
+              {benefit.title}
+            </h3>
+            <p class="text-sm text-ink-secondary leading-relaxed font-body">
+              {benefit.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Bottom CTA ── -->
+  <section class="relative py-24 bg-surface-secondary overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <div class="card-dark p-10 md:p-16 relative overflow-hidden rounded-2xl">
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <!-- Decorative dots -->
+          <div class="absolute top-8 left-8 glow-dot animate-pulse-glow"></div>
+          <div class="absolute top-12 right-16 glow-dot animate-pulse-glow" style="animation-delay: 1s;"></div>
+          <div class="absolute bottom-16 left-20 glow-dot animate-pulse-glow" style="animation-delay: 2s;"></div>
+          <div class="absolute bottom-8 right-8 glow-dot animate-pulse-glow" style="animation-delay: 0.5s;"></div>
+
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-6">
+              <!-- Zap -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true">
+                <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+              </svg>
+            </div>
+            <h2 class="font-display font-800 text-3xl sm:text-4xl text-white mb-4 leading-tight">
+              Start with
+              <span class="text-gradient-light">100 free credits</span>
+            </h2>
+            <p class="text-slate-300 text-base max-w-lg mx-auto mb-10 font-body">
+              Optimize your campaign efficiency with Scrubby. No credit card required.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a href="https://app.scrubby.io" class="btn-primary">
+                Get Started Free
+                <!-- ArrowRight -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="/contact" class="btn-secondary-dark">
+                Book a Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

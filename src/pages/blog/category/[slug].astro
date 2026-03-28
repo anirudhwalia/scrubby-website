@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogCategoryPage from '../../../page-components/BlogCategoryPage.jsx';
+import { blogCategories } from '../../../data/blog.js';
+
+export function getStaticPaths() {
+  return blogCategories.map((cat) => ({
+    params: { slug: cat.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const category = blogCategories.find((c) => c.slug === slug);
+---
+
+<BaseLayout title={category?.name || 'Category'} description={`Browse ${category?.name || ''} articles on the Scrubby blog.`} path={`/blog/category/${slug}/`}>
+  <BlogCategoryPage client:load />
+</BaseLayout>

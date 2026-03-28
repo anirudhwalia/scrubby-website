@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  { id: 'introduction', title: 'Introduction' },
+  { id: 'cookies', title: 'Cookies' },
+  { id: 'license', title: 'License & Intellectual Property' },
+  { id: 'user-comments', title: 'User Comments' },
+  { id: 'hyperlinking', title: 'Hyperlinking to Our Content' },
+  { id: 'iframes', title: 'iFrames' },
+  { id: 'content-liability', title: 'Content Liability' },
+  { id: 'reservation-of-rights', title: 'Reservation of Rights' },
+  { id: 'disclaimer', title: 'Disclaimer' },
+  { id: 'contact', title: 'Contact' },
+];
+---
+
+<BaseLayout title="Terms & Conditions" description="Scrubby's terms of service agreement." path="/terms/" noindex={true}>
+
+  {/* ── Hero ── */}
+  <section class="relative pt-40 pb-20 bg-navy-800 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-30"></div>
+    <div
+      class="absolute w-[500px] h-[500px] -top-32 -left-32 rounded-full blur-3xl animate-pulse opacity-50"
+      style="background: rgba(45, 206, 142, 0.08);"
+    ></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5">
+          Terms &amp; Conditions
+        </h1>
+        <p class="text-slate-300 text-lg max-w-xl mx-auto font-body">
+          Last updated: January 2024
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Content ── */}
+  <section class="relative py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      {/* Table of Contents */}
+      <div class="reveal mb-12 p-6 rounded-xl bg-surface-secondary border border-surface-border">
+        <h2 class="font-display font-bold text-lg text-ink mb-4">
+          Table of Contents
+        </h2>
+        <nav class="grid sm:grid-cols-2 gap-2">
+          {sections.map((section, i) => (
+            <a
+              href={`#${section.id}`}
+              class="flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+            >
+              <span class="text-xs text-ink-tertiary font-display font-500 w-5">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              {section.title}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      {/* ── Sections ── */}
+      <div class="space-y-12 reveal">
+
+        {/* 1. Introduction */}
+        <div id="introduction">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            1. Introduction
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            These Terms and Conditions govern your use of the Scrubby website located at scrubby.io, operated by
+            Scrubby O&Uuml; (Registration Code: 16031675), with its registered address at Viru v&auml;ljak 2, 10111,
+            Tallinn, Estonia.
+          </p>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            By accessing this website, you agree to be bound by these Terms and Conditions. If you disagree with any
+            part of these terms, please do not use our website. These Terms and Conditions, together with our Privacy
+            Policy, govern Scrubby O&Uuml;'s relationship with you in relation to this website.
+          </p>
+        </div>
+
+        {/* 2. Cookies */}
+        <div id="cookies">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            2. Cookies
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            This website employs the use of cookies. By accessing scrubby.io, you agree to the use of cookies in
+            accordance with Scrubby O&Uuml;'s{' '}
+            <a href="/privacy" class="text-brand-green hover:underline font-medium">
+              Privacy Policy
+            </a>{' '}
+            and{' '}
+            <a href="/cookies" class="text-brand-green hover:underline font-medium">
+              Cookie Policy
+            </a>.
+            Cookies are used by our website to enable the functionality of certain areas and to make it easier for
+            people visiting our website. Some of our affiliate and advertising partners may also use cookies.
+          </p>
+        </div>
+
+        {/* 3. License & Intellectual Property */}
+        <div id="license">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            3. License &amp; Intellectual Property
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            Unless otherwise stated, Scrubby O&Uuml; and/or its licensors own the intellectual property rights for all
+            material on scrubby.io. All intellectual property rights are reserved. You may access content from scrubby.io
+            for your own personal use, subject to the restrictions set in these Terms and Conditions.
+          </p>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            You must not:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+            <li>Republish material from scrubby.io</li>
+            <li>Sell, rent, or sub-license material from scrubby.io</li>
+            <li>Reproduce, duplicate, or copy material from scrubby.io</li>
+            <li>Redistribute content from scrubby.io unless content is specifically made for redistribution</li>
+          </ul>
+        </div>
+
+        {/* 4. User Comments */}
+        <div id="user-comments">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            4. User Comments
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            Certain parts of this website may offer the opportunity for users to post and exchange opinions and
+            information. Scrubby O&Uuml; does not filter, edit, publish, or review comments prior to their presence on
+            the website. Comments do not reflect the views and opinions of Scrubby O&Uuml;, its agents, or affiliates.
+          </p>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            By posting comments, you warrant and represent that:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body">
+            <li>You have the right to post the comments and have all necessary licenses and consents to do so</li>
+            <li>The comments do not infringe on any intellectual property rights of any third party</li>
+            <li>The comments do not contain any defamatory, libelous, offensive, indecent, or otherwise unlawful material</li>
+            <li>The comments will not be used to solicit or promote business, custom, or unlawful activity</li>
+          </ul>
+        </div>
+
+        {/* 5. Hyperlinking */}
+        <div id="hyperlinking">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            5. Hyperlinking to Our Content
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            The following organizations may link to our website without prior written approval:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+            <li>Government agencies</li>
+            <li>Search engines</li>
+            <li>News organizations</li>
+            <li>Online directory distributors, when they list us in their directories</li>
+            <li>System-wide accredited businesses, except soliciting non-profit organizations and charity groups</li>
+          </ul>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            Other organizations may request to link to our website by contacting us. We may consider and approve link
+            requests from commonly-known consumer or business information sources, trade associations, and other
+            entities at our sole discretion. Approved links must not be deceptive, must not falsely imply sponsorship,
+            and must fit within the context of the linking party's site.
+          </p>
+        </div>
+
+        {/* 6. iFrames */}
+        <div id="iframes">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            6. iFrames
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            Without prior approval and written permission, you may not create frames around our webpages that alter in
+            any way the visual presentation or appearance of our website. Any unauthorized framing of our website
+            content is strictly prohibited.
+          </p>
+        </div>
+
+        {/* 7. Content Liability */}
+        <div id="content-liability">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            7. Content Liability
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            We shall not be held responsible for any content that appears on your website. You agree to protect and
+            defend us against all claims that arise from content appearing on your website or that link to our website.
+            No link(s) should appear on any website that may be interpreted as libelous, obscene, or criminal, or that
+            infringes, otherwise violates, or advocates the infringement or other violation of any third-party rights.
+          </p>
+        </div>
+
+        {/* 8. Reservation of Rights */}
+        <div id="reservation-of-rights">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            8. Reservation of Rights
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            We reserve the right to request that you remove all links or any particular link to our website. You agree
+            to immediately remove all links to our website upon request. We also reserve the right to amend these Terms
+            and Conditions and its linking policy at any time. By continuously linking to our website, you agree to be
+            bound by and follow these linking Terms and Conditions.
+          </p>
+        </div>
+
+        {/* 9. Disclaimer */}
+        <div id="disclaimer">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            9. Disclaimer
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            To the maximum extent permitted by applicable law, we exclude all representations, warranties, and
+            conditions relating to our website and the use of this website. Nothing in this disclaimer will:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-ink-secondary font-body mb-4">
+            <li>Limit or exclude our or your liability for death or personal injury</li>
+            <li>Limit or exclude our or your liability for fraud or fraudulent misrepresentation</li>
+            <li>Limit any of our or your liabilities in any way that is not permitted under applicable law</li>
+            <li>Exclude any of our or your liabilities that may not be excluded under applicable law</li>
+          </ul>
+          <p class="text-ink-secondary leading-relaxed font-body">
+            The limitations and prohibitions of liability set in this section and elsewhere in this disclaimer are subject
+            to the preceding paragraph and govern all liabilities arising under the disclaimer, including liabilities
+            arising in contract, in tort, and for breach of statutory duty. As long as the website and the information
+            and services on the website are provided free of charge, we will not be liable for any loss or damage of any
+            nature.
+          </p>
+        </div>
+
+        {/* 10. Contact */}
+        <div id="contact">
+          <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            10. Contact
+          </h2>
+          <p class="text-ink-secondary leading-relaxed font-body mb-4">
+            If you have any questions about these Terms and Conditions, please contact us:
+          </p>
+          <div class="p-6 rounded-xl bg-surface-secondary border border-surface-border">
+            <div class="space-y-2 text-sm text-ink-secondary font-body">
+              <p><strong class="text-ink font-display">Scrubby O&Uuml;</strong></p>
+              <p>Registration Code: 16031675</p>
+              <p>Viru v&auml;ljak 2, 10111, Tallinn, Estonia</p>
+              <p>CEO: Erik Paulson</p>
+              <p>
+                Email:{' '}
+                <a href="mailto:info@scrubby.io" class="text-brand-green hover:underline">
+                  info@scrubby.io
+                </a>
+              </p>
+              <p>
+                Website:{' '}
+                <a href="https://scrubby.io" class="text-brand-green hover:underline" target="_blank" rel="noopener noreferrer">
+                  scrubby.io
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Back to home */}
+      <div class="mt-16 pt-8 border-t border-surface-border reveal">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-sm text-ink-secondary hover:text-brand-green transition-colors font-body"
+        >
+          {/* ArrowRight icon rotated 180deg = ArrowLeft */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="rotate-180"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+          Back to Home
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

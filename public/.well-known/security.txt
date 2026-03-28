@@ -1,0 +1,9 @@
+# Scrubby Security Contact
+# https://securitytxt.org/
+
+Contact: mailto:security@scrubby.io
+Contact: mailto:hello@scrubby.io
+Preferred-Languages: en
+Canonical: https://scrubby.io/.well-known/security.txt
+Policy: https://scrubby.io/privacy-policy/
+Expires: 2027-12-31T23:59:59.000Z

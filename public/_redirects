@@ -1,0 +1,19 @@
+# SEO redirects — match old WordPress slugs
+/contact-us  /contact/  301
+/contact-us/  /contact/  301
+/book-a-demo  /book-demo/  301
+/book-a-demo/  /book-demo/  301
+/terms-and-conditions  /terms/  301
+/terms-and-conditions/  /terms/  301
+/gdpr-compliance  /gdpr/  301
+/gdpr-compliance/  /gdpr/  301
+/about-us  /about/  301
+/about-us/  /about/  301
+/bulk-email-list-cleaning  /bulk-cleaning/  301
+/bulk-email-list-cleaning/  /bulk-cleaning/  301
+/founders  /about/founders/  301
+/founders/  /about/founders/  301
+/milestones  /about/milestones/  301
+/milestones/  /about/milestones/  301
+/g2-reviews  /about/g2-reviews/  301
+/g2-reviews/  /about/g2-reviews/  301

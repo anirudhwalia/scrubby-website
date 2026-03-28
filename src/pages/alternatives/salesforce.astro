@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const comparisonRows = [
+  { feature: 'Primary Focus',      salesforce: 'Enterprise CRM & sales automation',        scrubby: 'Risky / catch-all email validation' },
+  { feature: 'Core Strength',      salesforce: 'Lead management & reporting dashboards',    scrubby: '98.7% deliverability on risky emails' },
+  { feature: 'Contact Management', salesforce: 'Enterprise-grade CRM database',             scrubby: 'Validates email data in your CRM' },
+  { feature: 'Email Verification', salesforce: 'No native email verification',              scrubby: 'Deep inbox-level catch-all validation' },
+  { feature: 'Catch-All Handling', salesforce: 'Cannot detect catch-all emails',            scrubby: 'Validates each catch-all individually' },
+  { feature: 'Campaign Tools',     salesforce: 'Marketing Cloud, Pardot integrations',      scrubby: 'Ensures campaign lists are deliverable' },
+  { feature: 'Pricing',            salesforce: 'Enterprise pricing from $25/user/mo',       scrubby: 'Starting at $27/mo, 100 free credits' },
+  { feature: 'Best For',           salesforce: 'Enterprise sales & lead management',        scrubby: 'Validating CRM email data quality' },
+];
+
+const keyDifferences = [
+  {
+    title: 'Enterprise CRM vs Validation',
+    description: "Salesforce is the world's leading enterprise CRM for managing leads, accounts, and sales processes. Scrubby ensures the email data flowing through Salesforce is actually deliverable, preventing wasted outreach and protecting sender reputation.",
+  },
+  {
+    title: 'Data Quality at Scale',
+    description: 'Salesforce stores millions of contact records, but email data decays at 25-30% per year. Scrubby validates risky and catch-all emails in bulk, keeping your Salesforce data clean and your campaign metrics accurate.',
+  },
+  {
+    title: 'Campaign Performance',
+    description: 'Salesforce powers your sales automation and marketing campaigns through Pardot and Marketing Cloud. Scrubby ensures those campaigns reach real inboxes by catching the risky emails that standard tools miss.',
+  },
+];
+
+const workflowSteps = [
+  {
+    step: '01',
+    title: 'Export Salesforce Leads',
+    description: 'Export lead and contact email data from Salesforce, focusing on unverified records and aging data that needs validation.',
+  },
+  {
+    step: '02',
+    title: 'Scrubby Validates',
+    description: 'Upload the exported emails to Scrubby for deep inbox-level validation. Identify risky catch-all addresses in 48-72 hours.',
+  },
+  {
+    step: '03',
+    title: 'Sync Clean Data Back',
+    description: 'Update Salesforce records with Scrubby validation results. Flag or remove invalid emails, keep verified addresses active.',
+  },
+  {
+    step: '04',
+    title: 'Launch Campaigns',
+    description: 'Run Salesforce campaigns, Pardot sequences, or Marketing Cloud sends with confidence that every email reaches a real inbox.',
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Scrubby vs Salesforce — Email Validation Comparison",
+  "description": "Compare Scrubby and Salesforce for email validation. See how Scrubby complements Salesforce to validate catch-all and risky emails with 98.7% accuracy.",
+  "url": "https://scrubby.io/alternatives/salesforce",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://scrubby.io" },
+      { "@type": "ListItem", "position": 2, "name": "Alternatives", "item": "https://scrubby.io/alternatives" },
+      { "@type": "ListItem", "position": 3, "name": "Salesforce", "item": "https://scrubby.io/alternatives/salesforce" },
+    ],
+  },
+};
+---
+
+<BaseLayout
+  title="Scrubby vs Salesforce — Email Validation Comparison"
+  description="Compare Scrubby and Salesforce for email validation. See how Scrubby complements Salesforce to validate catch-all and risky emails with 98.7% accuracy."
+  path="/alternatives/salesforce"
+  schema={schema}
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative pt-40 pb-28 overflow-hidden" style="background:#18181B">
+    <div
+      class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+      style="background:rgba(45,206,142,0.08)"
+    ></div>
+    <div
+      class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+      style="background:rgba(45,206,142,0.05);animation-delay:2s"
+    ></div>
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+          <!-- Zap icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Scrubby + Salesforce
+        </div>
+
+        <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+          <span class="text-white">Salesforce + Scrubby: </span>
+          <span class="text-gradient-light">Better Together</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+          Salesforce manages your enterprise sales pipeline. Scrubby validates the email
+          data in your CRM, catching risky catch-all emails before they reach your campaigns.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+            Try Scrubby Free
+            <!-- ArrowRight icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/how-it-works" class="btn-secondary-dark text-base px-8 py-4">
+            How It Works
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       COMPARISON TABLE
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Layers icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          Feature Comparison
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          How They <span class="text-gradient">Compare</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Salesforce is an enterprise CRM platform while Scrubby is an email validation specialist.
+          They serve different but complementary roles in your enterprise sales stack.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div class="card overflow-hidden">
+          <!-- Table header -->
+          <div class="grid grid-cols-3 border-b border-surface-border">
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider">
+              Feature
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 text-ink-muted uppercase tracking-wider text-center bg-surface-secondary/50">
+              Salesforce
+            </div>
+            <div class="px-6 py-4 text-[11px] font-display font-600 uppercase tracking-wider text-center" style="background:rgba(45,206,142,0.05);color:#1BA872">
+              Scrubby
+            </div>
+          </div>
+
+          <!-- Table rows -->
+          {comparisonRows.map((row, i) => (
+            <div class={`grid grid-cols-3 ${i < comparisonRows.length - 1 ? 'border-b border-surface-border/50' : ''} hover:bg-surface-secondary/30 transition-colors`}>
+              <div class="px-6 py-4 text-sm font-display font-600 text-ink">
+                {row.feature}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center bg-surface-secondary/20">
+                {row.salesforce}
+              </div>
+              <div class="px-6 py-4 text-sm text-ink-secondary font-body text-center" style="background:rgba(45,206,142,0.02)">
+                {row.scrubby}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       KEY DIFFERENCES
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-surface-secondary">
+    <div class="divider mb-24"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- Target icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          Key Differences
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          What Sets Them <span class="text-gradient">Apart</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Salesforce and Scrubby are different tools that work powerfully together.
+          Understanding their strengths helps you maximize CRM data quality.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {keyDifferences.map((diff, i) => (
+          <div class="card p-8 reveal group" style={`transition-delay:${i * 0.1}s`}>
+            <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center mb-6 group-hover:shadow-green-glow transition-shadow duration-300">
+              {i === 0 && (
+                <!-- Database icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              )}
+              {i === 1 && (
+                <!-- BarChart3 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              )}
+              {i === 2 && (
+                <!-- Users icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              )}
+            </div>
+            <h3 class="font-display font-700 text-xl text-ink mb-3">{diff.title}</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">{diff.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="divider mt-24"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RECOMMENDED WORKFLOW
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <div class="badge mx-auto mb-5">
+          <!-- RefreshCw icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          Recommended Workflow
+        </div>
+        <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+          Use Them <span class="text-gradient">Together</span>
+        </h2>
+        <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Validate your Salesforce email data with Scrubby. Keep your CRM clean
+          and ensure every campaign reaches real, deliverable inboxes.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {workflowSteps.map((step, i) => (
+          <div class="card p-7 reveal text-center relative group" style={`transition-delay:${i * 0.1}s`}>
+            <div class="text-5xl font-display font-800 text-surface-tertiary mb-4 group-hover:text-brand-green/20 transition-colors duration-300">
+              {step.step}
+            </div>
+
+            <div class="w-12 h-12 mx-auto rounded-xl bg-brand-green-bg flex items-center justify-center mb-4">
+              {i === 0 && (
+                <!-- Database icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              )}
+              {i === 1 && (
+                <!-- Shield icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              )}
+              {i === 2 && (
+                <!-- RefreshCw icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              )}
+              {i === 3 && (
+                <!-- Sparkles icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark"><path d="M12 3l1.88 5.76a1 1 0 0 0 .95.69h6.06l-4.9 3.56a1 1 0 0 0-.36 1.12L17.5 20l-4.9-3.56a1 1 0 0 0-1.18 0L6.5 20l1.87-5.87a1 1 0 0 0-.36-1.12L3.11 9.45h6.06a1 1 0 0 0 .95-.69L12 3z"/></svg>
+              )}
+            </div>
+
+            <h3 class="font-display font-700 text-lg text-ink mb-2">{step.title}</h3>
+            <p class="text-sm text-ink-tertiary leading-relaxed font-body">{step.description}</p>
+
+            {i < workflowSteps.length - 1 && (
+              <div class="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10">
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-ink-muted"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════════ -->
+  <section class="relative py-24 overflow-hidden bg-white">
+    <div class="divider mb-24"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6">
+      <div class="reveal">
+        <div class="rounded-2xl p-10 md:p-16 text-center relative overflow-hidden" style="background:#18181B">
+          <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+          <div class="absolute top-8 left-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+          <div class="absolute top-12 right-16 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:1s"></div>
+          <div class="absolute bottom-16 left-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:2s"></div>
+          <div class="absolute bottom-8 right-8 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:0.5s"></div>
+
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- Zap icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Get Started
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Try Scrubby <span class="text-gradient-light">Free</span>
+            </h2>
+
+            <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10 font-body">
+              Start with 100 free credits. Validate your Salesforce lead emails and ensure
+              every campaign reaches a real inbox for maximum ROI on your CRM data.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+              <a href="https://app.scrubby.io" class="btn-primary text-base px-8 py-4">
+                Start Free Trial
+                <!-- ArrowRight icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+                View Pricing
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- CheckCircle2 icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                100 Free Credits
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                No Credit Card Required
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                98.7% Accuracy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

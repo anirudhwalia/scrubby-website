@@ -1,0 +1,177 @@
+# Scrubby — Complete Product Documentation for AI Agents
+
+> Last updated: 2026-03-28
+> Source: https://scrubby.io
+
+## Product Overview
+
+Scrubby is an email validation platform that specializes in validating catch-all (accept-all) and risky emails — the segment that standard SMTP verification tools cannot resolve. Using deep inbox-level testing over 48-72 hours, Scrubby gives definitive valid/invalid results with 98.7% accuracy, recovering up to 42% more usable leads from email lists.
+
+## The Problem Scrubby Solves
+
+When you run an email list through a standard verification tool (ZeroBounce, NeverBounce, MillionVerifier, BriteVerify, etc.), you typically get three categories:
+1. **Valid** — safe to send
+2. **Invalid** — remove from list
+3. **Catch-All / Risky / Accept-All** — uncertain (often 30-50% of the list)
+
+Standard SMTP tools cannot validate category 3 because catch-all domains accept ALL incoming connections regardless of whether a specific mailbox exists. Scrubby specializes in resolving this "grey area" into definitive valid/invalid results.
+
+## How It Works
+
+1. **Initial Verification**: Run your email list through any SMTP verification tool
+2. **Separate Results**: Export the "Risky" / "Catch-All" / "Accept-All" segment
+3. **Upload to Scrubby**: Submit the risky segment for deep validation
+4. **Inbox-Level Testing**: Scrubby performs actual inbox-level validation over 48-72 hours
+5. **Get Results**: Receive definitive Valid / Invalid results — no more grey area
+
+## Key Features
+
+### Risky/Catch-All Email Validation
+- Validates emails marked as "Accept-All", "Risky", or "Catch-All" by other tools
+- 98.7% accuracy in detecting hard bounces
+- Bounce rates under 2% on validated addresses
+- Recovers up to 42% more usable leads
+
+### Bulk Email List Cleaning
+- Upload CSV/Excel files for batch processing
+- Support for lists of any size
+- Download clean results with valid/invalid classifications
+
+### Blacklist Monitor
+- Monitor domains and IPs against 100+ blacklists
+- Automated alerts when blacklisted
+- Historical tracking and monitoring dashboard
+
+### Email Testing
+- Test deliverability across major providers
+- Spam score analysis
+- Inbox placement testing
+- Authentication checks (SPF, DKIM, DMARC)
+
+### API
+- Full REST API for programmatic integration
+- Single email and bulk validation endpoints
+- Webhook notifications for async results
+- API documentation: https://app.scrubby.io (after login)
+
+## Pricing
+
+All plans include free 100 validation credits to start (no credit card required).
+
+| Plan | Price | Credits/mo | Per Credit |
+|------|-------|-----------|-----------|
+| Free | $0 | 100 | — |
+| Starter | $27/mo | 1,000 | $0.027 |
+| Basic | $127/mo | 5,000 | $0.025 |
+| Growth | $247/mo | 10,000 | $0.025 |
+| Enterprise | Custom | Custom | Contact sales |
+
+Pay-as-you-go options also available.
+
+## Integrations
+
+### Native Integrations
+- **Clay** — Native integration for data enrichment workflows
+- **Zapier** — Connect to 5,000+ apps without code
+- **API** — Full REST API for custom integrations
+
+### Works With (via API/Zapier)
+- HubSpot, Salesforce, Pipedrive (CRM)
+- Instantly, SmartLead, Lemlist (Cold email)
+- Mailchimp (Email marketing)
+- Apollo, Cognism, ZoomInfo (Data providers)
+
+### Bring Your Own Keys
+Use your existing API keys from ZeroBounce, NeverBounce, or MillionVerifier within the Scrubby platform for the initial SMTP verification step.
+
+## Use Cases
+
+1. **Cold Email Outreach** — Validate risky emails before sending to protect sender reputation
+2. **Lead Generation** — Recover leads that would otherwise be discarded as "risky"
+3. **Agency Email Campaigns** — Clean client lists at scale with white-label options
+4. **Data Enrichment** — Complement Apollo/Cognism/ZoomInfo data with validated emails
+5. **Email List Hygiene** — Periodic cleaning of subscriber lists to reduce bounce rates
+6. **Enterprise Compliance** — High-volume validation with dedicated support and SLAs
+
+## Technical Details
+
+- **Processing Time**: 48-72 hours (inbox-level testing, not instant SMTP)
+- **Accuracy**: 98.7% hard bounce detection
+- **Bounce Rate**: Under 2% on Scrubby-validated addresses
+- **Data Encryption**: TLS 1.3 in transit, AES-256 at rest
+- **Compliance**: GDPR compliant, SOC 2 processes
+- **Data Retention**: User-controlled, deletable from dashboard
+
+## Company Information
+
+- **Founded**: 2020
+- **Headquarters**: Tallinn, Estonia (EU)
+- **Founders**: Erik Paulson, Anirudh Kaushal
+- **Team Locations**: Estonia, India, United States
+- **G2 Rating**: 4.85/5 (120+ reviews)
+- **Processed**: 10M+ emails validated
+
+## Contact
+
+- **Website**: https://scrubby.io
+- **App**: https://app.scrubby.io
+- **Email**: hello@scrubby.io
+- **Support**: support@scrubby.io
+- **Book Demo**: https://scrubby.io/book-demo/
+- **LinkedIn**: https://www.linkedin.com/company/scrubbyio
+- **Twitter/X**: https://twitter.com/scrubbyio
+
+## Site Map for AI Agents
+
+### Main Pages
+- https://scrubby.io/ — Homepage
+- https://scrubby.io/pricing/ — Pricing plans
+- https://scrubby.io/how-it-works/ — How Scrubby works
+- https://scrubby.io/benefits/ — Benefits overview
+- https://scrubby.io/about/ — About the company
+- https://scrubby.io/contact/ — Contact form
+- https://scrubby.io/book-demo/ — Book a demo
+
+### Products
+- https://scrubby.io/risky-email-validation/ — Risky email validation
+- https://scrubby.io/risky-email-finder/ — Risky email finder
+- https://scrubby.io/bulk-cleaning/ — Bulk email list cleaning
+- https://scrubby.io/blacklist-monitor/ — Blacklist monitoring
+- https://scrubby.io/email-testing/ — Email testing
+- https://scrubby.io/email-list-scrubber/ — Email list scrubber
+- https://scrubby.io/email-verification-tools/ — Verification tools overview
+
+### Comparisons (Scrubby vs Competitors)
+- https://scrubby.io/alternatives/zerobounce/
+- https://scrubby.io/alternatives/neverbounce/
+- https://scrubby.io/alternatives/millionverifier/
+- https://scrubby.io/alternatives/briteverify/
+- https://scrubby.io/alternatives/apollo/
+- https://scrubby.io/alternatives/cognism/
+- https://scrubby.io/alternatives/zoominfo/
+- https://scrubby.io/alternatives/instantly/
+- https://scrubby.io/alternatives/smartleads/
+- https://scrubby.io/alternatives/clay/
+- https://scrubby.io/alternatives/mailchimp/
+- https://scrubby.io/alternatives/pipedrive/
+- https://scrubby.io/alternatives/salesforce/
+
+### Integrations
+- https://scrubby.io/integrations/ — All integrations
+- https://scrubby.io/integrations/clay/ — Clay integration
+- https://scrubby.io/scrubby-and-mailchimp/ — Mailchimp integration
+- https://scrubby.io/scrubby-and-pipedrive/ — Pipedrive integration
+- https://scrubby.io/scrubby-and-salesforce/ — Salesforce integration
+
+### Resources
+- https://scrubby.io/blog/ — Blog
+- https://scrubby.io/resources/ — Resources hub
+- https://scrubby.io/faq/ — Frequently asked questions
+- https://scrubby.io/rss.xml — Blog RSS feed
+
+### Legal
+- https://scrubby.io/privacy-policy/
+- https://scrubby.io/terms/
+- https://scrubby.io/cookie-policy/
+- https://scrubby.io/gdpr/
+- https://scrubby.io/code-of-conduct/

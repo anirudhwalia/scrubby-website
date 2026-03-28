@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Scrubby",
+  "name_for_model": "scrubby",
+  "description_for_human": "Email validation for risky and catch-all emails. Validates emails that standard SMTP tools mark as uncertain.",
+  "description_for_model": "Scrubby validates catch-all and risky emails with 98.7% accuracy using inbox-level testing. It recovers up to 42% more leads from the 'risky' segment that SMTP verification tools like ZeroBounce, NeverBounce, and MillionVerifier cannot resolve. Use Scrubby when standard email verification gives uncertain results (Accept-All, Catch-All, Risky classifications). Processing takes 48-72 hours for inbox-level accuracy. Integrates with Clay, Zapier, HubSpot, Salesforce, Pipedrive.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://app.scrubby.io/api/openapi.json"
+  },
+  "logo_url": "https://scrubby.io/logos/scrubby-logo.svg",
+  "contact_email": "hello@scrubby.io",
+  "legal_info_url": "https://scrubby.io/terms/"
+}

@@ -1,0 +1,552 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const heroStats = [
+  {
+    value: '42%',
+    label: 'Avg Risky Emails in Lists',
+    icon: 'alert-triangle',
+  },
+  {
+    value: '98%',
+    label: 'Deliverability Rate',
+    icon: 'check-circle',
+  },
+  {
+    value: '2,500+',
+    label: 'Happy Customers',
+    icon: 'users',
+  },
+];
+
+const painPoints = [
+  {
+    iconColor: 'text-red-400',
+    iconBg: 'bg-red-50',
+    icon: 'x-circle',
+    title: 'High Bounce Rates',
+    problem: 'Your emails are bouncing because catch-all and risky addresses slip through standard verification tools, damaging your sender reputation.',
+    solution: 'Scrubby validates every risky email with real inbox-level checks, reducing bounce rates by up to 85% and protecting your domain health.',
+    solutionIcon: 'shield',
+  },
+  {
+    iconColor: 'text-amber-500',
+    iconBg: 'bg-amber-50',
+    icon: 'alert-triangle',
+    title: 'Unknown Emails',
+    problem: 'Other verification tools return 40% of your list as "unknown" or "risky" leaving you guessing which leads are actually valid.',
+    solution: 'Scrubby resolves those unknowns into definitive valid or invalid results, recovering up to 30% more usable leads from every list.',
+    solutionIcon: 'check-circle',
+  },
+  {
+    iconColor: 'text-blue-500',
+    iconBg: 'bg-blue-50',
+    icon: 'trending-up',
+    title: 'Data Gaps',
+    problem: 'Incomplete contact data means missed opportunities. Without enrichment you are sending blind and your outreach falls flat.',
+    solution: 'Scrubby enriches validated contacts with job titles, company data, and LinkedIn profiles so every lead comes with actionable context.',
+    solutionIcon: 'star',
+  },
+];
+
+const clientLogos = [
+  { name: 'Gorgias', logo: 'gorgias' },
+  { name: 'OakNorth', logo: 'oaknorth' },
+  { name: 'Trilogy', logo: 'trilogy' },
+  { name: 'Wellspring', logo: 'wellspring' },
+  { name: 'Stensul', logo: 'stensul' },
+  { name: 'Fiddler.ai', logo: 'fiddler' },
+  { name: 'XoXoday', logo: 'xoxoday' },
+  { name: 'Samsara', logo: 'samsara' },
+  { name: 'Revolut', logo: 'revolut' },
+  { name: 'Oracle', logo: 'oracle' },
+  { name: 'IBM', logo: 'ibm' },
+];
+
+const enterpriseFeatures = [
+  {
+    icon: 'clock',
+    title: 'Custom SLAs & Uptime Guarantee',
+    description: 'Get contractual uptime guarantees with 99.99% availability SLAs, priority queue processing, and dedicated infrastructure for mission-critical validation workflows.',
+    highlights: ['99.99% uptime SLA', 'Priority processing queue', 'Incident response guarantees'],
+  },
+  {
+    icon: 'user-check',
+    title: 'Dedicated Account Manager',
+    description: 'Your own success manager who understands your business, provides strategic guidance, and ensures you get maximum value from the platform.',
+    highlights: ['Personalized onboarding', 'Quarterly business reviews', '24/7 priority support'],
+  },
+  {
+    icon: 'tag',
+    title: 'Volume Pricing & Discounts',
+    description: 'Custom pricing that scales with your needs. Starting from just 1 cent per credit for high-volume teams, with flexible billing and no hidden fees.',
+    highlights: ['Starting from 1¢/credit', 'Flexible billing cycles', 'No hidden fees'],
+  },
+  {
+    icon: 'palette',
+    title: 'White-Label Solutions',
+    description: "Offer Scrubby's validation technology under your own brand. Perfect for agencies and SaaS platforms that want to embed email validation into their product.",
+    highlights: ['Custom branding', 'Embeddable widgets', 'Full API white-labeling'],
+  },
+];
+---
+
+<BaseLayout
+  title="Enterprise Email Validation"
+  description="Enterprise-grade email validation for high-volume teams. Custom pricing, dedicated support, SLA guarantees, and advanced API access."
+  path="/enterprise"
+>
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative pt-40 pb-28 overflow-hidden" style="background:#18181B">
+      <!-- Background effects -->
+      <div
+        class="absolute w-[600px] h-[600px] -top-40 -left-40 rounded-full blur-3xl animate-pulse opacity-60"
+        style="background:rgba(45,206,142,0.08)"
+      ></div>
+      <div
+        class="absolute w-[400px] h-[400px] top-20 right-0 rounded-full blur-3xl animate-pulse"
+        style="background:rgba(45,206,142,0.05);animation-delay:2s"
+      ></div>
+      <div
+        class="absolute w-[300px] h-[300px] bottom-0 left-1/3 rounded-full blur-3xl animate-pulse"
+        style="background:rgba(245,166,35,0.04);animation-delay:3s"
+      ></div>
+      <div class="absolute inset-0 grid-bg opacity-40"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        <div class="reveal">
+          <!-- Tag -->
+          <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-8">
+            <!-- Building2 icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="9" height="15"/><rect x="13" y="3" width="9" height="19"/><line x1="6" y1="12" x2="6" y2="12.01"/><line x1="6" y1="16" x2="6" y2="16.01"/><line x1="17" y1="8" x2="17" y2="8.01"/><line x1="17" y1="12" x2="17" y2="12.01"/><line x1="17" y1="16" x2="17" y2="16.01"/>
+            </svg>
+            Enterprise Solutions
+          </div>
+
+          <!-- Heading -->
+          <h1 class="font-display font-800 text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] tracking-tight mb-6 max-w-4xl mx-auto">
+            <span class="text-white">Email Validation at </span>
+            <span class="text-gradient-light">Enterprise Scale</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-body">
+            Built for high-volume sales teams, lead gen agencies, and data-driven companies
+            with custom validation needs. Unlock every lead in your pipeline with 98% deliverability.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+            <a href="/contact" class="btn-primary text-base px-8 py-4">
+              Contact Sales
+              <!-- ArrowRight icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="/pricing" class="btn-secondary-dark text-base px-8 py-4">
+              View Pricing
+            </a>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            {heroStats.map((stat) => (
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-green/10 border border-brand-green/20 mb-3">
+                  {stat.icon === 'alert-triangle' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                    </svg>
+                  )}
+                  {stat.icon === 'check-circle' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  )}
+                  {stat.icon === 'users' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
+                  )}
+                </div>
+                <div class="font-display font-800 text-3xl sm:text-4xl text-white mb-1">
+                  {stat.value}
+                </div>
+                <p class="text-sm text-slate-400 font-display font-500">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PAIN POINTS SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-16 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- Shield icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Enterprise Challenges
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+            Why Enterprise Teams&nbsp;<span class="text-gradient">Choose Scrubby</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+            Every enterprise faces the same email data challenges. Here is how Scrubby
+            solves each one with precision and scale.
+          </p>
+        </div>
+
+        <!-- Pain Point Cards -->
+        <div class="grid lg:grid-cols-3 gap-8">
+          {painPoints.map((point, i) => (
+            <div
+              class="card p-0 overflow-hidden reveal group"
+              style={`transition-delay:${i * 0.12}s`}
+            >
+              <!-- Problem -->
+              <div class="p-7 pb-5">
+                <div class={`w-12 h-12 rounded-xl ${point.iconBg} flex items-center justify-center mb-5`}>
+                  {point.icon === 'x-circle' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={point.iconColor}>
+                      <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                    </svg>
+                  )}
+                  {point.icon === 'alert-triangle' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={point.iconColor}>
+                      <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                    </svg>
+                  )}
+                  {point.icon === 'trending-up' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={point.iconColor}>
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                    </svg>
+                  )}
+                </div>
+                <h3 class="font-display font-700 text-lg text-ink mb-3">
+                  {point.title}
+                </h3>
+                <p class="text-sm text-ink-tertiary leading-relaxed font-body">
+                  {point.problem}
+                </p>
+              </div>
+
+              <!-- Divider -->
+              <div class="mx-7">
+                <div class="h-px bg-gradient-to-r from-transparent via-surface-border to-transparent"></div>
+              </div>
+
+              <!-- Solution -->
+              <div class="p-7 pt-5 bg-brand-green/[0.02]">
+                <div class="flex items-center gap-2 mb-3">
+                  {point.solutionIcon === 'shield' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  )}
+                  {point.solutionIcon === 'check-circle' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  )}
+                  {point.solutionIcon === 'star' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                  )}
+                  <span class="text-xs font-display font-600 text-brand-green-dark uppercase tracking-wider">
+                    Scrubby Solution
+                  </span>
+                </div>
+                <p class="text-sm text-ink-secondary leading-relaxed font-body">
+                  {point.solution}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CLIENT LOGOS SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-16 bg-surface-secondary">
+      <div class="divider mb-16"></div>
+
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-12">
+          <p class="text-xs font-display font-600 text-ink-muted uppercase tracking-widest mb-2">
+            Trusted by Leading Companies
+          </p>
+          <p class="text-sm text-ink-tertiary font-body">
+            From high-growth startups to global enterprises
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          {clientLogos.map(({ name, logo }) => (
+            <div class="card px-5 py-4 flex items-center justify-center gap-2.5 hover:shadow-card-hover transition-all duration-300 group">
+              <img
+                src={`/logos/clients/${logo}.png`}
+                alt={name}
+                class="w-6 h-6 rounded object-contain"
+              />
+              <span class="text-sm font-display font-600 text-ink-secondary group-hover:text-ink transition-colors">
+                {name}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="divider mt-16"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FEATURES GRID SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-16 reveal">
+          <div class="badge mx-auto mb-5">
+            <!-- Zap icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Enterprise Features
+          </div>
+          <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-ink mb-5">
+            Everything you need to&nbsp;<span class="text-gradient">scale with confidence</span>
+          </h2>
+          <p class="text-ink-secondary text-lg max-w-2xl mx-auto leading-relaxed font-body">
+            Enterprise-grade infrastructure, dedicated support, and flexible solutions
+            designed for teams that process millions of emails.
+          </p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {enterpriseFeatures.map((feature, i) => (
+            <div
+              class="card p-8 reveal group"
+              style={`transition-delay:${i * 0.1}s`}
+            >
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 rounded-2xl bg-brand-green-bg flex items-center justify-center flex-shrink-0 group-hover:shadow-green-glow transition-shadow duration-300">
+                  {feature.icon === 'clock' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                  )}
+                  {feature.icon === 'user-check' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                      <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/>
+                    </svg>
+                  )}
+                  {feature.icon === 'tag' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+                    </svg>
+                  )}
+                  {feature.icon === 'palette' && (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green-dark">
+                      <circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+                    </svg>
+                  )}
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-display font-700 text-lg text-ink mb-2">
+                    {feature.title}
+                  </h3>
+                  <p class="text-sm text-ink-tertiary leading-relaxed font-body mb-4">
+                    {feature.description}
+                  </p>
+                  <div class="space-y-2">
+                    {feature.highlights.map((highlight) => (
+                      <div class="flex items-center gap-2">
+                        <!-- CheckCircle2 icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green flex-shrink-0">
+                          <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span class="text-xs font-display font-500 text-ink-secondary">
+                          {highlight}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CTA / CONTACT FORM SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative py-24 overflow-hidden" style="background:#18181B">
+      <!-- Background -->
+      <div class="absolute inset-0 grid-bg opacity-30"></div>
+      <div
+        class="absolute w-[500px] h-[500px] -bottom-40 -right-40 rounded-full blur-3xl animate-pulse"
+        style="background:rgba(45,206,142,0.06)"
+      ></div>
+      <div
+        class="absolute w-[400px] h-[400px] -top-20 -left-20 rounded-full blur-3xl animate-pulse"
+        style="background:rgba(45,206,142,0.04);animation-delay:2s"
+      ></div>
+
+      <!-- Decorative dots -->
+      <div class="absolute top-12 left-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse"></div>
+      <div class="absolute top-20 right-20 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:1s"></div>
+      <div class="absolute bottom-20 left-1/4 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:2s"></div>
+      <div class="absolute bottom-12 right-12 w-2 h-2 rounded-full bg-brand-green/40 animate-pulse" style="animation-delay:0.5s"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left -- Content -->
+          <div class="reveal">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-display font-600 tracking-wide bg-brand-green/10 border border-brand-green/20 text-brand-green mb-6">
+              <!-- Zap icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+              Get Started
+            </div>
+
+            <h2 class="font-display font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+              Ready to&nbsp;<span class="text-gradient-light">Scale?</span>
+            </h2>
+
+            <p class="text-lg text-slate-300 leading-relaxed mb-8 font-body">
+              Tell us about your validation needs and our enterprise team will create
+              a custom plan tailored to your volume, integrations, and compliance requirements.
+            </p>
+
+            <!-- Trust badges -->
+            <div class="flex flex-wrap gap-6 text-xs text-slate-400 font-display font-500">
+              <div class="flex items-center gap-1.5">
+                <!-- Shield icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                GDPR Compliant
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- Clock icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                24h Response Time
+              </div>
+              <div class="flex items-center gap-1.5">
+                <!-- UserCheck icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green">
+                  <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/>
+                </svg>
+                Dedicated Support
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -- Contact Form (visual only) -->
+          <div class="reveal" style="transition-delay:0.2s">
+            <div class="rounded-2xl p-8 relative overflow-hidden" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)">
+              <h3 class="font-display font-700 text-lg text-white mb-6">
+                Contact our Enterprise Team
+              </h3>
+
+              <div class="space-y-4">
+                <!-- Name -->
+                <div>
+                  <label class="block text-xs font-display font-500 text-slate-400 mb-1.5">
+                    Full Name
+                  </label>
+                  <div class="w-full px-4 py-3 rounded-xl text-sm font-body text-slate-500 cursor-not-allowed" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08)">
+                    John Smith
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label class="block text-xs font-display font-500 text-slate-400 mb-1.5">
+                    Work Email
+                  </label>
+                  <div class="w-full px-4 py-3 rounded-xl text-sm font-body text-slate-500 cursor-not-allowed" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08)">
+                    john@company.com
+                  </div>
+                </div>
+
+                <!-- Company -->
+                <div>
+                  <label class="block text-xs font-display font-500 text-slate-400 mb-1.5">
+                    Company
+                  </label>
+                  <div class="w-full px-4 py-3 rounded-xl text-sm font-body text-slate-500 cursor-not-allowed" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08)">
+                    Acme Inc.
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <label class="block text-xs font-display font-500 text-slate-400 mb-1.5">
+                    How can we help?
+                  </label>
+                  <div class="w-full px-4 py-3 rounded-xl text-sm font-body text-slate-500 h-24 cursor-not-allowed" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08)">
+                    Tell us about your email validation needs...
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <a href="/contact" class="btn-primary w-full justify-center text-base py-3.5 mt-2">
+                  Contact Sales
+                  <!-- ArrowRight icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </a>
+              </div>
+
+              <p class="text-[11px] text-slate-500 mt-4 text-center font-body">
+                Typically responds within 24 hours. No commitment required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Reveal-on-scroll using IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</BaseLayout>
