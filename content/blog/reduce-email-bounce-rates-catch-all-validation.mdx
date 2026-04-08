@@ -1,0 +1,149 @@
+---
+title: "How to Reduce Email Bounce Rates Below 2% With Catch-All Validation"
+slug: "reduce-email-bounce-rates-catch-all-validation"
+excerpt: "High bounce rates destroy sender reputation and tank deliverability. Learn how catch-all email validation helps you keep bounce rates under 2% without sacrificing list size."
+author: "admin_scrubby_f1wrkklo"
+date: "2026-04-08"
+category: "catchallemails"
+tags: ["bounce rate", "catch-all validation", "email deliverability", "sender reputation", "email verification", "list hygiene"]
+readTime: "8 min read"
+featured: false
+thumbnail: "/blog-images/reduce-email-bounce-rates-catch-all-validation.svg"
+---
+
+# How to Reduce Email Bounce Rates Below 2% With Catch-All Validation
+
+If your email bounce rate is above 2%, your sender reputation is taking damage with every campaign you send. ESPs like Google and Microsoft are watching, and they don't give second chances.
+
+Most teams know they need to validate their lists. What they don't realize is that standard email verification leaves a massive blind spot: catch-all domains. And that blind spot is the single biggest reason "verified" lists still bounce at 3-5%.
+
+## Why 2% Is the Line You Can't Cross
+
+Email service providers use bounce rates as a primary signal for sender reputation. Here's how they grade you:
+
+- **Under 1%**: Excellent. You're in the safe zone.
+- **1-2%**: Acceptable. You're fine, but there's room to tighten.
+- **2-5%**: Warning territory. Your deliverability is already declining.
+- **Above 5%**: Critical. You're likely hitting spam folders or getting throttled.
+
+Google's Postmaster Tools documentation explicitly states that senders should keep bounce rates below 2%. Microsoft's SNDS uses similar thresholds. Once you cross that line, recovery takes weeks of clean sending — if you can recover at all.
+
+## The Catch-All Problem: Where Standard Validators Fail
+
+Here's a scenario most B2B outbound teams know too well:
+
+1. You buy or scrape a list of 10,000 contacts
+2. You run it through a standard email validator (ZeroBounce, NeverBounce, MillionVerifier, etc.)
+3. You get back 6,000 "valid" and 1,500 "catch-all/risky" results
+4. You discard the 1,500 catch-all addresses because the validator told you they're risky
+5. You send to your "clean" list and still see 2.5% bounces
+
+What happened? Two things:
+
+**First**, catch-all domains accept mail for any address, so standard SMTP-based validators can't tell the difference between a real mailbox and a dead one. They mark the entire domain as "accept all" and move on. That 1,500 you discarded? Probably 600-700 of those are real, active mailboxes you just threw away.
+
+**Second**, the 6,000 "valid" addresses weren't all truly valid. Standard validators confirm the mailbox exists at the moment of verification, but they can't predict whether it'll bounce when you actually send. Role addresses, full inboxes, and recently deactivated accounts slip through.
+
+## How Catch-All Validation Solves Both Problems
+
+Catch-all validation goes beyond SMTP verification. Instead of just checking whether a server accepts mail for an address, it uses multi-layer verification to determine whether the specific mailbox is real and active.
+
+Here's what that means in practice:
+
+### Recovering Lost Addresses
+
+That 1,500 "catch-all/risky" pile? Catch-all validation processes each address individually — not just the domain — and returns a definitive valid/invalid result for most of them.
+
+Scrubby's catch-all validation typically recovers 40-42% of addresses that standard validators mark as risky. On a list of 1,500 catch-all addresses, that's roughly 600 additional valid contacts you can safely email.
+
+### Tighter Bounce Prediction
+
+Because catch-all validation tests addresses at a deeper level than SMTP verification, it also catches addresses that would have bounced despite passing standard validation. The result is a cleaner "valid" segment with fewer surprises on send day.
+
+### The Math
+
+Let's run the numbers on that 10,000-contact list:
+
+| Metric | Standard Validation Only | Standard + Catch-All Validation |
+|--------|------------------------|---------------------------------|
+| Valid addresses | 6,000 | 6,600 |
+| Discarded catch-all | 1,500 | 0 (processed) |
+| Recovered from catch-all | 0 | ~600 |
+| Expected bounces | ~150 (2.5%) | ~50 (0.8%) |
+| Usable contacts | 6,000 | 6,600 |
+
+You get 10% more contacts and 70% fewer bounces. That's not a marginal improvement — it changes the economics of your entire outbound operation.
+
+## Step-by-Step: Getting Your Bounce Rate Under 2%
+
+### Step 1: Run Standard Validation First
+
+Start with a standard email verification pass. This handles the easy cases:
+
+- **Invalid syntax** — malformed addresses
+- **Non-existent domains** — domains with no MX records
+- **Known invalid mailboxes** — addresses that actively reject mail
+- **Disposable/temporary addresses** — burner email services
+
+This step typically removes 20-30% of a raw list. Don't skip it — catch-all validation is designed to process the ambiguous addresses that survive this first pass.
+
+### Step 2: Process Catch-All Addresses Separately
+
+Take the addresses your standard validator flagged as "catch-all," "accept-all," "risky," or "unknown" and run them through a catch-all validation service like Scrubby.
+
+Scrubby processes these addresses over a validation window (not instant, because deeper verification requires time) and returns a binary valid/invalid result for each one. No more ambiguous "risky" status.
+
+### Step 3: Segment by Confidence
+
+After both validation passes, segment your list:
+
+- **High confidence valid** — passed both standard and catch-all validation
+- **Standard valid** — passed standard validation, not on a catch-all domain
+- **Recovered valid** — catch-all addresses confirmed by Scrubby
+- **Invalid** — failed either validation pass
+
+Send to the first three segments. Your combined bounce rate should land well under 1%.
+
+### Step 4: Monitor and Re-validate
+
+Email addresses decay at roughly 2-3% per month. An address that was valid today may bounce next month. Set up a re-validation schedule:
+
+- **Monthly** for actively used sending lists
+- **Before every campaign** for lists that haven't been sent to in 30+ days
+- **Quarterly** for archived lists you might reactivate
+
+## What About Bounce Rate by Domain?
+
+Not all bounces are created equal. A 2% overall bounce rate might mask a much worse problem on specific domains.
+
+If you're bouncing at 5% on Gmail addresses but 0.5% on corporate domains, Gmail's spam filters are going to throttle you specifically — even if your aggregate rate looks fine.
+
+Break down your bounce reports by receiving domain and investigate any domain where you're consistently above 1%. Catch-all validation helps most with corporate and enterprise domains, which is exactly where B2B outbound teams need the most accuracy.
+
+## Common Mistakes That Keep Bounce Rates High
+
+### Sending to unvalidated catch-all addresses
+
+Some teams just send to everything their standard validator marks as "catch-all" because they don't want to lose the volume. This is a gamble. Catch-all domains include plenty of dead addresses, and sending to them will inflate your bounce rate.
+
+### Using old validation results
+
+If your validation data is more than 30 days old, it's stale. Re-validate before sending.
+
+### Ignoring role-based addresses
+
+Addresses like info@, sales@, admin@ often bounce or route to unmonitored inboxes. Most standard validators flag these, but some teams override the warning. Don't.
+
+### Not warming new domains/IPs
+
+Even a perfectly validated list will bounce if you send 10,000 emails from a brand-new domain on day one. Warm up gradually: 50 emails day one, double every 2-3 days.
+
+## The Bottom Line
+
+A 2% bounce rate isn't a nice-to-have target — it's the minimum threshold for maintaining deliverability. Standard email validation gets you most of the way there, but it leaves catch-all addresses as an unresolved risk.
+
+Catch-all validation closes that gap. It recovers valid addresses you'd otherwise discard, removes invalid addresses that standard validators can't detect, and gives you the confidence to send knowing your bounce rate will stay under the line.
+
+If you're running B2B outbound at any scale, the question isn't whether you can afford catch-all validation. It's how much pipeline you're losing without it.
+
+**Ready to get your bounce rate under 2%?** [Try Scrubby's catch-all validation](https://scrubby.io) and recover up to 42% of the "risky" addresses other validators tell you to throw away.
