@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Sketchy shield -->
+  <path d="M400 80 L340 120 L342 250 L400 310 L458 250 L460 120 Z" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none" opacity="0.9"/>
+  <path d="M398 82 L338 122 L341 248 L399 308 L457 248 L459 122 Z" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- Checkmark inside shield -->
+  <path d="M370 190 L392 215 L435 165" fill="none" stroke="#F87171" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M371 192 L393 216 L434 167" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- Warning triangle left -->
+  <path d="M140 200 L110 260 L170 260 Z" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="140" y1="225" x2="140" y2="245" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="140" cy="253" r="2" fill="#F87171"/>
+  <!-- Warning triangle right -->
+  <path d="M660 200 L630 260 L690 260 Z" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="660" y1="225" x2="660" y2="245" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="660" cy="253" r="2" fill="#F87171"/>
+  <!-- Email envelope sketchy -->
+  <rect x="170" y="320" width="120" height="80" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M172 322 L230 365 L288 322" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Email envelope right -->
+  <rect x="510" y="320" width="120" height="80" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M512 322 L570 365 L628 322" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Dotted paths connecting -->
+  <path d="M290 360 L340 300" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5"/>
+  <path d="M510 360 L460 300" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5"/>
+  <!-- Squiggly underline text area -->
+  <path d="M280 390 L520 390" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  <text x="400" y="430" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="16" opacity="0.6">Navigate Risky Emails Safely</text>
+</svg>

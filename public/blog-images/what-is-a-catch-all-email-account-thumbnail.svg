@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Central inbox/bucket -->
+  <path d="M300 280 L320 150 L480 150 L500 280 Z" stroke="#2DD4BF" stroke-width="2.5" fill="none" transform="rotate(-1 400 215)"/>
+  <line x1="300" y1="280" x2="500" y2="280" stroke="#2DD4BF" stroke-width="2.5"/>
+  <text x="400" y="260" font-family="Arial" font-size="14" fill="#2DD4BF" text-anchor="middle" opacity="0.7">CATCH-ALL</text>
+  <!-- Emails flying in from different directions -->
+  <g stroke="#F87171" stroke-width="2" fill="none">
+    <!-- Email 1 from top-left -->
+    <g transform="translate(140, 60) rotate(25)">
+      <rect width="40" height="28" rx="2"/>
+      <path d="M0 0 L20 14 L40 0"/>
+    </g>
+    <path d="M175 95 L310 160" stroke="#F87171" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- Email 2 from top -->
+    <g transform="translate(380, 40) rotate(-3)">
+      <rect width="40" height="28" rx="2"/>
+      <path d="M0 0 L20 14 L40 0"/>
+    </g>
+    <path d="M400 70 L400 150" stroke="#F87171" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- Email 3 from top-right -->
+    <g transform="translate(600, 70) rotate(-20)">
+      <rect width="40" height="28" rx="2"/>
+      <path d="M0 0 L20 14 L40 0"/>
+    </g>
+    <path d="M615 105 L490 160" stroke="#F87171" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- Email 4 from left -->
+    <g transform="translate(100, 190) rotate(10)">
+      <rect width="35" height="24" rx="2"/>
+      <path d="M0 0 L17 12 L35 0"/>
+    </g>
+    <path d="M140 200 L300 230" stroke="#F87171" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- Email 5 from right -->
+    <g transform="translate(640, 180) rotate(-12)">
+      <rect width="35" height="24" rx="2"/>
+      <path d="M0 0 L17 12 L35 0"/>
+    </g>
+    <path d="M645 200 L500 230" stroke="#F87171" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+  </g>
+  <!-- Typo labels -->
+  <g font-family="monospace" font-size="10" fill="#F87171" opacity="0.5">
+    <text x="120" y="55">saels@</text>
+    <text x="370" y="35">innfo@</text>
+    <text x="610" y="65">suport@</text>
+  </g>
+  <!-- Domain label -->
+  <rect x="320" y="305" width="160" height="30" rx="4" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <text x="400" y="325" font-family="monospace" font-size="12" fill="#2DD4BF" text-anchor="middle" opacity="0.6">@yourdomain.com</text>
+  <text x="400" y="390" font-family="Arial" font-size="20" fill="#2DD4BF" text-anchor="middle" font-weight="bold">What is a Catch-All Account?</text>
+</svg>

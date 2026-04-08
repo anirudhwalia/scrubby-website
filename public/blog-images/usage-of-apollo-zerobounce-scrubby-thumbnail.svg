@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Three connected circles representing the three tools -->
+  <circle cx="220" cy="180" r="75" stroke="#2DD4BF" stroke-width="2.5" fill="none" transform="rotate(-1 220 180)"/>
+  <circle cx="400" cy="180" r="75" stroke="#F87171" stroke-width="2.5" fill="none" transform="rotate(1 400 180)"/>
+  <circle cx="580" cy="180" r="75" stroke="#2DD4BF" stroke-width="2.5" fill="none" transform="rotate(-0.5 580 180)"/>
+  <!-- Labels -->
+  <text x="220" y="175" font-family="Arial" font-size="16" fill="#2DD4BF" text-anchor="middle" font-weight="bold">Apollo</text>
+  <text x="220" y="195" font-family="Arial" font-size="11" fill="#2DD4BF" text-anchor="middle" opacity="0.7">Prospecting</text>
+  <text x="400" y="175" font-family="Arial" font-size="16" fill="#F87171" text-anchor="middle" font-weight="bold">ZeroBounce</text>
+  <text x="400" y="195" font-family="Arial" font-size="11" fill="#F87171" text-anchor="middle" opacity="0.7">Verification</text>
+  <text x="580" y="175" font-family="Arial" font-size="16" fill="#2DD4BF" text-anchor="middle" font-weight="bold">Scrubby</text>
+  <text x="580" y="195" font-family="Arial" font-size="11" fill="#2DD4BF" text-anchor="middle" opacity="0.7">Catch-All</text>
+  <!-- Connecting arrows -->
+  <g stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M298 180 L322 180"/>
+    <path d="M315 173 L325 180 L315 187"/>
+    <path d="M478 180 L502 180"/>
+    <path d="M495 173 L505 180 L495 187"/>
+  </g>
+  <!-- Flow diagram below -->
+  <g stroke="#2DD4BF" stroke-width="1.8" fill="none" opacity="0.6">
+    <rect x="140" y="310" width="120" height="35" rx="4" transform="rotate(-0.5 200 327)"/>
+    <rect x="340" y="310" width="120" height="35" rx="4" transform="rotate(0.5 400 327)"/>
+    <rect x="540" y="310" width="120" height="35" rx="4" transform="rotate(-0.3 600 327)"/>
+  </g>
+  <text x="200" y="332" font-family="Arial" font-size="11" fill="#2DD4BF" text-anchor="middle" opacity="0.7">10K Leads</text>
+  <text x="400" y="332" font-family="Arial" font-size="11" fill="#F87171" text-anchor="middle" opacity="0.7">Filter</text>
+  <text x="600" y="332" font-family="Arial" font-size="11" fill="#2DD4BF" text-anchor="middle" opacity="0.7">88% Valid</text>
+  <!-- Arrow connectors -->
+  <g stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5">
+    <line x1="262" y1="327" x2="338" y2="327"/>
+    <line x1="462" y1="327" x2="538" y2="327"/>
+  </g>
+  <text x="400" y="400" font-family="Arial" font-size="18" fill="#2DD4BF" text-anchor="middle" opacity="0.9">The Ultimate Email Stack</text>
+</svg>

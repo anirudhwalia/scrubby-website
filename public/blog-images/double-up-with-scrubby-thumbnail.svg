@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- 2X text large -->
+  <text x="400" y="200" font-family="monospace" font-size="100" fill="none" stroke="#2DD4BF" stroke-width="3" text-anchor="middle" opacity="0.8">2X</text>
+  <!-- Stacked envelopes doubling -->
+  <rect x="250" y="240" width="60" height="40" rx="3" stroke="#F87171" stroke-width="2" fill="none"/>
+  <path d="M250 240 L280 265 L310 240" stroke="#F87171" stroke-width="2" fill="none"/>
+  <rect x="260" y="230" width="60" height="40" rx="3" stroke="#F87171" stroke-width="2" fill="none" opacity="0.5"/>
+  <!-- Arrow -->
+  <path d="M340 260 L420 260" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M410 250 L425 260 L410 270" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Double stacked envelopes -->
+  <rect x="440" y="240" width="60" height="40" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <path d="M440 240 L470 265 L500 240" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <rect x="450" y="230" width="60" height="40" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none" opacity="0.7"/>
+  <rect x="460" y="220" width="60" height="40" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none" opacity="0.5"/>
+  <rect x="470" y="210" width="60" height="40" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Sparkle effects -->
+  <path d="M200 150 L205 140 L210 150 L205 160 Z" fill="#F87171" opacity="0.6"/>
+  <path d="M600 140 L605 130 L610 140 L605 150 Z" fill="#2DD4BF" opacity="0.6"/>
+  <path d="M180 280 L185 270 L190 280 L185 290 Z" fill="#2DD4BF" opacity="0.4"/>
+  <path d="M620 260 L625 250 L630 260 L625 270 Z" fill="#F87171" opacity="0.4"/>
+  <!-- Credits bar -->
+  <rect x="280" y="320" width="240" height="16" rx="8" stroke="#2DD4BF" stroke-width="1.5" fill="none"/>
+  <rect x="282" y="322" width="235" height="12" rx="6" fill="#2DD4BF" opacity="0.3"/>
+  <!-- Label -->
+  <text x="400" y="390" font-family="monospace" font-size="14" fill="#F87171" text-anchor="middle" opacity="0.8">DOUBLE YOUR CREDITS</text>
+</svg>

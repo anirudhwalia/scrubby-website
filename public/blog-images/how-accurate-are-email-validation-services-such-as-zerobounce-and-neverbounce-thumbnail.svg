@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <circle cx="400" cy="190" r="100" fill="none" stroke="#2DD4BF" stroke-width="3"/>
+  <circle cx="400" cy="190" r="70" fill="none" stroke="#2DD4BF" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="190" r="40" fill="none" stroke="#2DD4BF" stroke-width="2" opacity="0.4"/>
+  <circle cx="400" cy="190" r="10" fill="#F87171" opacity="0.8"/>
+  <path d="M405 188 L430 165 L435 175" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="540" y="130" fill="#F87171" font-family="sans-serif" font-size="36" font-weight="bold" opacity="0.9">99%</text>
+  <text x="540" y="155" fill="#2DD4BF" font-family="sans-serif" font-size="13" opacity="0.7">ACCURACY</text>
+  <path d="M200 150 L220 170 L200 190" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <text x="215" y="155" fill="#2DD4BF" font-family="sans-serif" font-size="11" opacity="0.6">ZB</text>
+  <path d="M200 210 L220 230 L200 250" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <text x="215" y="235" fill="#2DD4BF" font-family="sans-serif" font-size="11" opacity="0.6">NB</text>
+  <text x="400" y="350" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="18" font-weight="bold" opacity="0.9">Email Validation Accuracy</text>
+  <text x="400" y="378" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="14" opacity="0.7">ZeroBounce vs NeverBounce</text>
+</svg>

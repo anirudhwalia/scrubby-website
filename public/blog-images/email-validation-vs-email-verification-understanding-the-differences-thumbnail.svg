@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- VS divider -->
+  <line x1="400" y1="80" x2="400" y2="370" stroke="#F87171" stroke-width="2" stroke-dasharray="6 4" opacity="0.5"/>
+  <text x="400" y="230" font-family="monospace" font-size="28" fill="#F87171" text-anchor="middle" font-weight="bold">VS</text>
+  <!-- Left: Validation -->
+  <text x="220" y="120" font-family="monospace" font-size="16" fill="#2DD4BF" text-anchor="middle">VALIDATION</text>
+  <!-- Syntax check icon -->
+  <rect x="160" y="150" width="120" height="30" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <text x="220" y="170" font-family="monospace" font-size="11" fill="#2DD4BF" text-anchor="middle" opacity="0.7">user@dom.com</text>
+  <!-- Checkmark -->
+  <path d="M195 210 L210 225 L240 195" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Format / syntax lines -->
+  <path d="M170 260 L270 260" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M180 280 L260 280" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M190 300 L250 300" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- Right: Verification -->
+  <text x="580" y="120" font-family="monospace" font-size="16" fill="#F87171" text-anchor="middle">VERIFICATION</text>
+  <!-- Server ping icon -->
+  <rect x="540" y="150" width="80" height="50" rx="5" stroke="#F87171" stroke-width="2" fill="none"/>
+  <circle cx="560" cy="168" r="4" stroke="#F87171" stroke-width="1.5" fill="none"/>
+  <circle cx="560" cy="188" r="4" stroke="#F87171" stroke-width="1.5" fill="none"/>
+  <line x1="575" y1="168" x2="605" y2="168" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <line x1="575" y1="188" x2="600" y2="188" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <!-- Signal waves -->
+  <path d="M540 220 Q530 235 540 250" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M530 215 Q515 235 530 255" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- Deep check icon -->
+  <path d="M570 240 L580 255 L605 220" stroke="#F87171" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M570 270 L580 285 L605 250" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <!-- Label -->
+  <text x="400" y="400" font-family="monospace" font-size="12" fill="#2DD4BF" text-anchor="middle" opacity="0.7">VALIDATION vs VERIFICATION</text>
+</svg>

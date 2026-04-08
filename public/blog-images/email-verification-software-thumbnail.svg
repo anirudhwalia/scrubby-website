@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Monitor / software screen -->
+  <rect x="230" y="80" width="340" height="220" rx="8" stroke="#2DD4BF" stroke-width="3" fill="none"/>
+  <rect x="245" y="95" width="310" height="185" rx="3" stroke="#2DD4BF" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Monitor stand -->
+  <line x1="400" y1="300" x2="400" y2="330" stroke="#2DD4BF" stroke-width="2.5"/>
+  <line x1="350" y1="330" x2="450" y2="330" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Email rows on screen -->
+  <rect x="265" y="115" width="270" height="25" rx="3" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M275 125 L282 133 L295 118" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="305" y1="128" x2="520" y2="128" stroke="#2DD4BF" stroke-width="1" opacity="0.3"/>
+  <rect x="265" y="150" width="270" height="25" rx="3" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M275 158 L290 172 M290 158 L275 172" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="305" y1="163" x2="520" y2="163" stroke="#F87171" stroke-width="1" opacity="0.3"/>
+  <rect x="265" y="185" width="270" height="25" rx="3" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M275 195 L282 203 L295 188" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="305" y1="198" x2="520" y2="198" stroke="#2DD4BF" stroke-width="1" opacity="0.3"/>
+  <rect x="265" y="220" width="270" height="25" rx="3" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M275 230 L282 238 L295 223" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="305" y1="233" x2="520" y2="233" stroke="#2DD4BF" stroke-width="1" opacity="0.3"/>
+  <!-- Shield badge -->
+  <path d="M610 140 L610 190 Q610 220 640 230 Q670 220 670 190 L670 140 Q640 130 610 140" stroke="#F87171" stroke-width="2.5" fill="none"/>
+  <path d="M628 175 L638 188 L660 160" stroke="#F87171" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Sparkle -->
+  <path d="M160 180 L165 170 L170 180 L165 190 Z" fill="#2DD4BF" opacity="0.5"/>
+  <!-- Label -->
+  <text x="400" y="390" font-family="monospace" font-size="13" fill="#2DD4BF" text-anchor="middle" opacity="0.7">VERIFICATION SOFTWARE</text>
+</svg>

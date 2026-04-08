@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Bar chart -->
+  <g stroke="#2DD4BF" stroke-width="2.5" fill="none">
+    <line x1="120" y1="330" x2="420" y2="330"/>
+    <line x1="120" y1="330" x2="120" y2="80"/>
+  </g>
+  <g fill="#2DD4BF" fill-opacity="0.3" stroke="#2DD4BF" stroke-width="2">
+    <rect x="150" y="250" width="45" height="80" rx="2" transform="rotate(-1 172 290)"/>
+    <rect x="210" y="200" width="45" height="130" rx="2" transform="rotate(0.5 232 265)"/>
+    <rect x="270" y="160" width="45" height="170" rx="2" transform="rotate(-0.5 292 245)"/>
+    <rect x="330" y="110" width="45" height="220" rx="2" transform="rotate(1 352 220)"/>
+  </g>
+  <!-- Upward trend arrow -->
+  <path d="M165 240 L235 190 L305 148 L370 100" stroke="#F87171" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M355 95 L375 95 L370 115" stroke="#F87171" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Dollar signs -->
+  <g font-family="Arial" font-size="36" fill="#F87171" opacity="0.6">
+    <text x="520" y="140" transform="rotate(-5 520 140)">$</text>
+    <text x="600" y="180" transform="rotate(3 600 180)">$</text>
+    <text x="560" y="250" transform="rotate(-2 560 250)">$</text>
+  </g>
+  <!-- ROI text in circle -->
+  <circle cx="650" cy="200" r="60" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-dasharray="6 3"/>
+  <text x="650" y="195" font-family="Arial" font-size="28" fill="#2DD4BF" text-anchor="middle" font-weight="bold">ROI</text>
+  <text x="650" y="220" font-family="Arial" font-size="14" fill="#F87171" text-anchor="middle">197%</text>
+  <!-- Envelope with coin -->
+  <g transform="translate(500, 290)" stroke="#2DD4BF" stroke-width="2" fill="none">
+    <rect width="55" height="38" rx="3" transform="rotate(2 27 19)"/>
+    <path d="M2 2 L27 22 L53 2"/>
+  </g>
+  <text x="400" y="400" font-family="Arial" font-size="18" fill="#2DD4BF" text-anchor="middle" opacity="0.9">Maximize Email Marketing ROI</text>
+  <path d="M230 410 Q400 416 570 408" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.4"/>
+</svg>

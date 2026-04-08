@@ -1,0 +1,19 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Shopping bag -->
+  <path d="M340 160 L340 320 Q341 340 360 340 L440 341 Q460 340 460 320 L461 160" stroke="#2DD4BF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370 160 Q369 120 400 110 Q431 120 430 160" stroke="#F87171" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Percentage signs -->
+  <text x="365" y="260" font-family="monospace" font-size="48" fill="#F87171" transform="rotate(-8 390 250)">50%</text>
+  <!-- Sparkles -->
+  <path d="M280 140 L285 130 L290 140 L285 150 Z" fill="#2DD4BF" opacity="0.7"/>
+  <path d="M510 180 L515 170 L520 180 L515 190 Z" fill="#F87171" opacity="0.7"/>
+  <path d="M250 280 L255 270 L260 280 L255 290 Z" fill="#2DD4BF" opacity="0.5"/>
+  <path d="M540 300 L545 290 L550 300 L545 310 Z" fill="#F87171" opacity="0.5"/>
+  <!-- Tag -->
+  <path d="M480 200 L530 180 L540 195 L490 215 Z" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <circle cx="528" cy="190" r="3" fill="#2DD4BF"/>
+  <!-- Sketchy underline -->
+  <path d="M300 370 Q400 375 500 370" stroke="#F87171" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+  <text x="400" y="400" font-family="monospace" font-size="16" fill="#2DD4BF" text-anchor="middle" opacity="0.8">BLACK FRIDAY DEALS</text>
+</svg>

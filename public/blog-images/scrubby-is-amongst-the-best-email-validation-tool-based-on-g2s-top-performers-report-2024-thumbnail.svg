@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <path d="M350 100 L400 60 L450 100 L450 200 L350 200Z" fill="none" stroke="#2DD4BF" stroke-width="2.5" opacity="0.8" stroke-linejoin="round"/>
+  <path d="M360 200 L440 200 L440 110 L400 78 L360 110Z" fill="#2DD4BF" opacity="0.1"/>
+  <text x="400" y="160" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="28" font-weight="bold" opacity="0.9">#2</text>
+  <path d="M220 150 L260 120 L300 150 L300 200 L220 200Z" fill="none" stroke="#F87171" stroke-width="2" opacity="0.6" stroke-linejoin="round"/>
+  <text x="260" y="180" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="18" opacity="0.7">#3</text>
+  <path d="M500 160 L530 135 L560 160 L560 200 L500 200Z" fill="none" stroke="#F87171" stroke-width="2" opacity="0.5" stroke-linejoin="round"/>
+  <text x="530" y="185" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="16" opacity="0.6">#4</text>
+  <line x1="150" y1="200" x2="650" y2="200" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="400" cy="50" r="15" fill="none" stroke="#F87171" stroke-width="2" opacity="0.7"/>
+  <path d="M394 50 L400 42 L406 50 L400 58Z" fill="#F87171" opacity="0.5"/>
+  <path d="M200 260 Q210 255 220 260" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M230 260 Q240 255 250 260" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M260 260 Q270 255 280 260" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M290 260 Q300 255 310 260" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M490 260 Q500 255 510 260" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M520 260 Q530 255 540 260" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M550 260 Q560 255 570 260" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M580 260 Q590 255 600 260" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <text x="400" y="340" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="20" font-weight="bold" opacity="0.9">G2 Top Performers 2024</text>
+  <text x="400" y="370" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="13" opacity="0.7">Scrubby - High Performer in Email Validation</text>
+</svg>

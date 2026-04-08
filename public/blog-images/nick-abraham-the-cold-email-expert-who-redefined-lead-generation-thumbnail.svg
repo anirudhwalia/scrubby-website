@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Person silhouette (sketchy) -->
+  <circle cx="400" cy="120" r="45" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M340 180 C340 180 360 230 400 230 C440 230 460 180 460 180" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M330 230 L330 320 L470 320 L470 230" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Lightning bolt (innovation) -->
+  <path d="M170 100 L150 180 L180 180 L155 270" fill="none" stroke="#F87171" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M172 102 L152 182 L182 182 L157 272" fill="none" stroke="#F87171" stroke-width="1" opacity="0.3"/>
+  <!-- Email rockets flying -->
+  <rect x="550" y="100" width="50" height="32" rx="3" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <path d="M551 101 L575 120 L599 101" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="540" y1="110" x2="520" y2="105" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="540" y1="120" x2="515" y2="120" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <rect x="590" y="180" width="50" height="32" rx="3" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M591 181 L615 200 L639 181" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="645" y1="190" x2="665" y2="185" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- Network nodes -->
+  <circle cx="200" cy="340" r="8" fill="none" stroke="#2DD4BF" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="300" cy="380" r="8" fill="none" stroke="#2DD4BF" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="500" cy="380" r="8" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="600" cy="340" r="8" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <line x1="208" y1="340" x2="292" y2="380" stroke="#2DD4BF" stroke-width="1" opacity="0.3"/>
+  <line x1="308" y1="380" x2="492" y2="380" stroke="#2DD4BF" stroke-width="1" opacity="0.2" stroke-dasharray="4,4"/>
+  <line x1="508" y1="380" x2="592" y2="340" stroke="#F87171" stroke-width="1" opacity="0.3"/>
+  <text x="400" y="430" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.6">Cold Email Expert</text>
+</svg>

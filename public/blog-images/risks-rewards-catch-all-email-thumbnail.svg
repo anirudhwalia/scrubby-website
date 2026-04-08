@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Dice (risk/reward) -->
+  <rect x="150" y="120" width="120" height="120" rx="10" fill="none" stroke="#F87171" stroke-width="3" stroke-linecap="round" transform="rotate(-8, 210, 180)"/>
+  <circle cx="185" cy="155" r="6" fill="#F87171" opacity="0.6"/>
+  <circle cx="235" cy="155" r="6" fill="#F87171" opacity="0.6"/>
+  <circle cx="210" cy="180" r="6" fill="#F87171" opacity="0.6"/>
+  <circle cx="185" cy="205" r="6" fill="#F87171" opacity="0.6"/>
+  <circle cx="235" cy="205" r="6" fill="#F87171" opacity="0.6"/>
+  <!-- Trophy (reward) -->
+  <path d="M530 120 L530 200 L560 240 L620 240 L650 200 L650 120 Z" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M530 140 C510 140 500 170 520 190" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M650 140 C670 140 680 170 660 190" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="560" y1="240" x2="560" y2="270" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="620" y1="240" x2="620" y2="270" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="545" y1="270" x2="635" y2="270" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Star inside trophy -->
+  <path d="M590 155 L595 170 L610 170 L598 180 L602 195 L590 187 L578 195 L582 180 L570 170 L585 170 Z" fill="#2DD4BF" opacity="0.3"/>
+  <!-- Arrow between (risk to reward) -->
+  <path d="M300 180 C350 160 420 160 500 180" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="6,4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M490 172 L505 180 L490 188" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Email at bottom center -->
+  <rect x="355" y="320" width="90" height="55" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M357 322 L400 352 L443 322" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Question mark on email -->
+  <text x="400" y="365" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="16" opacity="0.5">?</text>
+  <text x="400" y="425" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.6">Risks &amp; Rewards of Catch-All</text>
+</svg>

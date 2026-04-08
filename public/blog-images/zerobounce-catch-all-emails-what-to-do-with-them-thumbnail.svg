@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Pie chart showing email split -->
+  <g transform="translate(250, 190)">
+    <!-- Valid slice -->
+    <path d="M0 0 L0 -120 A120 120 0 0 1 104 60 Z" fill="#2DD4BF" fill-opacity="0.2" stroke="#2DD4BF" stroke-width="2.5"/>
+    <!-- Invalid slice -->
+    <path d="M0 0 L104 60 A120 120 0 0 1 -60 104 Z" fill="#F87171" fill-opacity="0.15" stroke="#F87171" stroke-width="2"/>
+    <!-- Catch-all slice (largest, highlighted) -->
+    <path d="M0 0 L-60 104 A120 120 0 0 1 0 -120 Z" fill="#F87171" fill-opacity="0.25" stroke="#F87171" stroke-width="3"/>
+  </g>
+  <!-- Labels for slices -->
+  <text x="310" y="120" font-family="Arial" font-size="12" fill="#2DD4BF">41% Valid</text>
+  <text x="360" y="290" font-family="Arial" font-size="12" fill="#F87171">17% Invalid</text>
+  <text x="140" y="230" font-family="Arial" font-size="14" fill="#F87171" font-weight="bold">42%</text>
+  <text x="120" y="248" font-family="Arial" font-size="11" fill="#F87171">Catch-All</text>
+  <!-- Arrow from catch-all to action -->
+  <g stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M400 200 Q450 200 500 180 Q550 160 560 140"/>
+    <path d="M552 148 L562 136 L568 152"/>
+  </g>
+  <!-- Action box -->
+  <rect x="500" y="80" width="200" height="110" rx="8" stroke="#2DD4BF" stroke-width="2" fill="none" transform="rotate(1 600 135)"/>
+  <text x="600" y="115" font-family="Arial" font-size="14" fill="#2DD4BF" text-anchor="middle" font-weight="bold">What to do?</text>
+  <!-- Options -->
+  <g font-family="Arial" font-size="11" fill="#2DD4BF" opacity="0.7">
+    <text x="530" y="140">1. Validate with Scrubby</text>
+    <text x="530" y="158">2. Recover 32%+ leads</text>
+    <text x="530" y="176">3. Keep bounce rate ~0%</text>
+  </g>
+  <!-- ZeroBounce label -->
+  <rect x="500" y="280" width="170" height="35" rx="5" stroke="#F87171" stroke-width="1.8" fill="none" opacity="0.6"/>
+  <text x="585" y="302" font-family="Arial" font-size="13" fill="#F87171" text-anchor="middle" opacity="0.7">ZeroBounce Results</text>
+  <text x="400" y="380" font-family="Arial" font-size="18" fill="#2DD4BF" text-anchor="middle" font-weight="bold">ZeroBounce Catch-All Emails</text>
+  <text x="400" y="408" font-family="Arial" font-size="14" fill="#F87171" text-anchor="middle" opacity="0.7">What to Do With Them</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Boxing gloves facing each other -->
+  <!-- Left glove (email) -->
+  <path d="M240 180 Q200 170 190 200 Q180 240 220 260 L260 260 Q280 240 280 210 Q280 180 260 175 Z" stroke="#2DD4BF" stroke-width="3" fill="none"/>
+  <path d="M260 260 L260 290" stroke="#2DD4BF" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="235" y="230" font-family="monospace" font-size="10" fill="#2DD4BF" text-anchor="middle" opacity="0.7">EMAIL</text>
+  <!-- Right glove (direct mail) -->
+  <path d="M560 180 Q600 170 610 200 Q620 240 580 260 L540 260 Q520 240 520 210 Q520 180 540 175 Z" stroke="#F87171" stroke-width="3" fill="none"/>
+  <path d="M540 260 L540 290" stroke="#F87171" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="565" y="230" font-family="monospace" font-size="10" fill="#F87171" text-anchor="middle" opacity="0.7">MAIL</text>
+  <!-- Impact lines between gloves -->
+  <path d="M320 210 L360 220" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M440 220 L480 210" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- VS -->
+  <text x="400" y="230" font-family="monospace" font-size="32" fill="#F87171" text-anchor="middle" opacity="0.8">VS</text>
+  <!-- Impact burst -->
+  <path d="M380 195 L385 180 L395 195" stroke="#F87171" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M405 195 L410 180 L420 195" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- Envelope icon (email side) -->
+  <rect x="210" y="310" width="80" height="50" rx="3" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <path d="M210 310 L250 340 L290 310" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <!-- Letter/postcard icon (direct mail side) -->
+  <rect x="510" y="310" width="80" height="50" rx="3" stroke="#F87171" stroke-width="2" fill="none"/>
+  <line x1="525" y1="325" x2="575" y2="325" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <line x1="525" y1="335" x2="560" y2="335" stroke="#F87171" stroke-width="1.5" opacity="0.4"/>
+  <rect x="555" y="335" width="20" height="15" rx="1" stroke="#F87171" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Label -->
+  <text x="400" y="410" font-family="monospace" font-size="13" fill="#2DD4BF" text-anchor="middle" opacity="0.7">EMAIL vs DIRECT MAIL</text>
+</svg>

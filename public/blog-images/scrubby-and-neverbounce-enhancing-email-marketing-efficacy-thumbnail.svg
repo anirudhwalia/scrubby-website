@@ -1,0 +1,21 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <path d="M120 180 Q125 175 180 178 Q235 181 290 179 Q345 177 400 180" stroke="#2DD4BF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M400 180 Q455 183 510 179 Q565 176 620 180 Q675 184 680 179" stroke="#F87171" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <rect x="100" y="120" width="250" height="160" rx="8" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-dasharray="4 3" opacity="0.7"/>
+  <rect x="450" y="120" width="250" height="160" rx="8" fill="none" stroke="#F87171" stroke-width="2.5" stroke-dasharray="4 3" opacity="0.7"/>
+  <circle cx="225" cy="175" r="30" fill="none" stroke="#2DD4BF" stroke-width="2" opacity="0.9"/>
+  <path d="M215 170 L220 180 L238 162" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="575" cy="175" r="30" fill="none" stroke="#F87171" stroke-width="2" opacity="0.9"/>
+  <path d="M565 170 L570 180 L588 162" stroke="#F87171" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="170" y1="225" x2="280" y2="225" stroke="#2DD4BF" stroke-width="1.5" opacity="0.5" stroke-dasharray="3 2"/>
+  <line x1="170" y1="240" x2="260" y2="240" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4" stroke-dasharray="3 2"/>
+  <line x1="170" y1="255" x2="270" y2="255" stroke="#2DD4BF" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 2"/>
+  <line x1="520" y1="225" x2="630" y2="225" stroke="#F87171" stroke-width="1.5" opacity="0.5" stroke-dasharray="3 2"/>
+  <line x1="520" y1="240" x2="610" y2="240" stroke="#F87171" stroke-width="1.5" opacity="0.4" stroke-dasharray="3 2"/>
+  <line x1="520" y1="255" x2="620" y2="255" stroke="#F87171" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 2"/>
+  <path d="M355 195 Q375 185 395 200 Q380 210 400 205" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M405 195 Q425 185 445 200 Q430 210 450 205" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <text x="400" y="370" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="22" font-weight="bold" opacity="0.9">Scrubby + NeverBounce</text>
+  <text x="400" y="400" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="14" opacity="0.7">Email Marketing Power Duo</text>
+</svg>

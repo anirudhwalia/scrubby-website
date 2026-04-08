@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Snowflake -->
+  <line x1="150" y1="80" x2="150" y2="140" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="120" y1="110" x2="180" y2="110" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="129" y1="89" x2="171" y2="131" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="171" y1="89" x2="129" y2="131" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Gift box -->
+  <rect x="320" y="140" width="160" height="120" rx="5" fill="none" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+  <line x1="400" y1="140" x2="400" y2="260" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="320" y1="190" x2="480" y2="190" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Ribbon bow -->
+  <path d="M380 140 Q360 110 400 120 Q440 110 420 140" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Email icon coming out of gift -->
+  <rect x="370" y="80" width="60" height="40" rx="3" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+  <path d="M370 80 L400 105 L430 80" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Shield/checkmark -->
+  <path d="M570 130 L570 190 Q570 220 600 240 Q630 220 630 190 L630 130 L600 115Z" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="585,175 595,188 618,158" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ornament dots -->
+  <circle cx="680" cy="150" r="8" fill="none" stroke="#F87171" stroke-width="2"/>
+  <circle cx="680" cy="150" r="3" fill="#F87171" opacity="0.5"/>
+  <circle cx="220" cy="200" r="6" fill="none" stroke="#2DD4BF" stroke-width="1.5"/>
+  <!-- Snowflake small -->
+  <line x1="680" y1="240" x2="680" y2="260" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="670" y1="250" x2="690" y2="250" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <!-- Title -->
+  <text x="400" y="380" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="20" font-weight="bold" opacity="0.9">Email Validation Saves Holiday</text>
+  <text x="400" y="410" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="14" opacity="0.7">Campaigns</text>
+</svg>

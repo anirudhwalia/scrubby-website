@@ -1,0 +1,24 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Two hands shaking (partnership) - simplified sketchy -->
+  <path d="M250 200 C280 180 310 190 330 200 C350 210 370 200 390 190" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M390 190 C410 200 430 210 450 200 C470 190 500 180 530 200" fill="none" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left arm -->
+  <path d="M150 250 L250 200" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right arm -->
+  <path d="M630 250 L530 200" fill="none" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+  <!-- Labels -->
+  <text x="220" y="130" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="16" opacity="0.8">Scrubby</text>
+  <text x="580" y="130" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="16" opacity="0.8">BriteVerify</text>
+  <!-- Plus sign -->
+  <line x1="390" y1="110" x2="390" y2="150" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="370" y1="130" x2="410" y2="130" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <!-- Upward arrow (deliverability) -->
+  <line x1="400" y1="340" x2="400" y2="280" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M385 295 L400 275 L415 295" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Email icon with checkmark -->
+  <rect x="360" y="355" width="80" height="50" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M362 357 L400 382 L438 357" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M420 370 L430 380 L445 360" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <text x="400" y="435" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.6">Better Email Deliverability</text>
+</svg>

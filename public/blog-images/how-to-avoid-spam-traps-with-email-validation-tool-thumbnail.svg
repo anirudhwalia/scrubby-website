@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <path d="M350 120 L450 120 L470 200 L330 200 Z" fill="none" stroke="#F87171" stroke-width="3" stroke-linejoin="round"/>
+  <text x="400" y="170" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="28" font-weight="bold">!</text>
+  <path d="M330 200 L310 220 Q300 230 310 240 L350 280 Q360 290 370 280 L400 240" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M470 200 L490 220 Q500 230 490 240 L450 280 Q440 290 430 280 L400 240" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <rect x="270" y="100" width="260" height="160" rx="8" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="8 4" opacity="0.4"/>
+  <circle cx="560" cy="160" r="40" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+  <path d="M545 160 L555 170 L578 148" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M210 140 Q220 120 230 140 Q240 160 250 140" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M610 250 Q620 230 630 250 Q640 270 650 250" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <text x="400" y="350" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="19" font-weight="bold" opacity="0.9">Avoid Spam Traps</text>
+  <text x="400" y="378" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="14" opacity="0.7">with Email Validation</text>
+</svg>

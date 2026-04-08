@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Big funnel -->
+  <path d="M250 80 L550 80 L480 200 L480 340 L320 340 L320 200 Z" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M252 82 L548 82 L478 198 L478 338 L322 338 L322 198 Z" fill="none" stroke="#2DD4BF" stroke-width="1" opacity="0.3"/>
+  <!-- Small envelopes falling into funnel -->
+  <rect x="300" y="40" width="30" height="20" rx="2" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <path d="M301 41 L315 53 L329 41" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="370" y="30" width="30" height="20" rx="2" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <path d="M371 31 L385 43 L399 31" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="440" y="45" width="30" height="20" rx="2" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <path d="M441 46 L455 58 L469 46" fill="none" stroke="#F87171" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="340" y="55" width="25" height="18" rx="2" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <rect x="410" y="50" width="25" height="18" rx="2" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- Gear icon on side -->
+  <circle cx="130" cy="200" r="35" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="130" cy="200" r="15" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="130" y1="160" x2="130" y2="172" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="130" y1="228" x2="130" y2="240" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="90" y1="200" x2="102" y2="200" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="158" y1="200" x2="170" y2="200" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Wrench icon on side -->
+  <path d="M650 160 L680 190 L670 200 L640 170 Z" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="685" cy="155" r="20" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <!-- Output arrow from funnel -->
+  <line x1="400" y1="340" x2="400" y2="400" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-dasharray="6,4"/>
+  <path d="M385 390 L400 410 L415 390" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <text x="400" y="438" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.6">Set Up Catch-All Email</text>
+</svg>

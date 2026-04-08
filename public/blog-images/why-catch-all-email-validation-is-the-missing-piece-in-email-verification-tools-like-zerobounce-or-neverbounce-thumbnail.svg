@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Puzzle pieces -->
+  <!-- Piece 1 (in place) -->
+  <g transform="translate(200, 80)" stroke="#2DD4BF" stroke-width="2.5" fill="none">
+    <path d="M0 0 L60 0 L60 20 Q75 25 75 35 Q75 45 60 50 L60 70 L0 70 L0 50 Q-15 45 -15 35 Q-15 25 0 20 Z" transform="rotate(-1 30 35)"/>
+    <text x="30" y="42" font-family="Arial" font-size="10" fill="#2DD4BF" text-anchor="middle">SMTP</text>
+  </g>
+  <!-- Piece 2 (in place) -->
+  <g transform="translate(280, 80)" stroke="#2DD4BF" stroke-width="2.5" fill="none">
+    <path d="M0 0 L60 0 L60 20 Q75 25 75 35 Q75 45 60 50 L60 70 L0 70 L0 50 Q-15 45 -15 35 Q-15 25 0 20 Z" transform="rotate(0.5 30 35)"/>
+    <text x="30" y="42" font-family="Arial" font-size="10" fill="#2DD4BF" text-anchor="middle">API</text>
+  </g>
+  <!-- Missing piece (highlighted, floating) -->
+  <g transform="translate(420, 60)" stroke="#F87171" stroke-width="3" fill="#F87171" fill-opacity="0.1">
+    <path d="M0 0 L60 0 L60 20 Q75 25 75 35 Q75 45 60 50 L60 70 L0 70 L0 50 Q-15 45 -15 35 Q-15 25 0 20 Z" transform="rotate(8 30 35)"/>
+    <text x="30" y="42" font-family="Arial" font-size="9" fill="#F87171" text-anchor="middle" font-weight="bold">CATCH</text>
+    <text x="30" y="54" font-family="Arial" font-size="9" fill="#F87171" text-anchor="middle" font-weight="bold">ALL</text>
+  </g>
+  <!-- Gap outline where piece should go -->
+  <rect x="360" y="80" width="75" height="72" rx="2" stroke="#F87171" stroke-width="1.5" stroke-dasharray="6 4" fill="none" opacity="0.4"/>
+  <!-- Arrow showing piece going to gap -->
+  <path d="M440 140 Q420 165 400 155" stroke="#F87171" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+  <!-- ZeroBounce / NeverBounce labels -->
+  <g font-family="Arial" font-size="12" opacity="0.6">
+    <text x="250" y="180" fill="#2DD4BF" text-anchor="middle">ZeroBounce</text>
+    <text x="400" y="180" fill="#2DD4BF" text-anchor="middle">NeverBounce</text>
+  </g>
+  <!-- Big arrow pointing to Scrubby -->
+  <g transform="translate(300, 220)" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round">
+    <line x1="0" y1="40" x2="200" y2="40"/>
+    <path d="M188 30 L202 40 L188 50"/>
+  </g>
+  <!-- Scrubby label -->
+  <rect x="520" y="240" width="140" height="45" rx="6" stroke="#F87171" stroke-width="2.5" fill="#F87171" fill-opacity="0.1"/>
+  <text x="590" y="268" font-family="Arial" font-size="16" fill="#F87171" text-anchor="middle" font-weight="bold">Scrubby</text>
+  <!-- Completion checkmark -->
+  <circle cx="590" cy="310" r="18" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <path d="M578 310 L586 320 L603 300" stroke="#2DD4BF" stroke-width="2.5" fill="none"/>
+  <text x="400" y="380" font-family="Arial" font-size="17" fill="#2DD4BF" text-anchor="middle">The Missing Piece in Email Verification</text>
+  <text x="400" y="410" font-family="Arial" font-size="13" fill="#F87171" text-anchor="middle" opacity="0.7">Catch-All Validation</text>
+</svg>

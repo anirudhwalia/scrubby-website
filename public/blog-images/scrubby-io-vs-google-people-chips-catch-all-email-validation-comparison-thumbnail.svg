@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <rect x="120" y="100" width="220" height="200" rx="12" fill="none" stroke="#2DD4BF" stroke-width="2.5" opacity="0.7"/>
+  <text x="230" y="140" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="16" font-weight="bold" opacity="0.9">Scrubby</text>
+  <path d="M160 175 L170 185 L190 165" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="205" y1="178" x2="300" y2="178" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4"/>
+  <path d="M160 205 L170 215 L190 195" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="205" y1="208" x2="290" y2="208" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4"/>
+  <path d="M160 235 L170 245 L190 225" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="205" y1="238" x2="310" y2="238" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4"/>
+  <path d="M160 265 L170 275 L190 255" stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="205" y1="268" x2="280" y2="268" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4"/>
+  <rect x="460" y="100" width="220" height="200" rx="12" fill="none" stroke="#F87171" stroke-width="2.5" opacity="0.7"/>
+  <text x="570" y="140" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="16" font-weight="bold" opacity="0.9">Google Chips</text>
+  <circle cx="500" cy="178" r="10" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <line x1="525" y1="178" x2="640" y2="178" stroke="#F87171" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="500" cy="208" r="10" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <line x1="525" y1="208" x2="630" y2="208" stroke="#F87171" stroke-width="1.5" opacity="0.4"/>
+  <path d="M494 232 L506 244" stroke="#F87171" stroke-width="2" opacity="0.6"/>
+  <path d="M506 232 L494 244" stroke="#F87171" stroke-width="2" opacity="0.6"/>
+  <line x1="525" y1="238" x2="620" y2="238" stroke="#F87171" stroke-width="1.5" opacity="0.3"/>
+  <path d="M494 262 L506 274" stroke="#F87171" stroke-width="2" opacity="0.6"/>
+  <path d="M506 262 L494 274" stroke="#F87171" stroke-width="2" opacity="0.6"/>
+  <line x1="525" y1="268" x2="610" y2="268" stroke="#F87171" stroke-width="1.5" opacity="0.3"/>
+  <text x="400" y="50" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="24" font-weight="bold" opacity="0.6">VS</text>
+  <text x="400" y="370" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="18" font-weight="bold" opacity="0.9">Catch-All Validation Compared</text>
+  <text x="400" y="396" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="12" opacity="0.7">Purpose-Built vs General Tool</text>
+</svg>

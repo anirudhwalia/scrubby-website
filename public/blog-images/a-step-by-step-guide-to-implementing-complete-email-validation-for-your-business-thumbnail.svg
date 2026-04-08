@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Staircase steps -->
+  <rect x="150" y="260" width="100" height="30" rx="3" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+  <rect x="250" y="220" width="100" height="30" rx="3" fill="none" stroke="#F87171" stroke-width="2.5"/>
+  <rect x="350" y="180" width="100" height="30" rx="3" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+  <rect x="450" y="140" width="100" height="30" rx="3" fill="none" stroke="#F87171" stroke-width="2.5"/>
+  <!-- Step labels -->
+  <text x="200" y="280" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="12">Step 1</text>
+  <text x="300" y="240" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="12">Step 2</text>
+  <text x="400" y="200" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="12">Step 3</text>
+  <text x="500" y="160" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="12">Step 4</text>
+  <!-- Person climbing -->
+  <circle cx="520" cy="110" r="12" fill="none" stroke="#2DD4BF" stroke-width="2"/>
+  <line x1="520" y1="122" x2="520" y2="140" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="510" y1="130" x2="530" y2="130" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Email with checkmark at top -->
+  <rect x="580" y="80" width="80" height="55" rx="5" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+  <path d="M580 80 L620 110 L660 80" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="660" cy="135" r="15" fill="none" stroke="#2DD4BF" stroke-width="2"/>
+  <polyline points="652,135 658,142 670,128" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Dotted path -->
+  <path d="M200 260 Q225 240 250 240 Q275 220 300 220 Q325 200 350 200 Q375 180 400 180 Q425 160 450 160 Q475 140 500 140" fill="none" stroke="#F87171" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+  <!-- Sparkles -->
+  <path d="M130 180 L135 170 L140 180 L135 190Z" fill="#F87171" opacity="0.4"/>
+  <circle cx="680" cy="200" r="3" fill="#2DD4BF" opacity="0.5"/>
+  <!-- Title -->
+  <text x="400" y="370" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="20" font-weight="bold" opacity="0.9">Step-by-Step Email Validation</text>
+  <text x="400" y="400" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="14" opacity="0.7">Complete Guide for Your Business</text>
+</svg>

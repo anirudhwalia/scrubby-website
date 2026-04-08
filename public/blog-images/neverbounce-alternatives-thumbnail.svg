@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Podium / comparison blocks -->
+  <rect x="180" y="200" width="120" height="150" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <rect x="340" y="140" width="120" height="210" rx="4" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="340" y="140" width="120" height="210" rx="4" fill="#2DD4BF" opacity="0.05"/>
+  <rect x="500" y="230" width="120" height="120" rx="4" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Crown/star on winner -->
+  <path d="M380 120 L390 100 L400 115 L410 95 L420 120" fill="none" stroke="#F87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Numbers -->
+  <text x="240" y="280" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="28" opacity="0.6">2</text>
+  <text x="400" y="250" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="28" opacity="0.8">1</text>
+  <text x="560" y="300" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="28" opacity="0.5">3</text>
+  <!-- Sketchy email icons -->
+  <rect x="225" y="310" width="30" height="20" rx="2" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.5"/>
+  <path d="M226 311 L240 323 L254 311" fill="none" stroke="#F87171" stroke-width="1" opacity="0.5"/>
+  <rect x="385" y="280" width="30" height="20" rx="2" fill="none" stroke="#F87171" stroke-width="1.5" opacity="0.6"/>
+  <path d="M386 281 L400 293 L414 281" fill="none" stroke="#F87171" stroke-width="1" opacity="0.6"/>
+  <!-- Baseline -->
+  <line x1="160" y1="350" x2="640" y2="350" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <text x="400" y="410" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.6">NeverBounce Alternatives</text>
+</svg>

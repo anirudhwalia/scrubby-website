@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Calendar sketch -->
+  <rect x="230" y="80" width="250" height="220" rx="8" fill="none" stroke="#2DD4BF" stroke-width="3"/>
+  <line x1="230" y1="130" x2="480" y2="130" stroke="#2DD4BF" stroke-width="2"/>
+  <!-- Calendar hooks -->
+  <line x1="290" y1="68" x2="290" y2="95" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+  <line x1="420" y1="68" x2="420" y2="95" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+  <!-- Day grid -->
+  <text x="270" y="160" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.4">M</text>
+  <text x="310" y="160" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.7">T</text>
+  <text x="350" y="160" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.4">W</text>
+  <text x="390" y="160" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.7">T</text>
+  <text x="430" y="160" fill="#2DD4BF" font-family="sans-serif" font-size="14" opacity="0.4">F</text>
+  <!-- Highlighted day circle -->
+  <circle cx="310" cy="200" r="18" fill="none" stroke="#F87171" stroke-width="2.5"/>
+  <circle cx="390" cy="200" r="18" fill="none" stroke="#F87171" stroke-width="2.5"/>
+  <!-- Star on best day -->
+  <path d="M310 195 L313 203 L322 204 L316 209 L318 218 L310 213 L302 218 L304 209 L298 204 L307 203Z" fill="#F87171" opacity="0.5"/>
+  <!-- Envelope with clock -->
+  <rect x="550" y="120" width="100" height="70" rx="5" fill="none" stroke="#2DD4BF" stroke-width="2.5"/>
+  <path d="M550 120 L600 160 L650 120" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Clock -->
+  <circle cx="600" cy="230" r="30" fill="none" stroke="#F87171" stroke-width="2.5"/>
+  <line x1="600" y1="230" x2="600" y2="210" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <line x1="600" y1="230" x2="615" y2="238" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="600" cy="230" r="3" fill="#F87171"/>
+  <!-- Sparkles -->
+  <path d="M160 200 L165 190 L170 200 L165 210Z" fill="#2DD4BF" opacity="0.4"/>
+  <circle cx="700" cy="300" r="3" fill="#F87171" opacity="0.4"/>
+  <!-- Title -->
+  <text x="400" y="370" text-anchor="middle" fill="#2DD4BF" font-family="sans-serif" font-size="22" font-weight="bold" opacity="0.9">Best Day to Send Newsletters</text>
+  <text x="400" y="400" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="14" opacity="0.7">Maximum Engagement</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Three protocol boxes -->
+  <!-- SMTP -->
+  <rect x="120" y="140" width="160" height="80" rx="5" stroke="#2DD4BF" stroke-width="2.5" fill="none"/>
+  <text x="200" y="175" font-family="monospace" font-size="20" fill="#2DD4BF" text-anchor="middle" font-weight="bold">SMTP</text>
+  <text x="200" y="200" font-family="monospace" font-size="10" fill="#2DD4BF" text-anchor="middle" opacity="0.6">SEND</text>
+  <!-- Arrow from SMTP to server -->
+  <path d="M200 220 L200 270" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M190 260 L200 275 L210 260" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- IMAP -->
+  <rect x="320" y="140" width="160" height="80" rx="5" stroke="#F87171" stroke-width="2.5" fill="none"/>
+  <text x="400" y="175" font-family="monospace" font-size="20" fill="#F87171" text-anchor="middle" font-weight="bold">IMAP</text>
+  <text x="400" y="200" font-family="monospace" font-size="10" fill="#F87171" text-anchor="middle" opacity="0.6">SYNC</text>
+  <!-- Double arrow for IMAP -->
+  <path d="M390 220 L390 270 M410 270 L410 220" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M380 260 L390 275 L400 260" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M400 230 L410 220 L420 230" stroke="#F87171" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- POP -->
+  <rect x="520" y="140" width="160" height="80" rx="5" stroke="#2DD4BF" stroke-width="2.5" fill="none"/>
+  <text x="600" y="175" font-family="monospace" font-size="20" fill="#2DD4BF" text-anchor="middle" font-weight="bold">POP</text>
+  <text x="600" y="200" font-family="monospace" font-size="10" fill="#2DD4BF" text-anchor="middle" opacity="0.6">DOWNLOAD</text>
+  <!-- Arrow from server to POP -->
+  <path d="M600 270 L600 220" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M590 230 L600 220 L610 230" stroke="#2DD4BF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Server -->
+  <rect x="300" y="290" width="200" height="70" rx="6" stroke="#2DD4BF" stroke-width="2" fill="none"/>
+  <circle cx="340" cy="315" r="6" stroke="#F87171" stroke-width="1.5" fill="none"/>
+  <circle cx="340" cy="340" r="6" stroke="#2DD4BF" stroke-width="1.5" fill="none"/>
+  <line x1="370" y1="315" x2="470" y2="315" stroke="#2DD4BF" stroke-width="1.5" opacity="0.4"/>
+  <line x1="370" y1="340" x2="460" y2="340" stroke="#F87171" stroke-width="1.5" opacity="0.4"/>
+  <!-- Connection lines to server -->
+  <path d="M200 275 Q200 290 300 310" stroke="#2DD4BF" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+  <path d="M600 275 Q600 290 500 310" stroke="#2DD4BF" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+  <!-- Label -->
+  <text x="400" y="410" font-family="monospace" font-size="12" fill="#2DD4BF" text-anchor="middle" opacity="0.7">EMAIL PROTOCOLS</text>
+</svg>

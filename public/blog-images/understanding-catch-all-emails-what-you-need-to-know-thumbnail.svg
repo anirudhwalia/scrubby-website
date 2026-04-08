@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Big net/funnel catching emails -->
+  <g stroke="#2DD4BF" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <!-- Net shape -->
+    <path d="M200 80 Q400 60 600 80 L550 320 Q400 340 250 320 Z" stroke-dasharray="8 4" opacity="0.6"/>
+    <!-- Net grid lines -->
+    <line x1="300" y1="75" x2="320" y2="315" opacity="0.3"/>
+    <line x1="400" y1="68" x2="400" y2="325" opacity="0.3"/>
+    <line x1="500" y1="75" x2="480" y2="315" opacity="0.3"/>
+    <path d="M220 140 Q400 130 580 140" opacity="0.3"/>
+    <path d="M235 200 Q400 190 565 200" opacity="0.3"/>
+    <path d="M248 260 Q400 250 552 260" opacity="0.3"/>
+  </g>
+  <!-- Falling envelopes -->
+  <g stroke="#F87171" stroke-width="2" fill="none">
+    <g transform="translate(300, 100) rotate(-15)">
+      <rect width="40" height="28" rx="2"/>
+      <path d="M0 0 L20 15 L40 0"/>
+    </g>
+    <g transform="translate(430, 130) rotate(10)">
+      <rect width="40" height="28" rx="2"/>
+      <path d="M0 0 L20 15 L40 0"/>
+    </g>
+    <g transform="translate(350, 180) rotate(-5)">
+      <rect width="40" height="28" rx="2"/>
+      <path d="M0 0 L20 15 L40 0"/>
+    </g>
+    <g transform="translate(480, 200) rotate(8)">
+      <rect width="35" height="24" rx="2"/>
+      <path d="M0 0 L17 12 L35 0"/>
+    </g>
+  </g>
+  <!-- Catch-all label -->
+  <text x="400" y="370" font-family="Arial" font-size="22" fill="#2DD4BF" text-anchor="middle" font-weight="bold">CATCH-ALL</text>
+  <text x="400" y="400" font-family="Arial" font-size="16" fill="#F87171" text-anchor="middle" opacity="0.7">What You Need to Know</text>
+  <!-- Question marks -->
+  <g font-family="Arial" font-size="28" fill="#F87171" opacity="0.4">
+    <text x="120" y="150">?</text>
+    <text x="660" y="120">?</text>
+    <text x="700" y="250">?</text>
+    <text x="90" y="280">?</text>
+  </g>
+  <path d="M250 410 Q400 415 550 408" stroke="#2DD4BF" stroke-width="1.5" fill="none" opacity="0.4"/>
+</svg>
