@@ -1,0 +1,187 @@
+---
+title: "How to Validate Email Lists Before a Product Launch: A Pre-Launch Deliverability Checklist"
+slug: "validate-email-lists-before-product-launch"
+excerpt: "Your product launch email is too important to land in spam. Use this pre-launch deliverability checklist to validate your email list, protect sender reputation, and maximize open rates on launch day."
+author: "admin_scrubby_f1wrkklo"
+date: "2026-04-09"
+category: "emailvalidation"
+tags: ["pre-launch email validation", "product launch email list", "email deliverability checklist", "email verification", "list hygiene", "sender reputation", "SaaS launch", "DTC launch"]
+readTime: "9 min read"
+featured: false
+thumbnail: "/blog-images/validate-email-lists-before-product-launch.svg"
+---
+
+# How to Validate Email Lists Before a Product Launch: A Pre-Launch Deliverability Checklist
+
+You've spent months building your product. The landing page is polished, the pricing is locked, and your waitlist has 15,000 email addresses. Launch day arrives. You hit send on your announcement email — and 8% of it bounces. Gmail throttles you within the hour. Half your list never sees the message.
+
+This happens more often than most teams admit. The email list you've been growing for months is the single most valuable asset for your product launch, and most teams never validate it until it's too late.
+
+Pre-launch email validation isn't a nice-to-have. It's the difference between a launch that generates revenue and one that tanks your sender reputation before you've even started.
+
+## Why Product Launches Are High-Risk for Email Deliverability
+
+Product launches have a unique deliverability profile that makes them especially vulnerable to list quality problems:
+
+**Volume spikes trigger scrutiny.** If you normally send 500 emails a month and suddenly blast 15,000 in one afternoon, ESPs flag you. Google, Microsoft, and Yahoo all monitor for sudden volume increases, and a spike paired with high bounces is the fastest way to land in spam.
+
+**You're sending to your oldest addresses.** Waitlists accumulate addresses over months or years. Email addresses decay at 2-3% per month. A 12-month-old waitlist could have 25-35% stale addresses if it hasn't been maintained.
+
+**First impressions set your reputation.** If your launch is the first email your domain sends at scale, your sender reputation is a blank slate. ESPs will use that initial send to calibrate how they treat every future email from your domain. A bad first send creates a hole that takes weeks to climb out of.
+
+**There's no second chance.** A weekly newsletter can recover from one bad send. A product launch announcement is a one-shot event. If deliverability fails, you can't re-launch next Tuesday.
+
+## The Pre-Launch Email Deliverability Checklist
+
+Start this process at least two weeks before your launch date. Some steps require time to execute properly — rushing them defeats the purpose.
+
+### 1. Audit Your List Sources
+
+Before you validate a single address, understand where your list came from. Different sources carry different risk profiles:
+
+- **Organic sign-ups with double opt-in** — Lowest risk. These contacts confirmed their address and expressed clear intent.
+- **Single opt-in sign-ups** — Moderate risk. Typos, disposable addresses, and bot submissions are common without a confirmation step.
+- **Imported from CRM or purchased lists** — Highest risk. Age, accuracy, and consent are all question marks.
+- **Event sign-ups and lead magnets** — Variable risk. People frequently use throwaway addresses for gated content.
+
+Document the source and approximate age of each segment. This context will help you decide how aggressively to clean each one.
+
+### 2. Run Standard Email Validation
+
+Process your entire list through a standard email verification service. This first pass catches the obvious problems:
+
+- **Syntax errors** — misspelled domains (gmial.com, yaho.com), missing TLDs, formatting issues
+- **Non-existent domains** — domains with no MX records or DNS entries
+- **Known invalid mailboxes** — addresses that actively reject incoming mail
+- **Disposable/temporary addresses** — services like Guerrilla Mail, Mailinator, and Tempail
+- **Role-based addresses** — info@, support@, admin@ (high bounce risk and low engagement)
+
+Standard validation will typically remove 15-30% of a raw waitlist. On a 15,000-address list, that's 2,250-4,500 addresses you'd have bounced on if you sent blind.
+
+### 3. Process Catch-All Addresses Separately
+
+Here's where most teams stop — and where the biggest risk remains.
+
+Standard validators will return a chunk of your list as "catch-all," "accept-all," or "risky." These are addresses on domains that accept mail for any address, making it impossible for standard SMTP-based verification to determine whether the specific mailbox exists.
+
+For B2B SaaS launches, catch-all addresses often make up 15-25% of your list because many corporate mail servers use catch-all configurations. Discarding them means losing a huge segment of your highest-value contacts. Sending to them unvalidated means accepting unknown bounce risk.
+
+The solution is catch-all validation. [Scrubby](https://scrubby.io) processes catch-all addresses through multi-layer verification to return a definitive valid/invalid result for each one — not a vague "risky" label. This typically recovers 40-42% of addresses that standard validators flag as ambiguous, while identifying the truly dead addresses you need to remove.
+
+### 4. Deduplicate and Normalize
+
+Once validation is complete, clean up structural issues:
+
+- **Remove exact duplicates** — same address appearing multiple times
+- **Normalize casing and formatting** — john.doe@Company.com and JOHN.DOE@company.com are the same address
+- **Merge records from different sources** — if the same address appears in your waitlist and your CRM import, keep the record with the most context but send only one email
+
+Duplicate sends are a deliverability risk in themselves. ESPs track when the same address receives multiple copies of the same message, and it signals sloppy list management.
+
+### 5. Segment by Engagement and Source Quality
+
+Not every valid address deserves the same treatment on launch day. Segment your validated list:
+
+- **Tier 1 — High intent**: Double opt-in waitlist sign-ups who clicked a confirmation link. These contacts are engaged and expecting your email. Send to them first.
+- **Tier 2 — Medium intent**: Single opt-in sign-ups, event attendees, and contacts who engaged with previous pre-launch content.
+- **Tier 3 — Lower intent**: Older sign-ups, imported CRM contacts, and recovered catch-all addresses with no prior engagement signal.
+
+Why segment? Because sending to Tier 1 first builds positive engagement signals (opens, clicks) with ESPs before you expand to riskier segments. This is essentially a mini-warmup within your launch send.
+
+### 6. Warm Your Sending Infrastructure
+
+If your launch email is going out from a new domain or IP, you need to warm it up. Even a perfectly clean list will bounce if ESPs don't trust your sending infrastructure.
+
+**For new domains:**
+- Start sending low volumes 2-3 weeks before launch
+- Begin with your most engaged contacts (newsletter subscribers, active users)
+- Gradually increase volume: 50 emails on day one, 100 on day three, 200 on day five, and so on
+- Monitor bounce rates and spam complaints at each step
+
+**For established domains:**
+- You can ramp faster, but still avoid jumping from your normal volume to 10x overnight
+- Send a pre-launch teaser email a week before to re-engage your list and identify any addresses that have gone stale since your last send
+
+If you're running outbound sales alongside your launch, tools like [Kali](https://getkali.io) can help you manage personalized outreach sequences separately from your bulk launch sends, keeping your deliverability signals clean across both channels.
+
+### 7. Configure Authentication Records
+
+This is table stakes, but a surprising number of teams launch without proper email authentication in place:
+
+- **SPF** — Specifies which mail servers are authorized to send on behalf of your domain
+- **DKIM** — Adds a cryptographic signature to verify your messages weren't tampered with
+- **DMARC** — Tells receiving servers what to do with messages that fail SPF/DKIM checks
+
+All three should be configured and passing before your launch send. A missing or misconfigured DMARC record alone can cause inbox placement to drop by 10-20%.
+
+### 8. Set Up Bounce Monitoring Before You Send
+
+Don't wait until after the launch to check your bounce rate. Set up real-time monitoring so you can react immediately:
+
+- **Hard bounce threshold**: If hard bounces exceed 2% during the send, pause immediately. Something is wrong with your list or your validation missed a segment.
+- **Soft bounce tracking**: Soft bounces (mailbox full, temporary server issues) are less critical but should be logged for follow-up.
+- **Spam complaint rate**: Keep this under 0.1%. If complaints spike, stop sending and investigate.
+
+Most ESPs and email marketing platforms provide real-time dashboards. Use them. If you're using a platform like [Vendisys](https://vendisys.com) for your launch sequences, make sure delivery monitoring is configured before you start the send, not after.
+
+### 9. Prepare Your Suppression List
+
+Build a suppression list that includes:
+
+- All addresses that failed validation (hard invalids)
+- Previous hard bounces from any prior sends
+- Unsubscribes from previous communications
+- Spam complainers
+- Addresses you're legally required to suppress (regulatory opt-outs, GDPR erasure requests)
+
+Load this suppression list into your sending platform before the launch send. This is your last line of defense against sending to known bad addresses.
+
+### 10. Send in Waves, Not All at Once
+
+Even with a fully validated list, avoid sending your entire launch email in a single blast:
+
+- **Wave 1 (10% of list)**: Send to your highest-engagement segment. Wait 1-2 hours. Check bounce rates, open rates, and spam complaints.
+- **Wave 2 (30% of list)**: If Wave 1 metrics look clean, expand to medium-intent contacts. Wait another hour.
+- **Wave 3 (remaining 60%)**: Send to the rest of your list.
+
+This approach gives you an escape hatch. If Wave 1 shows problems, you can pause and investigate before damaging your reputation with the full list.
+
+## Launch Day Email Validation: The Quick-Reference Timeline
+
+| Timeframe | Action |
+|-----------|--------|
+| T-14 days | Audit list sources, start domain warm-up |
+| T-10 days | Run standard email validation |
+| T-8 days | Process catch-all addresses through [Scrubby](https://scrubby.io) |
+| T-7 days | Deduplicate, normalize, segment |
+| T-5 days | Verify SPF/DKIM/DMARC configuration |
+| T-3 days | Send pre-launch teaser to highest-engagement segment |
+| T-1 day | Build suppression list, load into sending platform |
+| Launch day | Send in waves, monitor in real-time |
+
+## What Happens When You Skip Pre-Launch Validation
+
+The consequences are predictable and severe:
+
+- **Bounce rates above 5%** tank your sender reputation immediately. Recovery takes 2-4 weeks of careful, low-volume clean sending.
+- **Gmail and Microsoft throttle your domain**, meaning even valid addresses on your list stop receiving your emails.
+- **Your launch metrics are garbage**. You can't measure open rates or conversion when half your list didn't receive the email.
+- **Future sends are compromised**. The reputation damage from a botched launch affects every email you send afterward — transactional emails, onboarding sequences, billing notifications, all of it.
+
+A company that validates before launch will typically see bounce rates under 1%, open rates 20-40% higher than unvalidated sends, and zero deliverability-related incidents on launch day.
+
+## The Cost of Doing It Right vs. the Cost of Getting It Wrong
+
+Pre-launch email validation costs pennies per address. For a 15,000-address list, you're looking at $30-75 depending on the service and depth of validation.
+
+The cost of a failed launch email? Immeasurably higher. Lost revenue from contacts who never saw your announcement. Weeks of recovery sending to repair your domain reputation. The opportunity cost of launching to silence instead of an engaged audience.
+
+This isn't a difficult trade-off.
+
+## Start Validating Now, Not on Launch Day
+
+If your product launch is on the calendar, your email validation should already be underway. The checklist above isn't something you can execute the night before — it requires time for validation processing, warm-up sends, and monitoring.
+
+[Scrubby](https://scrubby.io) handles both standard validation and the catch-all addresses that other validators leave as question marks. Upload your list, let Scrubby process it, and go into launch day knowing every address on your list is a real person who can actually receive your email.
+
+Your product deserves a launch that reaches your full audience. Don't let a dirty email list be the reason it doesn't.
