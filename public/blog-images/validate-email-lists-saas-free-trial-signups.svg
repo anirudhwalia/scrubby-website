@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="formBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="funnelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+  </g>
+
+  <!-- LEFT SIDE: Signup Form -->
+  <!-- Form container -->
+  <rect x="60" y="80" width="240" height="290" rx="12" fill="url(#formBg)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Form header -->
+  <text x="180" y="115" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Free Trial Signup</text>
+  <line x1="80" y1="125" x2="280" y2="125" stroke="#334155" stroke-width="1"/>
+
+  <!-- Email field 1 - Valid -->
+  <rect x="80" y="140" width="200" height="32" rx="6" fill="#0f172a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="90" y="160" fill="#94a3b8" font-family="monospace" font-size="11">tom@acme.com</text>
+  <!-- Green checkmark -->
+  <circle cx="268" cy="156" r="10" fill="#22c55e" opacity="0.15"/>
+  <path d="M262 156 L266 160 L274 152" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Email field 2 - Invalid -->
+  <rect x="80" y="185" width="200" height="32" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="90" y="205" fill="#94a3b8" font-family="monospace" font-size="11">fake@tempmail.xyz</text>
+  <!-- Red X -->
+  <circle cx="268" cy="201" r="10" fill="#ef4444" opacity="0.15"/>
+  <path d="M263 196 L273 206 M273 196 L263 206" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Email field 3 - Catch-all / Risky -->
+  <rect x="80" y="230" width="200" height="32" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="90" y="250" fill="#94a3b8" font-family="monospace" font-size="11">lisa@bigcorp.io</text>
+  <!-- Amber question mark -->
+  <circle cx="268" cy="246" r="10" fill="#f59e0b" opacity="0.15"/>
+  <text x="268" y="251" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">?</text>
+
+  <!-- Email field 4 - Recovered -->
+  <rect x="80" y="275" width="200" height="32" rx="6" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="90" y="295" fill="#94a3b8" font-family="monospace" font-size="11">mark@enterprise.co</text>
+  <!-- Cyan recovered icon -->
+  <circle cx="268" cy="291" r="10" fill="#22d3ee" opacity="0.15"/>
+  <path d="M263 291 L267 295 L273 287" stroke="#22d3ee" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Legend below form -->
+  <circle cx="80" cy="340" r="5" fill="#22c55e"/>
+  <text x="90" y="344" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Valid</text>
+  <circle cx="130" cy="340" r="5" fill="#ef4444"/>
+  <text x="140" y="344" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Invalid</text>
+  <circle cx="190" cy="340" r="5" fill="#f59e0b"/>
+  <text x="200" y="344" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Catch-All</text>
+  <circle cx="265" cy="340" r="5" fill="#22d3ee"/>
+  <text x="275" y="344" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Recovered</text>
+
+  <!-- CENTER: Arrow / Flow -->
+  <g transform="translate(340, 200)">
+    <!-- Arrow body -->
+    <rect x="0" y="-8" width="60" height="16" rx="4" fill="#334155"/>
+    <polygon points="60,-16 85,0 60,16" fill="#334155"/>
+    <!-- Animated-look pulse lines -->
+    <line x1="10" y1="-3" x2="30" y2="-3" stroke="#22d3ee" stroke-width="1.5" opacity="0.6"/>
+    <line x1="15" y1="3" x2="45" y2="3" stroke="#22d3ee" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Validation label -->
+  <text x="383" y="180" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="11" font-weight="bold">VALIDATE</text>
+
+  <!-- RIGHT SIDE: Funnel -->
+  <!-- Funnel shape -->
+  <polygon points="480,80 720,80 680,200 520,200" fill="url(#funnelGrad)" stroke="#475569" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="520,205 680,205 650,310 550,310" fill="url(#funnelGrad)" stroke="#475569" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Funnel top label -->
+  <text x="600" y="120" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="13" font-weight="bold">All Signups</text>
+  <text x="600" y="140" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="11">2,000 / month</text>
+
+  <!-- Rejected emails floating out to the right -->
+  <g opacity="0.6">
+    <!-- Invalid leaving funnel -->
+    <rect x="690" y="110" width="80" height="22" rx="4" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+    <text x="730" y="125" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="9">-400 fake</text>
+  </g>
+  <g opacity="0.6">
+    <rect x="690" y="145" width="80" height="22" rx="4" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+    <text x="730" y="160" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="9">-100 bounced</text>
+  </g>
+
+  <!-- Middle funnel label -->
+  <text x="600" y="240" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Verified Trials</text>
+  <text x="600" y="258" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="11">1,350 valid</text>
+
+  <!-- Recovered callout -->
+  <g>
+    <rect x="685" y="225" width="95" height="28" rx="6" fill="#22d3ee" opacity="0.12" stroke="#22d3ee" stroke-width="1"/>
+    <text x="732" y="243" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="9" font-weight="bold">+150 recovered</text>
+    <!-- Arrow pointing into funnel -->
+    <line x1="685" y1="239" x2="665" y2="239" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <polygon points="665,235 655,239 665,243" fill="#22d3ee"/>
+  </g>
+
+  <!-- Bottom output -->
+  <rect x="545" y="320" width="110" height="40" rx="8" fill="#22c55e" opacity="0.12" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="600" y="338" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Clean Pipeline</text>
+  <text x="600" y="354" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">Real Conversions</text>
+
+  <!-- Title text at bottom -->
+  <text x="400" y="420" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Validate SaaS Trial Signups</text>
+  <text x="400" y="440" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">Clean data in. Real metrics out.</text>
+</svg>
