@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f8f5f0" rx="8"/>
+  <!-- shopping bag -->
+  <path d="M310 280 L310 180 Q310 160 330 160 L470 160 Q490 160 490 180 L490 280 Q490 300 470 300 L330 300 Q310 300 310 280Z" fill="none" stroke="#2d6a4f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M360 160 L360 130 Q360 100 400 100 Q440 100 440 130 L440 160" fill="none" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round"/>
+  <!-- envelope inside bag -->
+  <rect x="345" y="200" width="110" height="70" rx="5" fill="none" stroke="#e76f51" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <path d="M348 203 L400 245 L452 203" fill="none" stroke="#e76f51" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- checkmark -->
+  <circle cx="470" cy="170" r="22" fill="#52b788" opacity="0.9"/>
+  <path d="M458 170 L466 179 L483 160" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- bounce arrow going down -->
+  <path d="M530 200 Q560 260 530 310" fill="none" stroke="#e63946" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M525 300 L530 312 L540 303" fill="none" stroke="#e63946" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- small x marks for bounced -->
+  <path d="M550 210 L560 220 M560 210 L550 220" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>
+  <path d="M560 250 L570 260 M570 250 L560 260" stroke="#e63946" stroke-width="2" stroke-linecap="round"/>
+  <!-- decorative dots -->
+  <circle cx="270" cy="200" r="4" fill="#2d6a4f" opacity="0.3"/>
+  <circle cx="255" cy="240" r="3" fill="#e76f51" opacity="0.3"/>
+  <circle cx="280" cy="270" r="5" fill="#52b788" opacity="0.3"/>
+  <!-- title text -->
+  <text x="400" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#333" font-style="italic">Shopify + Email Validation</text>
+  <text x="400" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#777">reduce bounces · protect reputation</text>
+</svg>
