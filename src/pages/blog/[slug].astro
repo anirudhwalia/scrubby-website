@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPostPage from '../../page-components/BlogPostPage.jsx';
-import { blogPosts, getAuthorBySlug, getCategoryBySlug } from '../../data/blog.js';
+import { blogPosts, getAuthorBySlug, getCategoryBySlug, getPostComponent } from '../../data/blog.js';
 
 export function getStaticPaths() {
   return blogPosts.map((post) => ({
@@ -12,6 +12,7 @@ export function getStaticPaths() {
 
 const { post } = Astro.props;
 const { slug } = Astro.params;
+const PostContent = getPostComponent(slug);
 const title = post?.title || 'Blog Post';
 const description = post?.excerpt || '';
 const author = post?.author ? getAuthorBySlug(post.author) : null;
@@ -74,5 +75,7 @@ const breadcrumbSchema = {
   }}
   schema={[articleSchema, breadcrumbSchema]}
 >
-  <BlogPostPage client:load />
+  <BlogPostPage client:load>
+    {PostContent && <PostContent />}
+  </BlogPostPage>
 </BaseLayout>

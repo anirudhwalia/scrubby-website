@@ -9,13 +9,18 @@ export const blogAuthors = blogConfig.authors
 // Import all MDX files eagerly for metadata (frontmatter only)
 const mdxModules = import.meta.glob('../../content/blog/*.mdx', { eager: true })
 
-// Build the posts array from MDX frontmatter
+// Build the posts array from MDX frontmatter (metadata only — no Astro components)
 export const blogPosts = Object.entries(mdxModules)
   .map(([path, mod]) => ({
     ...mod.frontmatter,
-    Component: mod.default,
   }))
   .sort((a, b) => new Date(b.date) - new Date(a.date))
+
+// Server-only: get MDX component by slug (for rendering in Astro templates)
+export function getPostComponent(slug) {
+  const entry = Object.entries(mdxModules).find(([_, mod]) => mod.frontmatter?.slug === slug)
+  return entry ? entry[1].default : null
+}
 
 // Helper functions
 export function getPostBySlug(slug) {

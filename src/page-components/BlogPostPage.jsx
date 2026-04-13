@@ -4,7 +4,7 @@ import SEO, { buildArticleSchema } from '../components/SEO'
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag, ChevronRight } from 'lucide-react'
 import { getPostBySlug, getAuthorBySlug, blogCategories, blogPosts } from '../data/blog'
 
-export default function BlogPostPage() {
+export default function BlogPostPage({ children }) {
   const { slug } = useParams()
   const post = getPostBySlug(slug)
 
@@ -34,8 +34,6 @@ export default function BlogPostPage() {
 
   const author = getAuthorBySlug(post.author)
   const category = blogCategories.find(c => c.slug === post.category)
-  const MdxContent = post.Component
-
   const seoSchema = buildArticleSchema({
     title: post.title,
     description: post.excerpt,
@@ -154,7 +152,7 @@ export default function BlogPostPage() {
                   prose-img:rounded-xl prose-img:max-w-full prose-img:h-auto prose-img:my-6
                 "
               >
-                <MdxContent />
+                {children}
               </div>
 
               {/* Tags */}
