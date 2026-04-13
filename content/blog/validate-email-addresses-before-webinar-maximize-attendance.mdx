@@ -1,0 +1,156 @@
+---
+title: "How to Validate Email Addresses Before a Webinar to Maximize Attendance"
+slug: "validate-email-addresses-before-webinar-maximize-attendance"
+excerpt: "Webinar no-shows aren't always a content problem — they're often a deliverability problem. Learn how to validate registrant emails before sending reminders so your webinar links actually land in inboxes."
+author: "admin_scrubby_f1wrkklo"
+date: "2026-04-13"
+category: "emailvalidation"
+tags: ["webinar email validation", "validate registrant emails", "reduce webinar no-shows", "email list cleaning", "catch-all validation", "webinar deliverability"]
+readTime: "8 min read"
+featured: false
+thumbnail: "/blog-images/validate-email-addresses-before-webinar-maximize-attendance-thumbnail.svg"
+---
+
+# How to Validate Email Addresses Before a Webinar to Maximize Attendance
+
+You put weeks into building a webinar. The deck is polished. The speaker is confirmed. You've run ads and promoted it on LinkedIn. You have 800 registrants. Then the live event happens — and 90 people show up.
+
+Most webinar hosts blame their content, their topic, or their promotion timing. The real culprit is often simpler: reminder emails never reached the inbox.
+
+Webinar registration forms are one of the most common sources of low-quality email addresses on the internet. People use throwaway accounts, mistype their personal address, or register from a corporate email on a catch-all domain where your reminder will silently disappear. If you don't validate registrant emails before sending your reminder sequence, a significant portion of your registered audience never even knows the webinar is happening.
+
+This guide covers exactly how to fix that.
+
+## Why Webinar Registration Lists Are Especially Messy
+
+Webinars attract a specific pattern of email quality problems that differ from your regular marketing list.
+
+**Low-friction registration encourages throwaway addresses.** Free webinars have essentially zero commitment cost. When someone sees a form asking for only a name and email, they'll often enter a disposable or rarely-checked address. They were mildly interested at the time of registration — they're not invested enough to use a real inbox they monitor daily.
+
+**Corporate registrants often use catch-all addresses.** B2B webinars attract enterprise registrants who sign up with their work email. Many corporate domains are configured as catch-all servers — they accept mail for any address without exposing whether that specific mailbox exists. Standard email verification marks these as "risky" and moves on. But in a B2B webinar list, catch-all addresses can represent 20-30% of your registrants. Suppressing them all means losing a huge slice of your most valuable audience.
+
+**Organic promotion drives cold, uncommitted sign-ups.** When your webinar promotion reaches people through paid ads or social shares, those registrations skew lower-quality than sign-ups from your existing list. The person saw a headline, clicked, filled in the form, and may never check that inbox again.
+
+**Email addresses decay.** If you're promoting a webinar 4-6 weeks in advance, a percentage of addresses that were valid at registration will have already started bouncing by the time you send the day-before reminder. People switch jobs, abandon personal accounts, and corporate accounts get deprovisioned.
+
+## What Poor Deliverability Does to Attendance Rates
+
+The attendance-to-registration ratio for most webinars sits between 30-50%. Industry benchmarks treat this as normal. A big portion of that gap is simply deliverability failure dressed up as "no-shows."
+
+When your reminder emails bounce or land in spam:
+
+- Registrants who were genuinely planning to attend never get the join link
+- Your 24-hour and 1-hour reminders — the ones that drive the highest lift in attendance — disappear entirely
+- Attendance drops, your completion rate drops, and your conversion on any post-webinar offer drops with it
+
+Every percentage point of deliverability you recover from your registrant list translates directly into more people in the room. For a webinar with 800 registrants, recovering just 15% of addresses that standard verification flags as risky — and confirming those are actually deliverable — could mean 30-40 additional attendees without changing a single thing about your content.
+
+## The Pre-Webinar Email Validation Workflow
+
+Start this process as soon as registrations begin rolling in, not the night before the event. You want validation complete at least 5-7 days before the first reminder goes out.
+
+### Step 1: Export Your Registrant List Immediately After Registration Closes
+
+Pull your full list from your webinar platform (Zoom, Hopin, Demio, WebinarJam, GoToWebinar — they all let you export a CSV of registrants). Include the registration timestamp so you can identify which addresses were collected first and have had the most time to decay.
+
+Do this export 7-10 days before the event to give yourself time to process and act on the results.
+
+### Step 2: Run Standard Email Verification First
+
+Feed your registrant list through a standard email verification service. This first pass catches the quick wins:
+
+- **Syntax errors** — addresses with mistyped domains (gmal.com, yahooo.com), missing characters, or malformed structure
+- **Invalid domains** — domains with no active MX records (the domain doesn't accept email at all)
+- **Known dead mailboxes** — addresses that actively reject incoming mail via SMTP
+- **Disposable email services** — Mailinator, Guerrilla Mail, Temp Mail, and hundreds of similar providers
+- **Role-based addresses** — noreply@, admin@, info@, webmaster@ (these rarely engage and often generate complaints)
+
+Standard verification typically removes 10-20% of a raw webinar registrant list. That's meaningful, but it leaves the harder problem unsolved.
+
+### Step 3: Process Catch-All Addresses Separately — This Is the Critical Step
+
+Standard verification will flag 15-30% of your B2B webinar list as "catch-all," "accept-all," or "risky." These are addresses where the domain server accepts all incoming mail regardless of whether the specific mailbox exists. A conventional tool cannot tell you whether `john.smith@companyxyz.com` is a real, active inbox or a phantom address that will silently fail.
+
+Most webinar hosts at this point either:
+1. Suppress all catch-all addresses (losing a massive chunk of real attendees), or
+2. Send to them anyway and accept the bounce risk
+
+Neither is right. The correct answer is to run catch-all addresses through a dedicated catch-all verification layer.
+
+[Scrubby](https://scrubby.io) was built specifically for this problem. It processes addresses that conventional tools can't resolve — the catch-all, risky, and unknown results — and returns a deliverability verdict for each one. Rather than guessing, Scrubby uses multi-layer behavioral signals to determine whether a catch-all address is likely to receive and engage with mail. Typically, 40-42% of catch-all addresses in a registrant list are genuinely deliverable — those are registrants you'd be leaving out of your reminder sequence if you suppressed the entire catch-all segment.
+
+### Step 4: Segment Your Validated List
+
+Once validation is complete, you have three groups:
+
+**Confirmed deliverable**: Addresses that passed both standard verification and (where applicable) catch-all validation. These get your full reminder sequence — no changes needed.
+
+**Confirmed invalid**: Addresses that failed verification. Remove these from your sending list. Do not send to them. Import them as suppressed contacts in your email platform.
+
+**Unresolvable**: A small residual group that no validation layer can reliably classify. For webinar purposes, the pragmatic approach is to attempt delivery on your first reminder and watch for immediate hard bounces. Suppress anything that bounces and don't send the subsequent reminders to that group.
+
+### Step 5: Set Up Your Reminder Sequence With the Clean List
+
+Load only your confirmed-deliverable list into your webinar reminder sequence. A standard webinar reminder cadence looks like this:
+
+| Timing | Email |
+|--------|-------|
+| 7 days before | Confirmation + calendar invite attachment |
+| 1 day before | Reminder + what to expect |
+| 1 hour before | Join link + last call |
+| At start time | "We're live" with direct link |
+| 24 hours after | Recording (if you're sharing it) |
+
+Each of these emails does real work. The 1-hour reminder typically drives 20-30% of live attendance on its own. If that email bounces for 25% of your list, you lose a quarter of the attendance lift it would have generated.
+
+### Step 6: Monitor Bounce Rates During the Sequence
+
+Don't just validate once and walk away. Set up bounce monitoring in your email platform so you see hard bounce rates in real time as each reminder goes out. If hard bounces exceed 2% on any send:
+
+- Pause the sequence
+- Pull the bouncing addresses
+- Check whether a new segment of bad addresses entered your list (some webinar platforms allow late registrations that bypass your initial validation)
+
+If you're running late registrations, validate new sign-ups in near-real-time. Most validation APIs respond in under a second, so you can automate this with a Zap or a direct API call when each new registration comes in.
+
+## Handling Catch-All Emails: A Closer Look
+
+Because catch-all addresses are so prevalent in B2B webinar audiences, it's worth understanding exactly what's happening under the hood.
+
+When you use a standard SMTP verification approach, the verification server sends a simulated delivery attempt to the mail server. For normal domains, the mail server responds with either "yes, this mailbox exists" or "no, it doesn't." For catch-all domains, the server responds "yes" to everything — so the verification tool has no basis for distinguishing real from phantom.
+
+[Scrubby](https://scrubby.io) goes further by analyzing behavioral patterns across its validation network: engagement history, server response fingerprints, domain reputation signals, and other proprietary indicators. The result is a confidence score for deliverability rather than a binary stamp based on a single SMTP exchange.
+
+For webinar hosts whose audiences include corporate buyers, enterprise users, and B2B professionals — exactly the people who matter most for pipeline and sales outcomes — this layer of validation is not optional. It's the difference between reaching 60% of your audience and reaching 85%.
+
+## Complementary Tools for Webinar Follow-Through
+
+Email validation protects your deliverability. But the work doesn't end at the join link.
+
+If your webinar is part of a larger sales sequence — demo invites, follow-up calls, pipeline outreach — you need the rest of your workflow to be equally clean. [Kali](https://getkali.io) handles calendar-based outreach and meeting scheduling, making it straightforward to follow up with attendees who need a next step after the live session. Clean email data from your validation run feeds directly into Kali's outreach sequences without introducing deliverability risk.
+
+For webinars that include competitive positioning or market analysis as part of their content, [CAM](https://getcam.io) provides competitor monitoring data that keeps your talking points current. Teams that present competitive intelligence in webinars often find the content drives higher live attendance — people show up to hear things they can't get from a static blog post.
+
+If you're managing email infrastructure and outreach across multiple tools, the [Vendisys](https://vendisys.com) ecosystem ties these together. Email validation, outreach sequencing, and market intelligence work better as a connected workflow than as isolated point solutions.
+
+## What Good Webinar Deliverability Looks Like in Practice
+
+Here's what changes when you validate before sending:
+
+**Before validation**: 800 registrants, 25% show up live (200 attendees). 15% of your reminders bounced. Another 10% landed in spam due to sender reputation damage from those bounces. 100+ people who intended to attend never got the join link.
+
+**After validation**: 800 registrants, you send to 680 validated addresses (the rest were removed or suppressed). 40% show up live (272 attendees). Your bounce rate is under 0.5%. Sender reputation stays intact. The remaining 36% of no-shows made a conscious choice — they're not missing attendees, they're low-intent registrants who never planned to show up.
+
+That's a 36% improvement in attendance (200 to 272) from a single change in process. For a webinar that converts attendees to demo calls or trials, that improvement compounds into pipeline.
+
+## The Simple Version
+
+If you take nothing else from this post, take this:
+
+1. Export your registrant list 7-10 days before the event
+2. Run it through standard email verification
+3. Take the catch-all/risky segment and run it through [Scrubby](https://scrubby.io)
+4. Send your reminder sequence only to confirmed-deliverable addresses
+5. Monitor bounce rates as each reminder goes out
+
+Webinar attendance is a deliverability problem before it's a content problem. Fix the deliverability, and your content gets a fair shot at the audience you built.

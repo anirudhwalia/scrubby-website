@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f8f5f0" rx="8"/>
+
+  <!-- monitor / webinar screen -->
+  <rect x="260" y="100" width="280" height="175" rx="8" fill="none" stroke="#2d6a4f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- monitor stand -->
+  <line x1="400" y1="275" x2="400" y2="310" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round"/>
+  <line x1="370" y1="310" x2="430" y2="310" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round"/>
+  <!-- screen content: presenter silhouette -->
+  <circle cx="370" cy="155" r="18" fill="none" stroke="#52b788" stroke-width="2.5"/>
+  <path d="M345 195 Q370 178 395 195" fill="none" stroke="#52b788" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- screen content: slide lines -->
+  <rect x="400" y="140" width="110" height="8" rx="3" fill="#52b788" opacity="0.4"/>
+  <rect x="400" y="156" width="80" height="6" rx="3" fill="#2d6a4f" opacity="0.3"/>
+  <rect x="400" y="170" width="90" height="6" rx="3" fill="#2d6a4f" opacity="0.3"/>
+  <rect x="400" y="184" width="70" height="6" rx="3" fill="#2d6a4f" opacity="0.2"/>
+  <!-- screen content: audience icons at bottom of screen -->
+  <circle cx="285" cy="248" r="7" fill="none" stroke="#52b788" stroke-width="1.8"/>
+  <circle cx="305" cy="248" r="7" fill="none" stroke="#52b788" stroke-width="1.8"/>
+  <circle cx="325" cy="248" r="7" fill="none" stroke="#52b788" stroke-width="1.8"/>
+  <circle cx="345" cy="248" r="7" fill="none" stroke="#e76f51" stroke-width="1.8"/>
+  <circle cx="365" cy="248" r="7" fill="none" stroke="#52b788" stroke-width="1.8"/>
+
+  <!-- envelope left of screen -->
+  <rect x="150" y="155" width="90" height="60" rx="5" fill="none" stroke="#e76f51" stroke-width="2.5"/>
+  <path d="M153 158 L195 190 L237 158" fill="none" stroke="#e76f51" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- arrow from envelope into screen -->
+  <path d="M242 185 L258 185" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,3"/>
+  <path d="M253 180 L260 185 L253 190" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- validation checkmark bubble -->
+  <circle cx="185" cy="120" r="26" fill="#52b788" opacity="0.9"/>
+  <path d="M172 120 L181 130 L200 109" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- envelope right of screen — rejected/bad email -->
+  <rect x="558" y="155" width="90" height="60" rx="5" fill="none" stroke="#e63946" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <path d="M561 158 L603 190 L645 158" fill="none" stroke="#e63946" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- X mark on bad envelope -->
+  <path d="M578 170 L628 200 M628 170 L578 200" stroke="#e63946" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- arrow from screen to bad envelope (bounced) -->
+  <path d="M542 200 L556 200" fill="none" stroke="#e63946" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,3"/>
+  <path d="M551 195 L558 200 L551 205" fill="none" stroke="#e63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- catch-all label near bad envelope -->
+  <rect x="555" y="228" width="94" height="20" rx="4" fill="#e63946" opacity="0.12"/>
+  <text x="602" y="242" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#e63946">catch-all risk</text>
+
+  <!-- decorative dots -->
+  <circle cx="220" cy="310" r="5" fill="#2d6a4f" opacity="0.25"/>
+  <circle cx="200" cy="340" r="3" fill="#e76f51" opacity="0.25"/>
+  <circle cx="590" cy="115" r="4" fill="#52b788" opacity="0.3"/>
+  <circle cx="615" cy="135" r="3" fill="#2d6a4f" opacity="0.2"/>
+  <circle cx="565" cy="128" r="5" fill="#e76f51" opacity="0.2"/>
+
+  <!-- bottom text -->
+  <text x="400" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#333" font-style="italic">Webinar Email Validation</text>
+  <text x="400" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#777">validate registrants · maximize attendance · reduce no-shows</text>
+</svg>
