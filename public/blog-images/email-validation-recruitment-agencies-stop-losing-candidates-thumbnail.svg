@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f0f4ff" rx="8"/>
+  <!-- desk surface -->
+  <path d="M80 340 Q400 355 720 340" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- laptop body -->
+  <rect x="250" y="160" width="300" height="180" rx="12" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+  <!-- screen -->
+  <rect x="268" y="175" width="264" height="145" rx="4" fill="#1e293b"/>
+  <!-- email icon on screen -->
+  <rect x="340" y="210" width="120" height="75" rx="6" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <path d="M342 212 L400 255 L458 212" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- checkmark on email -->
+  <circle cx="440" cy="265" r="16" fill="#22c55e" opacity="0.85"/>
+  <path d="M432 265 L438 272 L450 258" stroke="white" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- bouncing X email (left side) -->
+  <rect x="100" y="120" width="80" height="55" rx="5" fill="none" stroke="#f87171" stroke-width="2" transform="rotate(-12 140 147)"/>
+  <path d="M102 122 L140 150 L178 122" stroke="#f87171" stroke-width="2" fill="none" stroke-linecap="round" transform="rotate(-12 140 147)"/>
+  <line x1="155" y1="135" x2="170" y2="155" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" transform="rotate(-12 140 147)"/>
+  <line x1="170" y1="135" x2="155" y2="155" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" transform="rotate(-12 140 147)"/>
+  <!-- bounce arrow -->
+  <path d="M145 185 Q130 220 160 260 Q175 285 155 310" stroke="#f87171" stroke-width="2" fill="none" stroke-dasharray="5 4" stroke-linecap="round"/>
+  <!-- person silhouette (right side, candidate) -->
+  <circle cx="650" cy="140" r="28" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+  <path d="M622 210 Q650 195 678 210 Q690 240 678 270 L622 270 Q610 240 622 210Z" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+  <!-- connection line from laptop to person -->
+  <path d="M530 240 Q580 200 630 170" stroke="#a78bfa" stroke-width="2" fill="none" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <!-- small checkmarks floating -->
+  <path d="M590 260 L596 268 L608 252" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M620 290 L625 296 L634 284" stroke="#22c55e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- title text -->
+  <text x="400" y="405" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#334155" font-style="italic">validate before you reach out</text>
+</svg>
