@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f8f6f1" rx="8"/>
+  <!-- Thermometer body -->
+  <rect x="360" y="60" width="40" height="260" rx="20" fill="none" stroke="#d94f4f" stroke-width="3" stroke-dasharray="0" opacity="0.9"/>
+  <circle cx="380" cy="350" r="40" fill="none" stroke="#d94f4f" stroke-width="3"/>
+  <circle cx="380" cy="350" r="28" fill="#d94f4f" opacity="0.7"/>
+  <!-- Mercury level (low = failing) -->
+  <rect x="368" y="220" width="24" height="100" rx="12" fill="#d94f4f" opacity="0.6"/>
+  <!-- Crack lines on thermometer -->
+  <path d="M400 140 L420 130 L410 155" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+  <path d="M360 180 L340 170 L350 195" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+  <!-- Envelope sketches floating around -->
+  <g transform="translate(150, 100) rotate(-12)">
+    <rect x="0" y="0" width="60" height="42" rx="4" fill="none" stroke="#5a8f7b" stroke-width="2.5"/>
+    <path d="M2 2 L30 24 L58 2" fill="none" stroke="#5a8f7b" stroke-width="2"/>
+    <!-- X mark = bad email -->
+    <line x1="18" y1="14" x2="42" y2="32" stroke="#d94f4f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="42" y1="14" x2="18" y2="32" stroke="#d94f4f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(560, 80) rotate(8)">
+    <rect x="0" y="0" width="60" height="42" rx="4" fill="none" stroke="#5a8f7b" stroke-width="2.5"/>
+    <path d="M2 2 L30 24 L58 2" fill="none" stroke="#5a8f7b" stroke-width="2"/>
+    <line x1="18" y1="14" x2="42" y2="32" stroke="#d94f4f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="42" y1="14" x2="18" y2="32" stroke="#d94f4f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(130, 280) rotate(5)">
+    <rect x="0" y="0" width="55" height="38" rx="4" fill="none" stroke="#5a8f7b" stroke-width="2.5"/>
+    <path d="M2 2 L27.5 20 L53 2" fill="none" stroke="#5a8f7b" stroke-width="2"/>
+    <circle cx="27.5" cy="19" r="8" fill="none" stroke="#e8a838" stroke-width="2"/>
+    <text x="27.5" y="23" text-anchor="middle" font-size="12" fill="#e8a838" font-family="sans-serif">?</text>
+  </g>
+  <g transform="translate(590, 260) rotate(-6)">
+    <rect x="0" y="0" width="55" height="38" rx="4" fill="none" stroke="#5a8f7b" stroke-width="2.5"/>
+    <path d="M2 2 L27.5 20 L53 2" fill="none" stroke="#5a8f7b" stroke-width="2"/>
+    <circle cx="27.5" cy="19" r="8" fill="none" stroke="#e8a838" stroke-width="2"/>
+    <text x="27.5" y="23" text-anchor="middle" font-size="12" fill="#e8a838" font-family="sans-serif">?</text>
+  </g>
+  <!-- Downward arrow (reputation dropping) -->
+  <path d="M510 160 L510 230 L490 230 L520 270 L550 230 L530 230 L530 160 Z" fill="#d94f4f" opacity="0.3" stroke="#d94f4f" stroke-width="2"/>
+  <!-- Squiggly warning lines -->
+  <path d="M220 370 Q240 355, 260 370 Q280 385, 300 370" fill="none" stroke="#e8a838" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M470 380 Q490 365, 510 380 Q530 395, 550 380" fill="none" stroke="#e8a838" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Title text -->
+  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#444" font-weight="bold">warm-up vs. bad data</text>
+</svg>
