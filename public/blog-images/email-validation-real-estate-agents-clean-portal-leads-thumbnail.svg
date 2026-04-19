@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f8f6f2"/>
+  <!-- house shape sketch -->
+  <path d="M200 280 L200 190 L280 130 L360 190 L360 280 Z" fill="none" stroke="#2d5a3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <rect x="240" y="220" width="40" height="60" fill="none" stroke="#2d5a3d" stroke-width="2.5" rx="2" opacity="0.7"/>
+  <line x1="280" y1="130" x2="280" y2="105" stroke="#2d5a3d" stroke-width="2" opacity="0.5"/>
+  <rect x="290" y="105" width="15" height="25" fill="none" stroke="#2d5a3d" stroke-width="1.5" opacity="0.5"/>
+  <!-- envelope sketch -->
+  <rect x="430" y="160" width="170" height="110" rx="6" fill="none" stroke="#c45a3c" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M433 163 L515 225 L597 163" fill="none" stroke="#c45a3c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <!-- checkmark on envelope -->
+  <circle cx="590" cy="250" r="20" fill="none" stroke="#2d8a5e" stroke-width="2.5" opacity="0.8"/>
+  <path d="M578 250 L586 258 L602 242" fill="none" stroke="#2d8a5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- X mark - bad email -->
+  <circle cx="440" cy="320" r="16" fill="none" stroke="#c45a3c" stroke-width="2" opacity="0.6"/>
+  <line x1="432" y1="312" x2="448" y2="328" stroke="#c45a3c" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="448" y1="312" x2="432" y2="328" stroke="#c45a3c" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- small floating @ symbols -->
+  <text x="150" y="140" font-family="Georgia, serif" font-size="22" fill="#2d5a3d" opacity="0.3" transform="rotate(-15 150 140)">@</text>
+  <text x="620" y="150" font-family="Georgia, serif" font-size="18" fill="#c45a3c" opacity="0.25" transform="rotate(10 620 150)">@</text>
+  <text x="380" y="100" font-family="Georgia, serif" font-size="16" fill="#2d5a3d" opacity="0.2">@</text>
+  <!-- dotted connection line -->
+  <line x1="360" y1="220" x2="430" y2="215" stroke="#666" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+  <!-- title text -->
+  <text x="400" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#333" opacity="0.6">validate leads before outreach</text>
+</svg>
