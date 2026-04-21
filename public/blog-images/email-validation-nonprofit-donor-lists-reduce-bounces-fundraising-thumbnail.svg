@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f0f4f8" rx="8"/>
+
+  <!-- Heart/donation symbol -->
+  <path d="M200 160 C200 130 230 110 260 130 C270 110 310 110 310 140 C310 180 255 220 255 220 C255 220 200 180 200 160Z" fill="#e53e3e" fill-opacity="0.15" stroke="#e53e3e" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Dollar sign in heart -->
+  <text x="255" y="178" font-family="sans-serif" font-size="28" fill="#e53e3e" text-anchor="middle" font-weight="bold">$</text>
+
+  <!-- Email envelope sketches -->
+  <rect x="380" y="100" width="70" height="48" fill="#fff" stroke="#2d3748" stroke-width="2" rx="3" transform="rotate(-3 415 124)"/>
+  <polyline points="382,102 415,128 448,102" fill="none" stroke="#2d3748" stroke-width="2" stroke-linejoin="round" transform="rotate(-3 415 124)"/>
+
+  <rect x="460" y="115" width="70" height="48" fill="#fff" stroke="#2d3748" stroke-width="2" rx="3" transform="rotate(2 495 139)"/>
+  <polyline points="462,117 495,143 528,117" fill="none" stroke="#2d3748" stroke-width="2" stroke-linejoin="round" transform="rotate(2 495 139)"/>
+
+  <rect x="540" y="95" width="70" height="48" fill="#fff" stroke="#a0aec0" stroke-width="1.8" rx="3" transform="rotate(-1 575 119)"/>
+  <polyline points="542,97 575,123 608,97" fill="none" stroke="#a0aec0" stroke-width="1.8" stroke-linejoin="round" transform="rotate(-1 575 119)"/>
+
+  <!-- Arrow from envelopes to validation list -->
+  <path d="M420 175 C420 220 350 230 320 260" fill="none" stroke="#4a7cff" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <polygon points="317,256 324,264 319,255" fill="#4a7cff"/>
+
+  <!-- Donor list clipboard -->
+  <rect x="180" y="260" width="160" height="140" fill="#fff" stroke="#2d3748" stroke-width="2.2" rx="4" transform="rotate(0.5 260 330)"/>
+  <rect x="230" y="252" width="60" height="16" fill="#e8edf3" stroke="#2d3748" stroke-width="1.5" rx="8"/>
+
+  <!-- List rows with check/x marks -->
+  <line x1="198" y1="290" x2="318" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="202" y="287" font-family="monospace" font-size="9" fill="#2d3748">donor1@org.com</text>
+  <circle cx="328" cy="285" r="6" fill="#48bb78" fill-opacity="0.2" stroke="#48bb78" stroke-width="1.5"/>
+  <polyline points="324,285 327,288 332,282" fill="none" stroke="#48bb78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="198" y1="312" x2="318" y2="312" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="202" y="309" font-family="monospace" font-size="9" fill="#2d3748">jane@funder.io</text>
+  <circle cx="328" cy="307" r="6" fill="#48bb78" fill-opacity="0.2" stroke="#48bb78" stroke-width="1.5"/>
+  <polyline points="324,307 327,310 332,304" fill="none" stroke="#48bb78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="198" y1="334" x2="318" y2="334" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="202" y="331" font-family="monospace" font-size="9" fill="#a0aec0">old@gone.net</text>
+  <circle cx="328" cy="329" r="6" fill="#e53e3e" fill-opacity="0.15" stroke="#e53e3e" stroke-width="1.5"/>
+  <line x1="324" y1="325" x2="332" y2="333" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="332" y1="325" x2="324" y2="333" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round"/>
+
+  <line x1="198" y1="356" x2="318" y2="356" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="202" y="353" font-family="monospace" font-size="9" fill="#2d3748">giver@corp.co</text>
+  <circle cx="328" cy="351" r="6" fill="#48bb78" fill-opacity="0.2" stroke="#48bb78" stroke-width="1.5"/>
+  <polyline points="324,351 327,354 332,348" fill="none" stroke="#48bb78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="198" y1="378" x2="318" y2="378" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="202" y="375" font-family="monospace" font-size="9" fill="#a0aec0">bounce@fake.biz</text>
+  <circle cx="328" cy="373" r="6" fill="#e53e3e" fill-opacity="0.15" stroke="#e53e3e" stroke-width="1.5"/>
+  <line x1="324" y1="369" x2="332" y2="377" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="332" y1="369" x2="324" y2="377" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Fundraising chart going up -->
+  <rect x="440" y="230" width="180" height="140" fill="none" stroke="#2d3748" stroke-width="1.5" rx="3"/>
+  <text x="530" y="252" font-family="sans-serif" font-size="11" fill="#2d3748" text-anchor="middle" font-weight="bold">Donations</text>
+
+  <!-- Bar chart bars -->
+  <rect x="465" y="330" width="22" height="30" fill="#4a7cff" fill-opacity="0.3" stroke="#4a7cff" stroke-width="1.2" rx="2"/>
+  <rect x="497" y="310" width="22" height="50" fill="#4a7cff" fill-opacity="0.4" stroke="#4a7cff" stroke-width="1.2" rx="2"/>
+  <rect x="529" y="290" width="22" height="70" fill="#4a7cff" fill-opacity="0.5" stroke="#4a7cff" stroke-width="1.2" rx="2"/>
+  <rect x="561" y="268" width="22" height="92" fill="#48bb78" fill-opacity="0.5" stroke="#48bb78" stroke-width="1.2" rx="2"/>
+
+  <!-- Trend arrow -->
+  <path d="M476 325 L508 305 L540 283 L572 262" fill="none" stroke="#48bb78" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <polygon points="575,258 569,265 576,263" fill="#48bb78"/>
+
+  <!-- Labels -->
+  <text x="476" y="375" font-family="sans-serif" font-size="8" fill="#718096" text-anchor="middle">Q1</text>
+  <text x="508" y="375" font-family="sans-serif" font-size="8" fill="#718096" text-anchor="middle">Q2</text>
+  <text x="540" y="375" font-family="sans-serif" font-size="8" fill="#718096" text-anchor="middle">Q3</text>
+  <text x="572" y="375" font-family="sans-serif" font-size="8" fill="#718096" text-anchor="middle">Q4</text>
+</svg>
