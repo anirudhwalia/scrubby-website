@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f7f8fc" rx="8"/>
+
+  <!-- Browser window sketch -->
+  <rect x="80" y="60" width="320" height="220" fill="#fff" stroke="#2d3748" stroke-width="2.2" rx="6" transform="rotate(-1 240 170)"/>
+  <line x1="82" y1="90" x2="398" y2="88" stroke="#e2e8f0" stroke-width="1.5" transform="rotate(-1 240 170)"/>
+  <circle cx="100" cy="76" r="5" fill="#fc8181" stroke="#e53e3e" stroke-width="1"/>
+  <circle cx="116" cy="76" r="5" fill="#fbd38d" stroke="#dd6b20" stroke-width="1"/>
+  <circle cx="132" cy="76" r="5" fill="#9ae6b4" stroke="#38a169" stroke-width="1"/>
+
+  <!-- Exit-intent popup overlay -->
+  <rect x="130" y="110" width="220" height="150" fill="#fff" stroke="#4a7cff" stroke-width="2.5" rx="8" transform="rotate(0.5 240 185)"/>
+  <text x="240" y="140" font-family="sans-serif" font-size="12" fill="#2d3748" text-anchor="middle" font-weight="bold">Wait! Before you go...</text>
+
+  <!-- Email input field -->
+  <rect x="155" y="155" width="170" height="28" fill="#f0f4f8" stroke="#a0aec0" stroke-width="1.5" rx="4"/>
+  <text x="165" y="174" font-family="monospace" font-size="10" fill="#a0aec0">your@email.com</text>
+
+  <!-- Submit button -->
+  <rect x="185" y="195" width="110" height="26" fill="#4a7cff" fill-opacity="0.15" stroke="#4a7cff" stroke-width="1.8" rx="4"/>
+  <text x="240" y="213" font-family="sans-serif" font-size="10" fill="#4a7cff" text-anchor="middle" font-weight="bold">Get 10% Off</text>
+
+  <!-- Cursor arrow near X -->
+  <path d="M340 108 L348 118 L342 118 L345 126" fill="none" stroke="#2d3748" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Arrow from popup to validation -->
+  <path d="M360 185 C420 185 440 200 480 220" fill="none" stroke="#4a7cff" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <polygon points="478,217 484,224 476,222" fill="#4a7cff"/>
+
+  <!-- Validation results list -->
+  <rect x="470" y="100" width="260" height="240" fill="#fff" stroke="#2d3748" stroke-width="2" rx="5" transform="rotate(0.8 600 220)"/>
+  <text x="600" y="128" font-family="sans-serif" font-size="13" fill="#2d3748" text-anchor="middle" font-weight="bold">Validation Results</text>
+  <line x1="485" y1="138" x2="715" y2="138" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Valid email row -->
+  <circle cx="502" cy="162" r="8" fill="#c6f6d5" stroke="#38a169" stroke-width="1.5"/>
+  <text x="498" y="166" font-family="sans-serif" font-size="11" fill="#38a169" font-weight="bold">&#x2713;</text>
+  <text x="518" y="166" font-family="monospace" font-size="10" fill="#2d3748">sarah@company.co</text>
+  <text x="680" y="166" font-family="sans-serif" font-size="9" fill="#38a169">valid</text>
+
+  <!-- Valid email row 2 -->
+  <circle cx="502" cy="192" r="8" fill="#c6f6d5" stroke="#38a169" stroke-width="1.5"/>
+  <text x="498" y="196" font-family="sans-serif" font-size="11" fill="#38a169" font-weight="bold">&#x2713;</text>
+  <text x="518" y="196" font-family="monospace" font-size="10" fill="#2d3748">mike@startup.io</text>
+  <text x="680" y="196" font-family="sans-serif" font-size="9" fill="#38a169">valid</text>
+
+  <!-- Catch-all email row -->
+  <circle cx="502" cy="222" r="8" fill="#fefcbf" stroke="#d69e2e" stroke-width="1.5"/>
+  <text x="499" y="226" font-family="sans-serif" font-size="11" fill="#d69e2e" font-weight="bold">?</text>
+  <text x="518" y="226" font-family="monospace" font-size="10" fill="#2d3748">info@bigcorp.com</text>
+  <text x="662" y="226" font-family="sans-serif" font-size="9" fill="#d69e2e">catch-all</text>
+
+  <!-- Invalid email row -->
+  <circle cx="502" cy="252" r="8" fill="#fed7d7" stroke="#e53e3e" stroke-width="1.5"/>
+  <text x="498" y="256" font-family="sans-serif" font-size="11" fill="#e53e3e" font-weight="bold">&#x2717;</text>
+  <text x="518" y="256" font-family="monospace" font-size="10" fill="#718096">asdf@fake.xyz</text>
+  <text x="672" y="256" font-family="sans-serif" font-size="9" fill="#e53e3e">invalid</text>
+
+  <!-- Fake/typo email row -->
+  <circle cx="502" cy="282" r="8" fill="#fed7d7" stroke="#e53e3e" stroke-width="1.5"/>
+  <text x="498" y="286" font-family="sans-serif" font-size="11" fill="#e53e3e" font-weight="bold">&#x2717;</text>
+  <text x="518" y="286" font-family="monospace" font-size="10" fill="#718096">test@gmial.com</text>
+  <text x="672" y="286" font-family="sans-serif" font-size="9" fill="#e53e3e">invalid</text>
+
+  <!-- Stats bar at bottom -->
+  <rect x="485" y="300" width="115" height="28" fill="#c6f6d5" fill-opacity="0.4" stroke="#38a169" stroke-width="1" rx="3"/>
+  <text x="542" y="318" font-family="sans-serif" font-size="9" fill="#38a169" text-anchor="middle">60% Valid</text>
+
+  <rect x="610" y="300" width="105" height="28" fill="#fed7d7" fill-opacity="0.4" stroke="#e53e3e" stroke-width="1" rx="3"/>
+  <text x="662" y="318" font-family="sans-serif" font-size="9" fill="#e53e3e" text-anchor="middle">40% Bad</text>
+
+  <!-- Subtle decorative dots -->
+  <circle cx="60" cy="380" r="3" fill="#e2e8f0"/>
+  <circle cx="75" cy="395" r="2" fill="#e2e8f0"/>
+  <circle cx="50" cy="400" r="4" fill="#e2e8f0"/>
+</svg>
