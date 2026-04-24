@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f0f4f8" rx="8"/>
+
+  <!-- Form card (left side) -->
+  <rect x="60" y="70" width="280" height="310" fill="#fff" stroke="#2d3748" stroke-width="2" rx="8" transform="rotate(-1.2 200 225)"/>
+
+  <!-- Form header bar -->
+  <rect x="60" y="70" width="280" height="42" fill="#6c4ff6" fill-opacity="0.15" stroke="#6c4ff6" stroke-width="1.5" rx="8" transform="rotate(-1.2 200 225)"/>
+  <rect x="60" y="98" width="280" height="14" fill="#6c4ff6" fill-opacity="0.15" transform="rotate(-1.2 200 225)"/>
+  <text x="200" y="97" font-family="sans-serif" font-size="13" fill="#6c4ff6" text-anchor="middle" font-weight="bold" transform="rotate(-1.2 200 225)">Contact Form</text>
+
+  <!-- Form fields -->
+  <rect x="85" y="130" width="230" height="28" fill="#f7f8fc" stroke="#cbd5e0" stroke-width="1.3" rx="4" transform="rotate(-1.2 200 225)"/>
+  <text x="95" y="149" font-family="monospace" font-size="9" fill="#a0aec0" transform="rotate(-1.2 200 225)">Name</text>
+
+  <rect x="85" y="172" width="230" height="28" fill="#f7f8fc" stroke="#cbd5e0" stroke-width="1.3" rx="4" transform="rotate(-1.2 200 225)"/>
+  <text x="95" y="191" font-family="monospace" font-size="9" fill="#a0aec0" transform="rotate(-1.2 200 225)">your@email.com</text>
+
+  <!-- Submitted entries with mixed quality -->
+  <text x="85" y="228" font-family="sans-serif" font-size="10" fill="#2d3748" font-weight="bold" transform="rotate(-1.2 200 225)">Responses:</text>
+
+  <!-- Good email -->
+  <rect x="85" y="236" width="230" height="22" fill="#c6f6d5" fill-opacity="0.5" stroke="#38a169" stroke-width="1" rx="3" transform="rotate(-1.2 200 225)"/>
+  <text x="95" y="251" font-family="monospace" font-size="9" fill="#276749" transform="rotate(-1.2 200 225)">sarah@company.com</text>
+  <circle cx="300" cy="248" r="6" fill="#38a169" fill-opacity="0.2" stroke="#38a169" stroke-width="1.2" transform="rotate(-1.2 200 225)"/>
+  <path d="M296 248 L299 251 L304 245" fill="none" stroke="#38a169" stroke-width="1.5" stroke-linecap="round" transform="rotate(-1.2 200 225)"/>
+
+  <!-- Bad email -->
+  <rect x="85" y="264" width="230" height="22" fill="#fed7d7" fill-opacity="0.5" stroke="#e53e3e" stroke-width="1" rx="3" transform="rotate(-1.2 200 225)"/>
+  <text x="95" y="279" font-family="monospace" font-size="9" fill="#9b2c2c" transform="rotate(-1.2 200 225)">asdf@gmial.com</text>
+  <circle cx="300" cy="276" r="6" fill="#e53e3e" fill-opacity="0.2" stroke="#e53e3e" stroke-width="1.2" transform="rotate(-1.2 200 225)"/>
+  <line x1="296" y1="272" x2="304" y2="280" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round" transform="rotate(-1.2 200 225)"/>
+  <line x1="304" y1="272" x2="296" y2="280" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round" transform="rotate(-1.2 200 225)"/>
+
+  <!-- Disposable email -->
+  <rect x="85" y="292" width="230" height="22" fill="#fed7d7" fill-opacity="0.5" stroke="#e53e3e" stroke-width="1" rx="3" transform="rotate(-1.2 200 225)"/>
+  <text x="95" y="307" font-family="monospace" font-size="9" fill="#9b2c2c" transform="rotate(-1.2 200 225)">temp29@guerrillamail.com</text>
+  <circle cx="300" cy="304" r="6" fill="#e53e3e" fill-opacity="0.2" stroke="#e53e3e" stroke-width="1.2" transform="rotate(-1.2 200 225)"/>
+  <line x1="296" y1="300" x2="304" y2="308" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round" transform="rotate(-1.2 200 225)"/>
+  <line x1="304" y1="300" x2="296" y2="308" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round" transform="rotate(-1.2 200 225)"/>
+
+  <!-- Good email -->
+  <rect x="85" y="320" width="230" height="22" fill="#c6f6d5" fill-opacity="0.5" stroke="#38a169" stroke-width="1" rx="3" transform="rotate(-1.2 200 225)"/>
+  <text x="95" y="335" font-family="monospace" font-size="9" fill="#276749" transform="rotate(-1.2 200 225)">mike@realdomain.io</text>
+  <circle cx="300" cy="332" r="6" fill="#38a169" fill-opacity="0.2" stroke="#38a169" stroke-width="1.2" transform="rotate(-1.2 200 225)"/>
+  <path d="M296 332 L299 335 L304 329" fill="none" stroke="#38a169" stroke-width="1.5" stroke-linecap="round" transform="rotate(-1.2 200 225)"/>
+
+  <!-- Arrow from form to filter -->
+  <path d="M350 225 C400 225 410 225 450 225" fill="none" stroke="#4a7cff" stroke-width="2.2" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <polygon points="448,220 458,225 448,230" fill="#4a7cff"/>
+
+  <!-- Validation filter (middle) -->
+  <rect x="465" y="150" width="140" height="150" fill="#fff" stroke="#4a7cff" stroke-width="2.2" rx="10" transform="rotate(0.8 535 225)"/>
+  <text x="535" y="180" font-family="sans-serif" font-size="12" fill="#4a7cff" text-anchor="middle" font-weight="bold" transform="rotate(0.8 535 225)">Validation</text>
+
+  <!-- Filter icon -->
+  <path d="M510 200 L560 200 L545 225 L545 250 L525 260 L525 225 Z" fill="#4a7cff" fill-opacity="0.1" stroke="#4a7cff" stroke-width="1.8" stroke-linejoin="round" transform="rotate(0.8 535 225)"/>
+
+  <!-- Output arrows -->
+  <!-- Clean list arrow (going right-up) -->
+  <path d="M610 195 C650 185 660 140 700 130" fill="none" stroke="#38a169" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="698,125 708,130 698,135" fill="#38a169"/>
+
+  <!-- Rejected arrow (going right-down) -->
+  <path d="M610 255 C650 265 660 310 700 320" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+  <polygon points="698,315 708,320 698,325" fill="#e53e3e"/>
+
+  <!-- Clean list result -->
+  <rect x="710" y="100" width="70" height="60" fill="#c6f6d5" fill-opacity="0.4" stroke="#38a169" stroke-width="1.5" rx="6"/>
+  <text x="745" y="122" font-family="sans-serif" font-size="9" fill="#276749" text-anchor="middle" font-weight="bold">Clean</text>
+  <text x="745" y="136" font-family="sans-serif" font-size="9" fill="#276749" text-anchor="middle">List</text>
+  <text x="745" y="152" font-family="sans-serif" font-size="18" fill="#38a169" text-anchor="middle">✓</text>
+
+  <!-- Rejected result -->
+  <rect x="710" y="295" width="70" height="60" fill="#fed7d7" fill-opacity="0.4" stroke="#e53e3e" stroke-width="1.5" rx="6"/>
+  <text x="745" y="317" font-family="sans-serif" font-size="9" fill="#9b2c2c" text-anchor="middle" font-weight="bold">Rejected</text>
+  <text x="745" y="331" font-family="sans-serif" font-size="9" fill="#9b2c2c" text-anchor="middle">Emails</text>
+  <text x="745" y="347" font-family="sans-serif" font-size="18" fill="#e53e3e" text-anchor="middle">✗</text>
+</svg>
