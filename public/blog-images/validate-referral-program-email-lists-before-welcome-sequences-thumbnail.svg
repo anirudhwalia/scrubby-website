@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc" rx="8"/>
+
+  <!-- Referral chain - people icons connected by arrows -->
+  <!-- Person 1 (referrer) -->
+  <circle cx="150" cy="180" r="28" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+  <path d="M150 210 Q150 240 150 260" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M150 230 Q130 220 120 240" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M150 230 Q170 220 180 240" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Arrow from person 1 to person 2 -->
+  <path d="M190 200 Q230 185 270 200" stroke="#64748b" stroke-width="2.5" fill="none" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <polygon points="268,194 278,200 268,206" fill="#64748b"/>
+
+  <!-- Person 2 (referred) -->
+  <circle cx="320" cy="180" r="28" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <path d="M320 210 Q320 240 320 260" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M320 230 Q300 220 290 240" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M320 230 Q340 220 350 240" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Arrow to email envelope -->
+  <path d="M360 210 Q400 210 430 210" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <polygon points="428,204 438,210 428,216" fill="#64748b"/>
+
+  <!-- Email envelope with question mark -->
+  <rect x="450" y="170" width="90" height="65" rx="5" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M452 175 L495 210 L538 175" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="495" y="255" font-family="sans-serif" font-size="24" fill="#f59e0b" text-anchor="middle" font-weight="bold">?</text>
+
+  <!-- Arrow to validation checkmark -->
+  <path d="M550 210 Q585 210 610 210" stroke="#64748b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <polygon points="608,204 618,210 608,216" fill="#64748b"/>
+
+  <!-- Validation shield with checkmark -->
+  <path d="M665 155 L665 220 Q665 260 635 275 Q665 260 695 275 Q665 260 665 220 Z" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-10)"/>
+  <path d="M645 200 L660 215 L690 185" stroke="#10b981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom text labels (hand-drawn style) -->
+  <text x="150" y="300" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">Referrer</text>
+  <text x="320" y="300" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">Signup</text>
+  <text x="495" y="300" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">Email</text>
+  <text x="665" y="300" font-family="sans-serif" font-size="14" fill="#475569" text-anchor="middle">Validate</text>
+
+  <!-- Decorative squiggly underline -->
+  <path d="M100 330 Q200 340 300 330 Q400 320 500 330 Q600 340 700 330" stroke="#e2e8f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Small X marks for invalid emails (scattered) -->
+  <path d="M420 350 L435 365 M435 350 L420 365" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M480 360 L495 375 M495 360 L480 375" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M540 345 L555 360 M555 345 L540 360" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Small checkmarks for valid emails -->
+  <path d="M600 355 L610 365 L630 345" stroke="#10b981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M650 360 L660 370 L680 350" stroke="#10b981" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>
