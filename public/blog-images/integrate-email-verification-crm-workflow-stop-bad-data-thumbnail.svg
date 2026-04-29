@@ -1,0 +1,82 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="800" height="450" fill="#f8f9fb"/>
+
+  <!-- CRM Database -->
+  <rect x="540" y="120" width="190" height="220" rx="14" stroke="#2d3a4a" stroke-width="2.5" fill="#fff" stroke-dasharray="0"/>
+  <text x="635" y="155" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2d3a4a">CRM Database</text>
+  <line x1="555" y1="168" x2="715" y2="168" stroke="#2d3a4a" stroke-width="1.5"/>
+  <!-- Rows -->
+  <rect x="558" y="178" width="154" height="22" rx="4" fill="#e6f7ee" stroke="#34a86c" stroke-width="1.2"/>
+  <text x="635" y="194" text-anchor="middle" font-family="monospace" font-size="11" fill="#2d3a4a">alice@acme.com</text>
+  <rect x="558" y="208" width="154" height="22" rx="4" fill="#e6f7ee" stroke="#34a86c" stroke-width="1.2"/>
+  <text x="635" y="224" text-anchor="middle" font-family="monospace" font-size="11" fill="#2d3a4a">bob@corp.io</text>
+  <rect x="558" y="238" width="154" height="22" rx="4" fill="#e6f7ee" stroke="#34a86c" stroke-width="1.2"/>
+  <text x="635" y="254" text-anchor="middle" font-family="monospace" font-size="11" fill="#2d3a4a">jess@startup.co</text>
+  <rect x="558" y="268" width="154" height="22" rx="4" fill="#e6f7ee" stroke="#34a86c" stroke-width="1.2"/>
+  <text x="635" y="284" text-anchor="middle" font-family="monospace" font-size="11" fill="#2d3a4a">mark@bigco.com</text>
+  <rect x="558" y="298" width="154" height="22" rx="4" fill="#e6f7ee" stroke="#34a86c" stroke-width="1.2"/>
+  <text x="635" y="314" text-anchor="middle" font-family="monospace" font-size="11" fill="#2d3a4a">li@enterprise.ai</text>
+
+  <!-- Validation Checkpoint -->
+  <rect x="320" y="140" width="140" height="180" rx="12" stroke="#e8574a" stroke-width="2.5" fill="#fff5f4"/>
+  <text x="390" y="170" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8574a">Validation</text>
+  <text x="390" y="186" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e8574a">Checkpoint</text>
+  <!-- Checkmark icons -->
+  <circle cx="365" cy="215" r="10" stroke="#34a86c" stroke-width="2" fill="none"/>
+  <polyline points="358,215 363,221 373,210" stroke="#34a86c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="382" y="219" font-family="monospace" font-size="10" fill="#2d3a4a">valid</text>
+  <!-- X icon -->
+  <circle cx="365" cy="248" r="10" stroke="#e8574a" stroke-width="2" fill="none"/>
+  <line x1="360" y1="243" x2="370" y2="253" stroke="#e8574a" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="370" y1="243" x2="360" y2="253" stroke="#e8574a" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="382" y="252" font-family="monospace" font-size="10" fill="#2d3a4a">invalid</text>
+  <!-- Question mark for catch-all -->
+  <circle cx="365" cy="281" r="10" stroke="#d4a017" stroke-width="2" fill="none"/>
+  <text x="365" y="286" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#d4a017">?</text>
+  <text x="382" y="285" font-family="monospace" font-size="10" fill="#2d3a4a">catch-all</text>
+
+  <!-- Incoming data sources -->
+  <!-- Web Form -->
+  <rect x="60" y="100" width="140" height="48" rx="8" stroke="#2d3a4a" stroke-width="2" fill="#fff"/>
+  <text x="130" y="120" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2d3a4a">Web Form</text>
+  <rect x="90" y="128" width="80" height="12" rx="3" stroke="#aab3c0" stroke-width="1" fill="#f0f2f5"/>
+
+  <!-- CSV Import -->
+  <rect x="60" y="185" width="140" height="48" rx="8" stroke="#2d3a4a" stroke-width="2" fill="#fff"/>
+  <text x="130" y="205" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2d3a4a">CSV Import</text>
+  <text x="130" y="222" text-anchor="middle" font-family="monospace" font-size="9" fill="#aab3c0">.csv / .xlsx</text>
+
+  <!-- API / Manual Entry -->
+  <rect x="60" y="270" width="140" height="48" rx="8" stroke="#2d3a4a" stroke-width="2" fill="#fff"/>
+  <text x="130" y="290" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2d3a4a">API / Manual</text>
+  <text x="130" y="307" text-anchor="middle" font-family="monospace" font-size="9" fill="#aab3c0">entry point</text>
+
+  <!-- Arrows: sources to checkpoint -->
+  <line x1="200" y1="124" x2="316" y2="200" stroke="#2d3a4a" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="200" y1="209" x2="316" y2="225" stroke="#2d3a4a" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="200" y1="294" x2="316" y2="255" stroke="#2d3a4a" stroke-width="1.8" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: checkpoint to CRM -->
+  <line x1="460" y1="230" x2="536" y2="230" stroke="#34a86c" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arrowGreen)"/>
+
+  <!-- Rejected arrow going down -->
+  <line x1="390" y1="320" x2="390" y2="390" stroke="#e8574a" stroke-width="1.8" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#arrowRed)"/>
+  <text x="390" y="415" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e8574a">Rejected / Flagged</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#2d3a4a" stroke-width="1.4"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#34a86c" stroke-width="1.4"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto">
+      <path d="M0,0 L4,8 L8,0" fill="none" stroke="#e8574a" stroke-width="1.4"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2d3a4a">Email Verification in Your CRM Workflow</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#7a8599">Stop bad data before it enters your pipeline</text>
+</svg>
