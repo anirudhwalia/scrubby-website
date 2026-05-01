@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f0f4f8" rx="8"/>
+
+  <!-- Hand-drawn shield shape -->
+  <path d="M390 80 C392 78 408 78 410 80 L480 110 C483 112 485 116 484 120 L470 280 C468 290 420 330 400 340 C380 330 332 290 330 280 L316 120 C315 116 317 112 320 110 Z" fill="none" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M400 340 C380 330 332 290 330 280 L316 120 C315 116 317 112 320 110 L390 80" fill="#2563eb" opacity="0.08"/>
+
+  <!-- Checkmark inside shield -->
+  <path d="M365 195 L390 225 L435 170" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dollar signs floating around -->
+  <text x="220" y="140" font-family="Georgia, serif" font-size="36" fill="#f59e0b" opacity="0.7" transform="rotate(-12, 220, 140)">$</text>
+  <text x="560" y="160" font-family="Georgia, serif" font-size="28" fill="#f59e0b" opacity="0.5" transform="rotate(8, 560, 160)">$</text>
+  <text x="180" y="280" font-family="Georgia, serif" font-size="24" fill="#f59e0b" opacity="0.4" transform="rotate(-5, 180, 280)">$</text>
+  <text x="600" y="290" font-family="Georgia, serif" font-size="32" fill="#f59e0b" opacity="0.6" transform="rotate(15, 600, 290)">$</text>
+
+  <!-- Envelope sketches -->
+  <g transform="translate(140, 170) rotate(-8)">
+    <rect x="0" y="0" width="50" height="35" rx="3" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <path d="M2 2 L25 20 L48 2" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- X mark for invalid -->
+    <path d="M38 8 L48 18 M48 8 L38 18" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(590, 180) rotate(6)">
+    <rect x="0" y="0" width="50" height="35" rx="3" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <path d="M2 2 L25 20 L48 2" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Check for valid -->
+    <path d="M35 12 L40 18 L50 6" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Wavy connecting lines (hand-drawn feel) -->
+  <path d="M200 210 Q250 200 310 180" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" stroke-linecap="round"/>
+  <path d="M500 210 Q550 200 590 195" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" stroke-linecap="round"/>
+
+  <!-- Text label -->
+  <text x="400" y="400" font-family="system-ui, sans-serif" font-size="18" fill="#475569" text-anchor="middle" font-weight="600" letter-spacing="0.5">Validate Before You Pay</text>
+
+  <!-- Small warning triangles (fraud indicators) -->
+  <path d="M250 310 L260 290 L270 310 Z" fill="none" stroke="#ef4444" stroke-width="2" stroke-linejoin="round" opacity="0.6"/>
+  <text x="260" y="307" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle" opacity="0.6">!</text>
+
+  <path d="M530 300 L540 280 L550 300 Z" fill="none" stroke="#ef4444" stroke-width="2" stroke-linejoin="round" opacity="0.5"/>
+  <text x="540" y="297" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle" opacity="0.5">!</text>
+</svg>
