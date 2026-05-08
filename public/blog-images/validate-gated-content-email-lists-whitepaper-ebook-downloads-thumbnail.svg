@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#FAF7F2"/>
+  <g stroke="#1F1F1F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 120 q-6 -8 4 -10 l260 -8 q12 -1 12 12 l-2 220 q0 12 -12 11 l-262 -4 q-10 0 -10 -10 z" fill="#FFE9C7"/>
+    <path d="M150 150 l210 -2"/>
+    <path d="M150 175 l180 -1"/>
+    <path d="M150 200 l205 0"/>
+    <path d="M150 225 l160 -1"/>
+    <path d="M150 250 l198 0"/>
+    <path d="M150 275 l140 -1"/>
+    <path d="M150 300 l190 0"/>
+    <text x="170" y="138" font-family="Georgia, serif" font-size="14" fill="#1F1F1F" stroke="none">Whitepaper.pdf</text>
+  </g>
+  <g stroke="#1F1F1F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M450 90 l260 4 q12 0 12 12 l-1 90 q0 10 -12 9 l-260 -3 q-10 0 -10 -10 l1 -90 q0 -12 10 -12 z" fill="#D8ECFF"/>
+    <path d="M460 110 l180 1"/>
+    <path d="M460 132 l210 1"/>
+    <path d="M460 154 l160 1"/>
+    <path d="M460 176 l190 0"/>
+    <text x="475" y="105" font-family="Georgia, serif" font-size="14" fill="#1F1F1F" stroke="none">name@company.co</text>
+  </g>
+  <g stroke="#C0392B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M455 235 q -3 -8 6 -10 l255 2 q10 0 10 10 l-1 110 q0 12 -10 11 l-255 -2 q-10 0 -10 -10 z" fill="#FCE4E0"/>
+    <path d="M475 260 l50 50"/>
+    <path d="M525 260 l-50 50"/>
+    <text x="540" y="298" font-family="Georgia, serif" font-size="14" fill="#1F1F1F" stroke="#1F1F1F" stroke-width="0.6">bounce: 38%</text>
+  </g>
+  <g stroke="#2D7A3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="#E1F4DB">
+    <circle cx="395" cy="375" r="42"/>
+    <path d="M375 376 l14 16 l30 -34" stroke-width="3.4"/>
+  </g>
+  <g stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M260 360 q40 -28 105 -8" />
+    <path d="M362 350 l8 4 l-3 8"/>
+  </g>
+  <text x="120" y="420" font-family="Georgia, serif" font-size="16" fill="#1F1F1F">scrub before sequence</text>
+</svg>
