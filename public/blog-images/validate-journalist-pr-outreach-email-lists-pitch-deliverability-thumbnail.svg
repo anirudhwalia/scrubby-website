@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="0" y="0" width="800" height="450" fill="#fef9f3" stroke="none"/>
+
+  <!-- Newspaper background -->
+  <path d="M90 70 Q88 68 90 66 L420 64 Q424 66 422 70 L424 360 Q422 364 418 362 L92 364 Q88 362 90 358 Z" fill="#ffffff"/>
+  <line x1="115" y1="100" x2="395" y2="98" stroke-width="4"/>
+  <line x1="115" y1="120" x2="320" y2="119"/>
+  <text x="115" y="155" font-family="Georgia, serif" font-size="22" font-weight="bold" stroke="none" fill="#1f2937">DAILY PITCH</text>
+  <line x1="115" y1="175" x2="395" y2="173" stroke-width="1.5"/>
+  <line x1="115" y1="195" x2="385" y2="194" stroke-width="1.5"/>
+  <line x1="115" y1="215" x2="370" y2="214" stroke-width="1.5"/>
+  <line x1="115" y1="235" x2="395" y2="234" stroke-width="1.5"/>
+  <line x1="115" y1="255" x2="340" y2="253" stroke-width="1.5"/>
+  <rect x="115" y="275" width="120" height="70" fill="#fde68a" stroke-width="2"/>
+  <line x1="250" y1="285" x2="395" y2="283" stroke-width="1.5"/>
+  <line x1="250" y1="305" x2="385" y2="304" stroke-width="1.5"/>
+  <line x1="250" y1="325" x2="375" y2="323" stroke-width="1.5"/>
+
+  <!-- Stack of bouncing envelopes -->
+  <g transform="translate(480,90) rotate(-8)">
+    <rect x="0" y="0" width="180" height="110" fill="#ffffff"/>
+    <path d="M0 0 L90 65 L180 0"/>
+    <text x="20" y="98" font-family="Georgia, serif" font-size="14" stroke="none" fill="#b91c1c">BOUNCED</text>
+  </g>
+  <g transform="translate(515,180) rotate(5)">
+    <rect x="0" y="0" width="180" height="110" fill="#ffffff"/>
+    <path d="M0 0 L90 65 L180 0"/>
+    <text x="20" y="98" font-family="Georgia, serif" font-size="14" stroke="none" fill="#b91c1c">RETURNED</text>
+  </g>
+  <g transform="translate(490,275) rotate(-3)">
+    <rect x="0" y="0" width="180" height="110" fill="#dcfce7"/>
+    <path d="M0 0 L90 65 L180 0"/>
+    <text x="30" y="98" font-family="Georgia, serif" font-size="14" stroke="none" fill="#166534">DELIVERED</text>
+    <path d="M150 88 l8 8 l16 -18" stroke="#166534" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Curvy delivery arrow -->
+  <path d="M430 140 Q470 100 510 130" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+  <path d="M505 122 L512 132 L500 138" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+
+  <!-- Title strip -->
+  <rect x="60" y="385" width="680" height="40" fill="#1f2937" stroke="none"/>
+  <text x="80" y="412" font-family="Georgia, serif" font-size="20" stroke="none" fill="#fef9f3">Clean media lists. Pitches that actually land.</text>
+
+  <!-- Decorative dots -->
+  <circle cx="730" cy="80" r="4" fill="#f59e0b" stroke="none"/>
+  <circle cx="745" cy="105" r="3" fill="#f59e0b" stroke="none"/>
+  <circle cx="60" cy="380" r="3" fill="#f59e0b" stroke="none"/>
+</svg>
