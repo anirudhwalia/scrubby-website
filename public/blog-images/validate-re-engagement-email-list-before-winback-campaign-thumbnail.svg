@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Re-engagement email validation">
+  <rect width="800" height="450" fill="#fdf6ec"/>
+  <path d="M120 140 q-6 -18 14 -20 l300 4 q22 -2 18 18 l-2 150 q2 20 -20 18 l-296 -4 q-20 2 -18 -18 z" fill="#fff" stroke="#1f2a44" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M122 142 l168 118 q12 8 24 0 l160 -116" fill="none" stroke="#e07a5f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="560" cy="120" r="46" fill="#81b29a" opacity="0.25"/>
+  <path d="M520 120 a40 40 0 1 1 12 28" fill="none" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/>
+  <path d="M528 156 l-10 4 l4 -12" fill="none" stroke="#1f2a44" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 100 l0 22 l16 10" fill="none" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/>
+  <path d="M150 330 q40 -30 90 -8 q50 22 96 -6 q46 -26 96 -4" fill="none" stroke="#3d405b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="240" cy="322" r="7" fill="#e07a5f"/>
+  <circle cx="336" cy="316" r="7" fill="#81b29a"/>
+  <circle cx="432" cy="318" r="7" fill="#e07a5f"/>
+  <text x="150" y="392" font-family="Georgia, serif" font-size="26" fill="#1f2a44">clean before you win back</text>
+</svg>
