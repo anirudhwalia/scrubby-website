@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Bounce rate chart crossing a throttling threshold line">
+  <rect width="800" height="450" fill="#f6f8fb"/>
+  <!-- axes, slightly wobbly hand-drawn feel -->
+  <path d="M110,360 C109,260 111,160 110,80" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M110,360 C260,361 540,359 700,360" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- throttling threshold line (dashed red) -->
+  <path d="M120,200 C300,198 520,202 690,200" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <text x="540" y="188" font-family="Comic Sans MS, Marker Felt, sans-serif" font-size="20" fill="#dc2626">throttle ~2%</text>
+  <!-- climbing bounce-rate line crossing the threshold -->
+  <path d="M120,330 C200,320 250,300 300,285 C360,266 410,250 470,215 C520,186 560,150 640,120" fill="none" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- data dots -->
+  <circle cx="120" cy="330" r="7" fill="#2563eb"/>
+  <circle cx="300" cy="285" r="7" fill="#2563eb"/>
+  <circle cx="470" cy="215" r="7" fill="#2563eb"/>
+  <circle cx="640" cy="120" r="9" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+  <!-- alert burst near the crossing -->
+  <path d="M655,108 l10,-22 l6,18 l20,-8 l-14,17 l20,8 l-22,4 l6,20 l-18,-12 l-10,18 l-2,-22 l-20,6 l14,-16 z" fill="#fbbf24" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+  <!-- axis labels -->
+  <text x="60" y="90" font-family="Comic Sans MS, Marker Felt, sans-serif" font-size="18" fill="#1f2937">%</text>
+  <text x="330" y="400" font-family="Comic Sans MS, Marker Felt, sans-serif" font-size="18" fill="#1f2937">sends over time</text>
+  <!-- title doodle -->
+  <text x="110" y="50" font-family="Comic Sans MS, Marker Felt, sans-serif" font-size="26" fill="#111827">Bounce rate</text>
+  <path d="M110,58 C180,64 250,62 300,57" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+</svg>
