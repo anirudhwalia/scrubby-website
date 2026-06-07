@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Comic Sans MS, Marker Felt, sans-serif">
+  <rect width="800" height="450" fill="#f4f9f7"/>
+  <!-- divider -->
+  <path d="M400 40 C 392 160, 408 300, 400 410" stroke="#0e9f6e" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <!-- B2B side -->
+  <text x="120" y="90" font-size="34" fill="#0e9f6e" font-weight="bold">B2B</text>
+  <rect x="70" y="130" width="240" height="60" rx="10" fill="#ffffff" stroke="#0e9f6e" stroke-width="3"/>
+  <text x="90" y="168" font-size="20" fill="#23423a">name@company.com</text>
+  <path d="M70 230 q 120 -18 240 0" stroke="#0e9f6e" stroke-width="3" fill="none"/>
+  <text x="78" y="265" font-size="16" fill="#5b6f69">corporate filters</text>
+  <text x="78" y="295" font-size="16" fill="#5b6f69">catch-all domains</text>
+  <circle cx="92" cy="320" r="6" fill="#0e9f6e"/>
+  <text x="108" y="326" font-size="16" fill="#5b6f69">SMTP risk checks</text>
+  <!-- B2C side -->
+  <text x="560" y="90" font-size="34" fill="#d97706" font-weight="bold">B2C</text>
+  <rect x="490" y="130" width="240" height="60" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
+  <text x="512" y="168" font-size="20" fill="#3a2e23">you@gmail.com</text>
+  <path d="M490 230 q 120 18 240 0" stroke="#d97706" stroke-width="3" fill="none"/>
+  <text x="510" y="265" font-size="16" fill="#6f5b4a">typo + spam traps</text>
+  <text x="510" y="295" font-size="16" fill="#6f5b4a">high volume lists</text>
+  <circle cx="510" cy="320" r="6" fill="#d97706"/>
+  <text x="526" y="326" font-size="16" fill="#6f5b4a">freemail noise</text>
+  <text x="230" y="410" font-size="22" fill="#23423a" font-weight="bold">Same list. Different rules.</text>
+</svg>
