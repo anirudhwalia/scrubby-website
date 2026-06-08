@@ -1,0 +1,61 @@
+---
+title: "Role-Based Email Addresses: Should You Validate Them or Just Remove Them?"
+slug: "role-based-email-addresses-validate-or-remove"
+excerpt: "info@, sales@, and support@ addresses behave nothing like a personal inbox. Here is when a role-based address is worth keeping, when it quietly tanks your deliverability, and how to decide per list instead of guessing."
+author: "kristelk"
+date: "2026-06-08"
+category: "emaillistcleaning"
+tags: ["email validation", "role-based email", "list cleaning", "deliverability", "b2b"]
+readTime: "7 min read"
+featured: false
+thumbnail: "/blog-images/role-based-email-addresses-validate-or-remove-thumbnail.svg"
+---
+
+Open almost any B2B list and you will find them: `info@`, `sales@`, `support@`, `contact@`, `admin@`, `hello@`. These are role-based addresses, mailboxes tied to a function instead of a person. They show up everywhere because they are easy to find, often published right on a company's contact page. The question every sender eventually hits is whether to keep them, validate them, or strip them out entirely.
+
+The honest answer is that it depends on what the list is for, and "delete them all" is just as wrong as "keep them all." Here is how to actually decide.
+
+## Why role-based addresses are different
+
+A personal mailbox has one human behind it. A role-based address usually routes to a shared inbox, a ticketing queue, a distribution list, or sometimes nobody at all. That changes the math in three ways.
+
+First, engagement is unpredictable. A message to `support@` might be read by five people or auto-filed into a help-desk tool that never counts as an open. Your engagement metrics get noisy.
+
+Second, complaint risk is higher. Shared inboxes are more likely to mark unsolicited mail as spam, and because the address is monitored by whoever is on duty, one annoyed person can file a complaint that hits your sender reputation.
+
+Third, many email service providers and filters treat role-based addresses with extra suspicion. Some ESPs will flag or block them on import outright, which is a signal worth paying attention to.
+
+## When a role-based address is worth keeping
+
+Role-based does not mean worthless. There are real cases where these addresses convert.
+
+- **Small businesses and sole proprietors.** At a 3-person company, `info@` often is the owner. There is a real human reading it, and it may be the only address you will ever find.
+- **Transactional and opted-in mail.** If someone gave you `billing@theircompany.com` to receive invoices, that address is doing its job. Removing it breaks a workflow the recipient asked for.
+- **Account-based outreach where you have nothing else.** If `sales@` is your only door into a target account, a careful, relevant message can still get forwarded to the right person internally.
+
+The common thread is intent and context. A role-based address attached to a warm relationship or a tiny company is a keeper. The same address sprayed across a cold consumer blast is a liability.
+
+## When to remove them
+
+Strip role-based addresses when the campaign depends on reaching a specific individual, when the list is a large cold send where complaint risk compounds, or when you are mailing consumers (a role-based address on a B2C list is almost always a scrape artifact, not a real subscriber). For high-volume cold sequences, the downside of a single complaint outweighs the upside of one more contact.
+
+## Validate first, then decide
+
+Here is the part most teams skip. Before you keep or cut a role-based address, you still need to know whether the mailbox is even real. Plenty of `info@` addresses on old contact pages point at domains that have since gone dark, or sit behind catch-all servers that accept everything and confirm nothing.
+
+This is where validation earns its place. A deeper verification pass tells you whether the address resolves to a live mailbox or is a dead end hiding behind a catch-all. Tools like [Scrubby](https://scrubby.io) are built to push past the surface-level SMTP check and determine whether an address (role-based or not) actually exists, so you are deciding based on whether the inbox is real rather than guessing from the prefix alone. Cutting every role-based address blindly throws away the live ones; keeping them all without verification keeps the dead ones. Validation lets you separate the two.
+
+A practical sequence:
+
+1. Run the full list through verification, flagging which role-based addresses are live, dead, or catch-all.
+2. Drop the dead ones, no debate.
+3. For the live ones, apply judgment based on the campaign type above: keep them for warm or small-company outreach, cut them for large cold consumer sends.
+4. Tag catch-all role-based addresses separately so you can decide your risk tolerance per campaign instead of per list.
+
+## Match the address to the channel
+
+One more option people forget: if a role-based address is the only contact you have for an account you genuinely want, email is not your only route. A clean, validated email list paired with a channel that does not live or die by inbox placement, like the calendar-based outreach approach behind [Kali](https://getkali.io), gives you a second way to reach a target account when the shared inbox swallows your message. You are not forced to choose between "mail the role-based address and hope" and "skip the account."
+
+## The takeaway
+
+Role-based addresses are not automatically bad data, and they are not automatically good data. They are context-dependent data. The mistake is treating the prefix as the decision. Validate first to learn which mailboxes are actually live, then let the campaign type decide whether a live role-based address is worth keeping. That is how you avoid both the complaint risk of mailing dead shared inboxes and the lost opportunity of deleting addresses that would have reached a real human.
