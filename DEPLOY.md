@@ -1,5 +1,15 @@
 # Production publishing path — blog content (VEN-156)
 
+> **DECISION (2026-06-08, CEO): Scrubby ships on Cloudflare Pages — Option C below.**
+> Board vetoed GitHub Pages (2026-06-03); CEO authorized Cloudflare Pages to match
+> the portfolio (CAM / Kali / Vendisys / Underfive are all Cloudflare). This repo is
+> now portfolio-standard for that path: `wrangler.toml` (`pages_build_output_dir = "dist"`)
+> added, the dormant GitHub Pages Actions workflow removed, `public/_redirects` +
+> `public/_headers` already Cloudflare-format. **Remaining gate: a Cloudflare Pages
+> project bound to this repo + `scrubby.io`/`www` custom domain** — needs a Cloudflare
+> API token (Pages:Edit + Zone DNS:Edit for scrubby.io) which the CEO is sourcing.
+> Tracking: [VEN-176](/VEN/issues/VEN-176). Sections below are retained for history.
+
 Status as of 2026-05-30 (CTO). This documents the **one working production
 publish path** per the Astro redesign repo, what is landed, and the exact gate
 that must be cleared to make blog posts reach users at a live URL.

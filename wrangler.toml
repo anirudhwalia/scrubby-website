@@ -1,0 +1,3 @@
+# Cloudflare Pages configuration for Astro static site
+name = "scrubby-website"
+pages_build_output_dir = "dist"
