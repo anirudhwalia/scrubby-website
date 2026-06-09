@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Catch-all email verification illustration">
+  <rect width="800" height="450" fill="#f5f8fb"/>
+  <!-- hand-drawn frame -->
+  <path d="M28 26 Q400 18 772 28 Q780 225 770 424 Q400 432 30 422 Q22 225 28 26 Z" fill="none" stroke="#1f6f8b" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <!-- big mailbox / envelope sorting -->
+  <g stroke="#1f6f8b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 150 Q118 138 132 138 L356 140 Q368 140 366 154 L364 286 Q364 298 350 296 L130 294 Q118 294 120 282 Z"/>
+    <path d="M124 150 L243 224 L362 150"/>
+  </g>
+  <!-- accepted check (green) -->
+  <g stroke="#2e9e5b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="560" cy="150" r="44" stroke-width="4" opacity="0.85"/>
+    <path d="M538 152 L554 170 L586 132"/>
+  </g>
+  <!-- unknown / catch-all question (amber) -->
+  <g stroke="#e08a1e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="560" cy="300" r="44" stroke-width="4" opacity="0.85"/>
+    <path d="M545 286 Q548 270 562 272 Q578 274 574 290 Q571 300 560 304 L560 314"/>
+    <circle cx="560" cy="330" r="2.4" fill="#e08a1e" stroke="none"/>
+  </g>
+  <!-- arrows from mailbox to verdicts -->
+  <g stroke="#7a5cff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M372 200 Q450 168 506 152"/>
+    <path d="M498 150 L508 150 L506 160"/>
+    <path d="M372 244 Q452 286 506 300"/>
+    <path d="M498 302 L508 300 L505 290"/>
+  </g>
+  <!-- scrubby resolves the unknown: dotted convert arrow -->
+  <path d="M612 300 Q672 300 672 226 Q672 168 624 152" fill="none" stroke="#2e9e5b" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+  <text x="120" y="360" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#1f6f8b" font-style="italic">turn "unknown" into a decision</text>
+  <text x="120" y="396" font-family="Georgia, serif" font-size="18" fill="#5a7585">catch-all verification beyond the SMTP shrug</text>
+</svg>
