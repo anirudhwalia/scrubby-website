@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Email validation comparison illustration">
+  <rect width="800" height="450" fill="#f4f9f7"/>
+  <g fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left envelope (alternative) -->
+    <path d="M120 150 q-4 -8 6 -9 l150 2 q10 1 9 10 l-2 95 q-1 9 -10 9 l-150 -2 q-9 -1 -8 -10 z" fill="#ffffff"/>
+    <path d="M118 148 l78 60 q9 6 18 0 l72 -56"/>
+    <!-- right envelope (scrubby) -->
+    <path d="M510 150 q-4 -8 6 -9 l150 2 q10 1 9 10 l-2 95 q-1 9 -10 9 l-150 -2 q-9 -1 -8 -10 z" fill="#ffffff"/>
+    <path d="M508 148 l78 60 q9 6 18 0 l72 -56"/>
+    <!-- checkmark over right -->
+    <circle cx="650" cy="135" r="26" fill="#d1fae5"/>
+    <path d="M636 136 l10 11 l20 -24" stroke="#059669" stroke-width="5"/>
+    <!-- x over left -->
+    <circle cx="148" cy="135" r="22" fill="#fee2e2"/>
+    <path d="M139 126 l18 18 M157 126 l-18 18" stroke="#dc2626" stroke-width="4"/>
+    <!-- vs arrows in middle -->
+    <path d="M360 200 l70 0 M412 188 l20 12 l-20 12" stroke-width="4"/>
+  </g>
+  <text x="400" y="60" font-family="Georgia, serif" font-size="34" fill="#0f766e" text-anchor="middle" font-style="italic">Emailable vs Scrubby</text>
+  <text x="400" y="400" font-family="Georgia, serif" font-size="20" fill="#475569" text-anchor="middle">catch-all email validation, compared</text>
+</svg>
