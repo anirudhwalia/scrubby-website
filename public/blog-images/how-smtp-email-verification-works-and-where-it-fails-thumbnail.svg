@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="SMTP email verification handshake illustration">
+  <rect width="800" height="450" fill="#f4f9f7"/>
+  <text x="400" y="58" font-family="Georgia, serif" font-size="32" fill="#0f766e" text-anchor="middle" font-style="italic">How SMTP Verification Works</text>
+  <g fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- validator node (left) -->
+    <rect x="90" y="190" width="120" height="80" rx="10" fill="#ffffff"/>
+    <circle cx="150" cy="220" r="12" fill="#d1fae5"/>
+    <path d="M120 250 q30 -18 60 0" />
+    <!-- mail server node (right) -->
+    <rect x="590" y="190" width="120" height="80" rx="10" fill="#ffffff"/>
+    <path d="M610 210 l40 28 q5 3 10 0 l40 -28" />
+    <rect x="610" y="208" width="90" height="54" rx="6" />
+    <!-- handshake arrows -->
+    <path d="M230 215 l330 0 M548 203 l18 12 l-18 12" stroke-width="4"/>
+    <path d="M560 248 l-330 0 M242 236 l-18 12 l18 12" stroke-width="4"/>
+    <!-- catch-all wall in the middle -->
+    <path d="M400 150 l0 150" stroke="#94a3b8" stroke-width="6" stroke-dasharray="10 10"/>
+  </g>
+  <!-- RCPT TO label -->
+  <text x="395" y="200" font-family="monospace" font-size="16" fill="#475569" text-anchor="middle">RCPT TO</text>
+  <!-- 250 OK (deceptive) -->
+  <text x="395" y="270" font-family="monospace" font-size="16" fill="#dc2626" text-anchor="middle">250 OK?</text>
+  <!-- question mark badge on the wall -->
+  <circle cx="400" cy="130" r="22" fill="#fee2e2"/>
+  <text x="400" y="138" font-family="Georgia, serif" font-size="26" fill="#dc2626" text-anchor="middle" font-weight="bold">?</text>
+  <text x="400" y="400" font-family="Georgia, serif" font-size="20" fill="#475569" text-anchor="middle">and why catch-all domains break it</text>
+</svg>
