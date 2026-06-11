@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Soft bounce versus hard bounce illustration">
+  <rect x="0" y="0" width="800" height="450" fill="#f5f8fc"/>
+
+  <!-- hand-drawn divider -->
+  <path d="M400 40 C 396 160, 404 300, 400 410" stroke="#c2cedd" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="2 12"/>
+
+  <!-- LEFT: soft bounce, ball bounces back up -->
+  <text x="120" y="80" font-family="Georgia, serif" font-size="30" fill="#1f7a4d" font-weight="bold">Soft bounce</text>
+  <text x="120" y="108" font-family="Georgia, serif" font-size="16" fill="#5b6b7b">temporary, try again later</text>
+
+  <!-- dashed floor -->
+  <path d="M70 330 C 180 326, 300 334, 360 330" stroke="#9bb0c3" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- bounce arc -->
+  <path d="M110 160 C 150 300, 190 300, 215 330 C 250 290, 270 230, 300 175" stroke="#2aa56a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- envelope ball at apex landing and rising -->
+  <g transform="translate(195 322) rotate(-8)">
+    <rect x="0" y="0" width="46" height="32" rx="3" fill="#ffffff" stroke="#1f7a4d" stroke-width="3"/>
+    <path d="M1 3 L23 19 L45 3" stroke="#1f7a4d" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(286 158) rotate(12)">
+    <rect x="0" y="0" width="46" height="32" rx="3" fill="#eaf7f0" stroke="#1f7a4d" stroke-width="3"/>
+    <path d="M1 3 L23 19 L45 3" stroke="#1f7a4d" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- up arrow -->
+  <path d="M320 150 l 12 -10 l 4 16" stroke="#1f7a4d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- RIGHT: hard bounce, ball hits a wall and stops -->
+  <text x="470" y="80" font-family="Georgia, serif" font-size="30" fill="#b03a3a" font-weight="bold">Hard bounce</text>
+  <text x="470" y="108" font-family="Georgia, serif" font-size="16" fill="#5b6b7b">permanent, remove it</text>
+
+  <!-- brick wall -->
+  <g stroke="#b03a3a" stroke-width="3" fill="none">
+    <rect x="690" y="150" width="70" height="190" rx="2" fill="#fbeaea"/>
+    <line x1="690" y1="188" x2="760" y2="188"/>
+    <line x1="690" y1="226" x2="760" y2="226"/>
+    <line x1="690" y1="264" x2="760" y2="264"/>
+    <line x1="690" y1="302" x2="760" y2="302"/>
+    <line x1="725" y1="150" x2="725" y2="188"/>
+    <line x1="708" y1="188" x2="708" y2="226"/>
+    <line x1="742" y1="188" x2="742" y2="226"/>
+    <line x1="725" y1="226" x2="725" y2="264"/>
+    <line x1="708" y1="264" x2="708" y2="302"/>
+    <line x1="742" y1="264" x2="742" y2="302"/>
+    <line x1="725" y1="302" x2="725" y2="340"/>
+  </g>
+  <!-- straight path into wall, then a sharp stop burst -->
+  <path d="M470 245 C 540 240, 600 248, 660 245" stroke="#b03a3a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- envelope stopped at wall -->
+  <g transform="translate(640 228)">
+    <rect x="0" y="0" width="46" height="32" rx="3" fill="#ffffff" stroke="#b03a3a" stroke-width="3"/>
+    <path d="M1 3 L23 19 L45 3" stroke="#b03a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- impact lines -->
+  <g stroke="#d97a2b" stroke-width="3" stroke-linecap="round">
+    <line x1="672" y1="205" x2="684" y2="192"/>
+    <line x1="676" y1="245" x2="692" y2="245"/>
+    <line x1="672" y1="285" x2="684" y2="298"/>
+  </g>
+</svg>
