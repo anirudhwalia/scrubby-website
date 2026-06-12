@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Disposable email being dropped into a trash bin">
+  <rect width="800" height="450" fill="#f4f8fb"/>
+
+  <!-- hand-drawn dashed border -->
+  <rect x="24" y="24" width="752" height="402" rx="18" fill="none" stroke="#1d3f5e" stroke-width="3" stroke-dasharray="10 12" opacity="0.5"/>
+
+  <!-- falling envelope (the disposable one) -->
+  <g transform="rotate(-14 300 150)">
+    <rect x="232" y="96" width="150" height="98" rx="8" fill="#ffffff" stroke="#1d3f5e" stroke-width="4"/>
+    <path d="M234 102 L307 152 L380 102" fill="none" stroke="#1d3f5e" stroke-width="4" stroke-linecap="round"/>
+    <text x="307" y="180" font-family="Comic Sans MS, 'Segoe Print', cursive" font-size="20" fill="#c0392b" text-anchor="middle">temp@10minmail</text>
+  </g>
+
+  <!-- motion lines -->
+  <path d="M410 70 q20 18 8 44" fill="none" stroke="#7aa7c7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M442 92 q22 18 10 46" fill="none" stroke="#7aa7c7" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- trash bin -->
+  <g transform="translate(470 230)">
+    <!-- lid -->
+    <rect x="-14" y="-8" width="188" height="26" rx="6" fill="#e8edf1" stroke="#1d3f5e" stroke-width="4"/>
+    <rect x="62" y="-26" width="36" height="22" rx="5" fill="#e8edf1" stroke="#1d3f5e" stroke-width="4"/>
+    <!-- body -->
+    <path d="M2 22 L18 196 q2 18 20 18 L122 214 q18 0 20 -18 L158 22 Z" fill="#ffffff" stroke="#1d3f5e" stroke-width="4"/>
+    <!-- ribs -->
+    <path d="M40 36 L52 200" fill="none" stroke="#7aa7c7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M80 36 L80 202" fill="none" stroke="#7aa7c7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M120 36 L108 200" fill="none" stroke="#7aa7c7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- approved real email parked safely on the left -->
+  <g transform="translate(120 300)">
+    <rect x="0" y="0" width="150" height="92" rx="8" fill="#ffffff" stroke="#1f8a5b" stroke-width="4"/>
+    <path d="M2 6 L75 54 L148 6" fill="none" stroke="#1f8a5b" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="124" cy="76" r="20" fill="#1f8a5b"/>
+    <path d="M114 76 l7 8 l13 -16" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- title -->
+  <text x="400" y="416" font-family="Comic Sans MS, 'Segoe Print', cursive" font-size="26" fill="#1d3f5e" text-anchor="middle">Catch disposable emails before they hit your list</text>
+</svg>
